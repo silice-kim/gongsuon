@@ -82,6 +82,37 @@
         .feature-card h3 { font-size: 1.6rem; margin-bottom: 1.2rem; font-weight: 700; }
         .feature-card p { color: #666; font-size: 1.1rem; }
 
+        /* 비디오 섹션 스타일 */
+        .video-section { background-color: #fff; padding: 60px 20px; }
+        .video-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 2rem; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            justify-items: center;
+        }
+        .video-card {
+            width: 100%;
+            max-width: 315px;
+            background: #000;
+            border-radius: 36px;
+            padding: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            border: 8px solid #333;
+            aspect-ratio: 9/16;
+            position: relative;
+            overflow: hidden;
+        }
+        .video-card iframe {
+            width: 100%;
+            height: 100%;
+            border-radius: 24px;
+            border: none;
+        }
+        .video-info { text-align: center; margin-top: 1rem; }
+        .video-info h4 { font-size: 1.1rem; color: var(--primary); }
+
         .faq { background-color: var(--bg-light); }
         .faq-container { max-width: 800px; margin: 0 auto; text-align: left; }
         .faq-item { margin-bottom: 1.5rem; background: #fff; padding: 1.5rem; border-radius: 12px; }
@@ -161,6 +192,31 @@
                     <h3>다국어 지원 서비스</h3>
                     <p>외국인 근로자분들도 불편함 없이 사용할 수 있도록 다양한 언어를 지원합니다.</p>
                 </article>
+            </div>
+        </section>
+
+        <section class="video-section">
+            <h2 class="section-title">앱 미리보기 및 사용 가이드</h2>
+            <div class="video-grid">
+                <!-- 첫 번째 영상 -->
+                <div class="video-item">
+                    <div class="video-card">
+                        <iframe src="https://www.youtube.com/embed/Q60rTrWI8sE" title="공수 On 앱 가이드 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h4>공수 On 사용법 안내</h4>
+                    </div>
+                </div>
+                <!-- 두 번째 영상 -->
+                <div class="video-item">
+                    <div class="video-card">
+                        <iframe src="https://www.youtube.com/embed/vVAQa6FYk2w" title="공수 On 앱 가이드 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h4>빠르고 간편한 기록 방법</h4>
+                    </div>
+                </div>
+                <!-- 여기에 새로운 <div class="video-item">...</div> 를 추가하면 자동으로 그리드에 붙습니다 -->
             </div>
         </section>
 
