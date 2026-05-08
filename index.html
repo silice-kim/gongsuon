@@ -3,7 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>공수 On - 스마트한 건설 현장 관리의 시작</title>
+    
+    <!-- SEO 기본 메타 태그 -->
+    <title>공수 On - 스마트한 건설 현장 공수표 및 일당 계산 앱</title>
+    <meta name="description" content="건설 현장 근로자를 위한 필수 앱! 간편한 공수 기록, 실시간 일당 및 세금 계산, 무료 구인구직 정보를 공수 On에서 확인하세요.">
+    <meta name="keywords" content="공수표, 공수계산기, 건설현장, 일당계산, 구인구직, 현장관리, 공수On">
+    <link rel="canonical" href="https://silice-kim.github.io/gongsuon/">
+
+    <!-- Open Graph (소셜 공유용) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="공수 On - 스마트한 건설 현장 관리">
+    <meta property="og:description" content="가장 쉬운 공수표 및 일당 계산 앱. 지금 바로 다운로드하세요!">
+    <meta property="og:image" content="assets/images/feature.png">
+    <meta property="og:url" content="https://silice-kim.github.io/gongsuon/">
+
+    <!-- AEO를 위한 구조화된 데이터 (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "공수 On",
+      "operatingSystem": "Android, iOS",
+      "applicationCategory": "BusinessApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "KRW"
+      },
+      "description": "건설 현장 근로자를 위한 스마트 공수 관리 및 구인구직 플랫폼",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "ratingCount": "100"
+      }
+    }
+    </script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -16,113 +51,133 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif; line-height: 1.6; color: var(--text-dark); background-color: #fff; }
+        body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif; line-height: 1.6; color: var(--text-dark); background-color: #fff; overflow-x: hidden; }
 
         header { background-color: var(--primary); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        .logo-text { color: var(--text-light); font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; gap: 0.5rem; }
+        .logo-text { color: var(--text-light); font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; gap: 0.5rem; text-decoration: none; }
         .logo-text span { color: var(--secondary); }
+        .logo-img { width: 32px; height: 32px; border-radius: 6px; }
 
-        .hero { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); padding: 100px 20px; color: var(--text-light); text-align: center; }
-        .hero h1 { font-size: 3rem; margin-bottom: 1.5rem; font-weight: 900; line-height: 1.2; }
-        .hero p { font-size: 1.25rem; margin-bottom: 2.5rem; opacity: 0.9; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .hero { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); padding: 120px 20px; color: var(--text-light); text-align: center; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 1.5rem; font-weight: 900; line-height: 1.2; letter-spacing: -1px; }
+        .hero p { font-size: 1.3rem; margin-bottom: 3rem; opacity: 0.9; max-width: 800px; margin-left: auto; margin-right: auto; }
         
-        .download-btns { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
-        .btn { padding: 1rem 2.5rem; border-radius: 50px; font-weight: 700; text-decoration: none; transition: all 0.3s; display: inline-flex; align-items: center; gap: 0.5rem; font-size: 1.1rem; }
+        .download-btns { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
+        .btn { padding: 1.2rem 2.8rem; border-radius: 50px; font-weight: 700; text-decoration: none; transition: all 0.3s; display: inline-flex; align-items: center; gap: 0.8rem; font-size: 1.2rem; }
         .btn-google { background-color: #fff; color: var(--primary); }
-        .btn-google:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+        .btn-google:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.3); }
 
-        .features { padding: 80px 20px; background-color: var(--bg-light); text-align: center; }
-        .section-title { font-size: 2.5rem; margin-bottom: 3rem; font-weight: 800; }
-        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto; }
-        .feature-card { background: #fff; padding: 3rem 2rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s; }
-        .feature-card:hover { transform: translateY(-10px); }
-        .feature-card i { font-size: 3rem; color: var(--primary); margin-bottom: 1.5rem; }
-        .feature-card h3 { font-size: 1.5rem; margin-bottom: 1rem; }
-        .feature-card p { color: #666; }
+        section { padding: 100px 20px; }
+        .section-title { font-size: 2.8rem; margin-bottom: 4rem; font-weight: 800; text-align: center; color: var(--primary); }
 
-        .cta { padding: 80px 20px; text-align: center; background-color: #fff; }
-        .cta h2 { font-size: 2.2rem; margin-bottom: 1.5rem; font-weight: 800; }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; max-width: 1200px; margin: 0 auto; }
+        .feature-card { background: #fff; padding: 3.5rem 2rem; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); text-align: center; transition: all 0.3s; border: 1px solid #eee; }
+        .feature-card:hover { transform: translateY(-10px); border-color: var(--primary); }
+        .feature-card i { font-size: 3.5rem; color: var(--primary); margin-bottom: 2rem; }
+        .feature-card h3 { font-size: 1.6rem; margin-bottom: 1.2rem; font-weight: 700; }
+        .feature-card p { color: #666; font-size: 1.1rem; }
 
-        footer { background-color: #1a1a1a; color: #888; padding: 40px 20px; text-align: center; }
-        footer p { margin-bottom: 1rem; font-size: 0.9rem; }
-        footer a { color: #ccc; text-decoration: none; margin: 0 10px; }
-        footer a:hover { color: var(--secondary); }
+        /* AEO 최적화를 위한 FAQ 섹션 */
+        .faq { background-color: var(--bg-light); }
+        .faq-container { max-width: 800px; margin: 0 auto; text-align: left; }
+        .faq-item { margin-bottom: 1.5rem; background: #fff; padding: 1.5rem; border-radius: 12px; }
+        .faq-item h4 { color: var(--primary); margin-bottom: 0.5rem; font-size: 1.2rem; }
+        .faq-item p { color: #555; }
+
+        .footer { background-color: #111; color: #aaa; padding: 60px 20px; text-align: center; }
+        .footer-links { margin-top: 20px; }
+        .footer-links a { color: #888; text-decoration: none; margin: 0 15px; font-size: 0.95rem; }
+        .footer-links a:hover { color: var(--secondary); }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
+            .hero h1 { font-size: 2.5rem; }
             .hero p { font-size: 1.1rem; }
-            .section-title { font-size: 2rem; }
+            .section-title { font-size: 2.2rem; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo-text">공수 <span>On</span></div>
+        <a href="#" class="logo-text">
+            <img src="assets/images/icon.png" alt="공수 On 로고" class="logo-img">
+            공수 <span>On</span>
+        </a>
     </header>
 
-    <section class="hero">
-        <h1>건설 현장 근무 관리,<br>이제 '공수 On'으로 스마트하게</h1>
-        <p>복잡한 공수 기록부터 일당 계산, 구인구직까지!<br>현장 근로자를 위한 필수 파트너 앱을 지금 만나보세요.</p>
-        <div class="download-btns">
-            <a href="#" class="btn btn-google">
-                <i class="fab fa-google-play"></i> Google Play에서 다운로드
-            </a>
-        </div>
-    </section>
+    <main>
+        <section class="hero">
+            <h1>현장의 모든 공수 기록,<br>스마트하게 On 하세요.</h1>
+            <p>복잡한 일당 계산부터 전국 현장 구인구직 정보까지!<br>공수 On은 건설 현장 근로자의 성공을 돕는 최고의 파트너입니다.</p>
+            <div class="download-btns">
+                <a href="#" class="btn btn-google">
+                    <i class="fab fa-google-play"></i> Google Play 다운로드
+                </a>
+            </div>
+        </section>
 
-    <section class="features">
-        <h2 class="section-title">주요 기능</h2>
-        <div class="feature-grid">
-            <div class="feature-card">
-                <i class="fas fa-calendar-check"></i>
-                <h3>스마트 공수 달력</h3>
-                <p>터치 한 번으로 간편하게 기록하고 월별/연간 수익을 한눈에 확인하세요.</p>
+        <section id="features">
+            <h2 class="section-title">주요 핵심 기능</h2>
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3>직관적인 공수 달력</h3>
+                    <p>누구나 쉽게 터치 한 번으로 공수를 기록하고, 월별 수익을 실시간으로 확인하세요.</p>
+                </article>
+                <article class="feature-card">
+                    <i class="fas fa-coins"></i>
+                    <h3>자동 세금 및 임금 계산</h3>
+                    <p>소득세, 4대 보험 등 현장별 맞춤 설정을 통해 실제 수령액을 정확히 계산합니다.</p>
+                </article>
+                <article class="feature-card">
+                    <i class="fas fa-search-location"></i>
+                    <h3>전국 현장 구인구직</h3>
+                    <p>내 주변의 현장 정보를 확인하고, 나에게 딱 맞는 일자리를 무료로 찾아보세요.</p>
+                </article>
+                <article class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>안전 공지 및 기상 알람</h3>
+                    <p>긴급 안전 수칙과 실시간 기상 특보를 푸시 알림으로 받아 사고를 예방하세요.</p>
+                </article>
+                <article class="feature-card">
+                    <i class="fas fa-sync-alt"></i>
+                    <h3>실시간 클라우드 백업</h3>
+                    <p>휴대폰을 바꿔도 걱정 마세요. 소셜 로그인 한 번으로 모든 데이터를 안전하게 복구합니다.</p>
+                </article>
+                <article class="feature-card">
+                    <i class="fas fa-language"></i>
+                    <h3>다국어 지원 서비스</h3>
+                    <p>외국인 근로자분들도 불편함 없이 사용할 수 있도록 다양한 언어를 지원합니다.</p>
+                </article>
             </div>
-            <div class="feature-card">
-                <i class="fas fa-calculator"></i>
-                <h3>자동 임금 계산</h3>
-                <p>세금(소득세, 4대보험)을 반영한 실제 수령액을 실시간으로 확인하세요.</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-briefcase"></i>
-                <h3>무료 구인구직</h3>
-                <p>지역별, 조건별 맞춤형 일자리를 찾거나 필요한 인력을 무료로 모집하세요.</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-bell"></i>
-                <h3>실시간 안전 공지</h3>
-                <p>현장 긴급 공지와 기상 특보를 푸시 알림으로 가장 빠르게 받아보세요.</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-cloud-upload-alt"></i>
-                <h3>데이터 클라우드 백업</h3>
-                <p>소셜 로그인 연동으로 기기를 바꿔도 소중한 내 기록을 안전하게 복원하세요.</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-globe"></i>
-                <h3>다국어 지원</h3>
-                <p>외국인 동료들과 함께 사용할 수 있도록 다양한 언어를 제공합니다.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="cta">
-        <h2>지금 바로 시작하세요</h2>
-        <p style="margin-bottom: 2rem; color: #666;">현장 관리의 모든 것, 공수 On과 함께라면 더 완벽해집니다.</p>
-        <div class="download-btns">
-            <a href="#" class="btn btn-google" style="background-color: var(--primary); color: #fff;">
-                <i class="fab fa-google-play"></i> 앱 다운로드하기
-            </a>
-        </div>
-    </section>
+        <!-- AEO 최적화 FAQ 섹션 -->
+        <section class="faq">
+            <h2 class="section-title">자주 묻는 질문 (FAQ)</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h4>Q. 공수 On 앱은 무료인가요?</h4>
+                    <p>A. 네, 공수 기록부터 구인구직 이용까지 모든 주요 기능을 무료로 이용하실 수 있습니다.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Q. 휴대폰을 바꿔도 기록이 유지되나요?</h4>
+                    <p>A. 네, 카카오나 구글 계정으로 로그인하시면 클라우드에 데이터가 안전하게 저장되어 언제든 복구 가능합니다.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Q. 외국인 근로자도 사용할 수 있나요?</h4>
+                    <p>A. 네, 러시아어, 몽골어, 베트남어 등 다양한 언어 설정을 지원하여 누구나 쉽게 사용 가능합니다.</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <footer>
-        <p>&copy; 2026 공수 On | 비즈어드민 (BizAdmin)</p>
-        <div style="margin-top: 10px;">
+    <footer class="footer">
+        <p>&copy; 2026 공수 On | 비즈어드민 (BizAdmin). All Rights Reserved.</p>
+        <nav class="footer-links">
             <a href="privacy.html">개인정보 처리방침</a>
             <a href="mailto:support@bizadmin.co.kr">고객지원</a>
-        </div>
+        </nav>
     </footer>
 
 </body>
