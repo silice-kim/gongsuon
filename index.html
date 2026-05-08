@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
     <!-- SEO 기본 메타 태그 -->
     <title>공수 On - 스마트한 건설 현장 공수표 및 일당 계산 앱</title>
     <meta name="description" content="건설 현장 근로자를 위한 필수 앱! 간편한 공수 기록, 실시간 일당 및 세금 계산, 무료 구인구직 정보를 공수 On에서 확인하세요.">
@@ -51,245 +50,56 @@
             --bg-light: #f8f9fa;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif; line-height: 1.6; color: var(--text-dark); background-color: #fff; overflow-x: hidden; }
 
-        body {
-            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            background-color: #fff;
-            overflow-x: hidden;
-        }
+        header { background-color: var(--primary); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); }
+        .logo-text { color: var(--text-light); font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; gap: 0.5rem; text-decoration: none; }
+        .logo-text span { color: var(--secondary); }
+        .logo-img { width: 32px; height: 32px; border-radius: 6px; }
 
-        header {
-            background-color: var(--primary);
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
+        .lang-switcher { display: flex; gap: 10px; }
+        .lang-switcher a { color: #fff; text-decoration: none; font-size: 0.9rem; opacity: 0.7; transition: opacity 0.3s; }
+        .lang-switcher a:hover { opacity: 1; }
+        .lang-switcher a.active { opacity: 1; font-weight: bold; }
 
-        .logo-text {
-            color: var(--text-light);
-            font-size: 1.5rem;
-            font-weight: 800;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            text-decoration: none;
-        }
+        .hero { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); padding: 50px 20px; color: var(--text-light); text-align: center; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 1.5rem; font-weight: 900; line-height: 1.2; letter-spacing: -1px; }
+        .hero p { font-size: 1.3rem; margin-bottom: 3rem; opacity: 0.9; max-width: 800px; margin-left: auto; margin-right: auto; }
+        
+        .download-btns { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
+        .btn { padding: 1.2rem 2.8rem; border-radius: 50px; font-weight: 700; text-decoration: none; transition: all 0.3s; display: inline-flex; align-items: center; gap: 0.8rem; font-size: 1.2rem; }
+        .btn-google { background-color: #fff; color: var(--primary); }
+        .btn-google:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); }
 
-        .logo-text span {
-            color: var(--secondary);
-        }
+        section { padding: 60px 20px; }
+        .section-title { font-size: 2.8rem; margin-bottom: 2.5rem; font-weight: 800; text-align: center; color: var(--primary); }
 
-        .logo-img {
-            width: 32px;
-            height: 32px;
-            border-radius: 6px;
-        }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; max-width: 1200px; margin: 0 auto; }
+        .feature-card { background: #fff; padding: 2.5rem 1.5rem; border-radius: 24px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05); text-align: center; transition: all 0.3s; border: 1px solid #eee; }
+        .feature-card:hover { transform: translateY(-10px); border-color: var(--primary); }
+        .feature-card i { font-size: 3.5rem; color: var(--primary); margin-bottom: 2rem; }
+        .feature-card h3 { font-size: 1.6rem; margin-bottom: 1.2rem; font-weight: 700; }
+        .feature-card p { color: #666; font-size: 1.1rem; }
 
-        .lang-switcher {
-            display: flex;
-            gap: 10px;
-        }
+        .faq { background-color: var(--bg-light); }
+        .faq-container { max-width: 800px; margin: 0 auto; text-align: left; }
+        .faq-item { margin-bottom: 1.5rem; background: #fff; padding: 1.5rem; border-radius: 12px; }
+        .faq-item h4 { color: var(--primary); margin-bottom: 0.5rem; font-size: 1.2rem; }
+        .faq-item p { color: #555; }
 
-        .lang-switcher a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 0.9rem;
-            opacity: 0.7;
-            transition: opacity 0.3s;
-        }
-
-        .lang-switcher a:hover {
-            opacity: 1;
-        }
-
-        .lang-switcher a.active {
-            opacity: 1;
-            font-weight: bold;
-        }
-
-        .hero {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            padding: 50px 20px;
-            color: var(--text-light);
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            font-weight: 900;
-            line-height: 1.2;
-            letter-spacing: -1px;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 3rem;
-            opacity: 0.9;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .download-btns {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 1.2rem 2.8rem;
-            border-radius: 50px;
-            font-weight: 700;
-            text-decoration: none;
-            transition: all 0.3s;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.8rem;
-            font-size: 1.2rem;
-        }
-
-        .btn-google {
-            background-color: #fff;
-            color: var(--primary);
-        }
-
-        .btn-google:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        section {
-            padding: 60px 20px;
-        }
-
-        .section-title {
-            font-size: 2.8rem;
-            margin-bottom: 2.5rem;
-            font-weight: 800;
-            text-align: center;
-            color: var(--primary);
-        }
-
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .feature-card {
-            background: #fff;
-            padding: 2.5rem 1.5rem;
-            border-radius: 24px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
-            text-align: center;
-            transition: all 0.3s;
-            border: 1px solid #eee;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--primary);
-        }
-
-        .feature-card i {
-            font-size: 3.5rem;
-            color: var(--primary);
-            margin-bottom: 2rem;
-        }
-
-        .feature-card h3 {
-            font-size: 1.6rem;
-            margin-bottom: 1.2rem;
-            font-weight: 700;
-        }
-
-        .feature-card p {
-            color: #666;
-            font-size: 1.1rem;
-        }
-
-        /* AEO 최적화를 위한 FAQ 섹션 */
-        .faq {
-            background-color: var(--bg-light);
-        }
-
-        .faq-container {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: left;
-        }
-
-        .faq-item {
-            margin-bottom: 1.5rem;
-            background: #fff;
-            padding: 1.5rem;
-            border-radius: 12px;
-        }
-
-        .faq-item h4 {
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
-        }
-
-        .faq-item p {
-            color: #555;
-        }
-
-        .footer {
-            background-color: #111;
-            color: #aaa;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .footer-links {
-            margin-top: 20px;
-        }
-
-        .footer-links a {
-            color: #888;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 0.95rem;
-        }
-
-        .footer-links a:hover {
-            color: var(--secondary);
-        }
+        .footer { background-color: #111; color: #aaa; padding: 40px 20px; text-align: center; }
+        .footer-links { margin-top: 20px; }
+        .footer-links a { color: #888; text-decoration: none; margin: 0 15px; font-size: 0.95rem; }
+        .footer-links a:hover { color: var(--secondary); }
 
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero p {
-                font-size: 1.1rem;
-            }
-
-            .section-title {
-                font-size: 2.2rem;
-            }
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1.1rem; }
+            .section-title { font-size: 2.2rem; }
         }
     </style>
 </head>
-
 <body>
 
     <header>
@@ -337,19 +147,9 @@
                     <p>타 앱에서 데이터를 한 번에 가져오세요. '공수 On'으로의 이사가 훨씬 쉬워집니다.</p>
                 </article>
                 <article class="feature-card">
-                    <i class="fas fa-globe"></i>
+                    <i class="fas fa-coins"></i>
                     <h3>자동 세금 및 임금 계산</h3>
                     <p>소득세, 4대 보험 등 현장별 맞춤 설정을 통해 실제 수령액을 정확히 계산합니다.</p>
-                </article>
-                <article class="feature-card">
-                    <i class="fas fa-search-location"></i>
-                    <h3>전국 현장 구인구직</h3>
-                    <p>내 주변의 현장 정보를 확인하고, 나에게 딱 맞는 일자리를 무료로 찾아보세요.</p>
-                </article>
-                <article class="feature-card">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>안전 공지 및 기상 알람</h3>
-                    <p>긴급 안전 수칙과 실시간 기상 특보를 푸시 알림으로 받아 사고를 예방하세요.</p>
                 </article>
                 <article class="feature-card">
                     <i class="fas fa-sync-alt"></i>
@@ -364,18 +164,16 @@
             </div>
         </section>
 
-        <!-- AEO 최적화 FAQ 섹션 -->
         <section class="faq">
             <h2 class="section-title">자주 묻는 질문 (FAQ)</h2>
             <div class="faq-container">
                 <div class="faq-item">
                     <h4>Q. 공수 On 앱은 정말 광고가 없나요?</h4>
-                    <p>A. 네, 평생 광고 없이 운영됩니다. <strong>공수 On의 운영자 또한 현장에서 땀 흘려 일하는 근로자입니다.</strong> 현장의 고단함을 누구보다 잘 알기에,
-                        사용을 방해하는 불편한 광고들을 과감히 없앴습니다.</p>
+                    <p>A. 네, 평생 광고 없이 운영됩니다. <strong>공수 On의 운영자 또한 현장에서 땀 흘려 일하는 근로자입니다.</strong> 현장의 고단함을 누구보다 잘 알기에, 사용을 방해하는 불편한 광고들을 과감히 없앴습니다.</p>
                 </div>
                 <div class="faq-item">
-                    <h4>Q. 공수 On 앱은 무료인가요?</h4>
-                    <p>A. 네, 공수 기록부터 구인구직 이용까지 모든 주요 기능을 무료로 이용하실 수 있습니다.</p>
+                    <h4>Q. 앱 이용료는 무료인가요?</h4>
+                    <p>A. 네, 공수 기록부터 임금 계산, 구인구직 이용까지 모든 주요 기능을 평생 무료로 이용하실 수 있습니다.</p>
                 </div>
                 <div class="faq-item">
                     <h4>Q. 다른 앱이나 엑셀 데이터를 가져올 수 있나요?</h4>
@@ -383,16 +181,15 @@
                 </div>
                 <div class="faq-item">
                     <h4>Q. 회원가입 없이도 사용할 수 있나요?</h4>
-                    <p>A. 네, 공수 On은 별도의 가입 절차 없이도 모든 기능을 즉시 사용하실 수 있습니다. 다만, 회원가입(소셜 로그인)을 하시면 데이터를 클라우드에 안전하게 백업할 수 있어,
-                        휴대폰을 바꾸거나 분실했을 때도 소중한 기록을 100% 복구할 수 있는 장점이 있습니다.</p>
+                    <p>A. 네, 공수 On은 별도의 가입 절차 없이도 모든 기능을 즉시 사용하실 수 있습니다. 다만, 회원가입(소셜 로그인)을 하시면 데이터를 클라우드에 안전하게 백업할 수 있는 장점이 있습니다.</p>
                 </div>
                 <div class="faq-item">
                     <h4>Q. 휴대폰을 바꿔도 기록이 유지되나요?</h4>
-                    <p>A. 네, 카카오나 구글 계정으로 로그인하시면 클라우드에 데이터가 안전하게 저장되어 언제든 복구 가능합니다.</p>
+                    <p>A. 네, 카카오나 구글 계정으로 로그인하시면 클라우드에 데이터가 안전하게 저장되어 기기 변경 시에도 모든 기록을 100% 복구할 수 있습니다.</p>
                 </div>
                 <div class="faq-item">
                     <h4>Q. 외국인 근로자도 사용할 수 있나요?</h4>
-                    <p>A. 네, 러시아어, 몽골어, 베트남어 등 다양한 언어 설정을 지원하여 누구나 쉽게 사용 가능합니다.</p>
+                    <p>A. 네, 러시아어, 몽골어, 베트남어, 중국어 등 다양한 언어 설정을 지원하여 누구나 쉽게 사용 가능합니다.</p>
                 </div>
             </div>
         </section>
@@ -407,5 +204,4 @@
     </footer>
 
 </body>
-
 </html>

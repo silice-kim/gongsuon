@@ -25,15 +25,11 @@
         .logo-img { width: 32px; height: 32px; border-radius: 6px; }
 
         .lang-switcher { display: flex; gap: 10px; }
-        .lang-switcher a { color: #fff; text-decoration: none; font-size: 0.9rem; opacity: 0.7; }
+        .lang-switcher a { color: #fff; text-decoration: none; font-size: 0.9rem; opacity: 0.7; transition: opacity 0.3s; }
+        .lang-switcher a:hover { opacity: 1; }
         .lang-switcher a.active { opacity: 1; font-weight: bold; }
 
-        .hero {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            padding: 50px 20px;
-            color: var(--text-light);
-            text-align: center;
-        }
+        .hero { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); padding: 50px 20px; color: var(--text-light); text-align: center; }
         .hero h1 { font-size: 2.8rem; margin-bottom: 1.5rem; font-weight: 900; line-height: 1.2; letter-spacing: -1px; }
         .hero p { font-size: 1.2rem; margin-bottom: 3rem; opacity: 0.9; max-width: 800px; margin-left: auto; margin-right: auto; }
         
@@ -109,14 +105,14 @@
                     <p>Tính toán chính xác số tiền thực nhận sau khi trừ thuế thu nhập và bảo hiểm.</p>
                 </article>
                 <article class="feature-card">
-                    <i class="fas fa-search-location"></i>
-                    <h3>Tuyển dụng toàn quốc</h3>
-                    <p>Xem thông tin công trường xung quanh bạn và tìm việc làm phù hợp hoàn toàn miễn phí.</p>
-                </article>
-                <article class="feature-card">
                     <i class="fas fa-sync-alt"></i>
                     <h3>Sao lưu đám mây thời gian thực</h3>
                     <p>Không lo mất dữ liệu khi đổi điện thoại. Chỉ cần đăng nhập để khôi phục mọi ghi chép.</p>
+                </article>
+                <article class="feature-card">
+                    <i class="fas fa-language"></i>
+                    <h3>Dịch vụ hỗ trợ đa ngôn ngữ</h3>
+                    <p>Hỗ trợ nhiều cài đặt ngôn ngữ giúp lao động nước ngoài dễ dàng sử dụng không rào cản.</p>
                 </article>
             </div>
         </section>
@@ -129,8 +125,24 @@
                     <p>A. Đúng vậy, Gongsu On không có quảng cáo trọn đời. <strong>Người điều hành Gongsu On cũng là một công nhân làm việc vất vả tại công trường.</strong> Vì hiểu rõ sự mệt mỏi nên chúng tôi đã loại bỏ các quảng cáo gây phiền nhiễu.</p>
                 </div>
                 <div class="faq-item">
+                    <h4>Q. Ứng dụng có miễn phí không?</h4>
+                    <p>A. Có, tất cả các tính năng chính từ ghi chép chấm công đến tính lương đều được sử dụng miễn phí trọn đời.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Q. Tôi có thể nhập dữ liệu từ các ứng dụng khác hoặc Excel không?</h4>
+                    <p>A. Có, hoàn toàn có thể. Thông qua tính năng 'Nhập dữ liệu' trong menu cài đặt, bạn có thể dễ dàng chuyển các tệp Excel hoặc dữ liệu từ các ứng dụng khác mà bạn đã quản lý trước đó.</p>
+                </div>
+                <div class="faq-item">
                     <h4>Q. Có thể sử dụng mà không cần tài khoản?</h4>
-                    <p>A. Có, bạn có thể sử dụng ngay mà không cần đăng ký. Tuy nhiên, đăng nhập sẽ giúp bạn sao lưu dữ liệu an toàn.</p>
+                    <p>A. Có, bạn có thể sử dụng ngay mà không cần đăng ký. Tuy nhiên, nếu bạn đăng nhập bằng mạng xã hội, dữ liệu sẽ được sao lưu an toàn vào đám mây, giúp bạn khôi phục 100% bản ghi khi đổi điện thoại.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Q. Dữ liệu có được giữ nguyên khi đổi điện thoại không?</h4>
+                    <p>A. Có, chỉ cần đăng nhập bằng tài khoản Kakao hoặc Google, tất cả dữ liệu sẽ được lưu trữ an toàn trên đám mây và có thể khôi phục bất cứ lúc nào.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Q. Lao động nước ngoài có thể sử dụng không?</h4>
+                    <p>A. Có, chúng tôi hỗ trợ nhiều ngôn ngữ như tiếng Nga, tiếng Mông Cổ, tiếng Việt, tiếng Trung, v.v., giúp mọi người dễ dàng sử dụng.</p>
                 </div>
             </div>
         </section>

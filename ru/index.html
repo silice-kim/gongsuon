@@ -24,38 +24,34 @@
         .logo-text span { color: var(--secondary); }
         .logo-img { width: 32px; height: 32px; border-radius: 6px; }
 
-        .lang-switcher { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
-        .lang-switcher a { color: #fff; text-decoration: none; font-size: 0.8rem; opacity: 0.6; padding: 2px 5px; }
-        .lang-switcher a.active { opacity: 1; font-weight: bold; border-bottom: 2px solid var(--secondary); }
+        .lang-switcher { display: flex; gap: 10px; }
+        .lang-switcher a { color: #fff; text-decoration: none; font-size: 0.9rem; opacity: 0.7; transition: opacity 0.3s; }
+        .lang-switcher a:hover { opacity: 1; }
+        .lang-switcher a.active { opacity: 1; font-weight: bold; }
 
-        .hero {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            padding: 50px 20px;
-            color: var(--text-light);
-            text-align: center;
-        }
+        .hero { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); padding: 50px 20px; color: var(--text-light); text-align: center; }
         .hero h1 { font-size: 2.5rem; margin-bottom: 1.5rem; font-weight: 900; line-height: 1.2; }
         .hero p { font-size: 1.1rem; margin-bottom: 2.5rem; opacity: 0.9; max-width: 800px; margin-left: auto; margin-right: auto; }
         
-        .download-btns { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
-        .btn { padding: 0.9rem 2rem; border-radius: 50px; font-weight: 700; text-decoration: none; transition: all 0.3s; display: inline-flex; align-items: center; gap: 0.6rem; font-size: 1rem; }
+        .download-btns { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
+        .btn { padding: 1rem 2.5rem; border-radius: 50px; font-weight: 700; text-decoration: none; transition: all 0.3s; display: inline-flex; align-items: center; gap: 0.8rem; font-size: 1.1rem; }
         .btn-google { background-color: #fff; color: var(--primary); }
 
-        section { padding: 50px 20px; }
-        .section-title { font-size: 2.2rem; margin-bottom: 2rem; font-weight: 800; text-align: center; color: var(--primary); }
+        section { padding: 60px 20px; }
+        .section-title { font-size: 2.5rem; margin-bottom: 2.5rem; font-weight: 800; text-align: center; color: var(--primary); }
 
-        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; max-width: 1200px; margin: 0 auto; }
-        .feature-card { background: #fff; padding: 2rem 1.2rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); text-align: center; border: 1px solid #eee; }
-        .feature-card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 1.2rem; }
-        .feature-card h3 { font-size: 1.3rem; margin-bottom: 0.8rem; }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto; }
+        .feature-card { background: #fff; padding: 2.5rem 1.5rem; border-radius: 24px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05); text-align: center; transition: all 0.3s; border: 1px solid #eee; }
+        .feature-card i { font-size: 3rem; color: var(--primary); margin-bottom: 1.5rem; }
+        .feature-card h3 { font-size: 1.5rem; margin-bottom: 1rem; }
 
         .faq { background-color: var(--bg-light); }
         .faq-container { max-width: 800px; margin: 0 auto; text-align: left; }
-        .faq-item { margin-bottom: 1rem; background: #fff; padding: 1.2rem; border-radius: 12px; }
-        .faq-item h4 { color: var(--primary); margin-bottom: 0.4rem; font-size: 1.1rem; }
+        .faq-item { margin-bottom: 1.5rem; background: #fff; padding: 1.5rem; border-radius: 12px; }
+        .faq-item h4 { color: var(--primary); margin-bottom: 0.5rem; }
 
-        .footer { background-color: #111; color: #aaa; padding: 30px 20px; text-align: center; }
-        .footer-links a { color: #888; text-decoration: none; margin: 0 10px; font-size: 0.85rem; }
+        .footer { background-color: #111; color: #aaa; padding: 40px 20px; text-align: center; }
+        .footer-links a { color: #888; text-decoration: none; margin: 0 15px; }
     </style>
 </head>
 <body>
@@ -109,14 +105,14 @@
                     <p>Точный расчет чистой зарплаты за вычетом подоходного налога и страховок.</p>
                 </article>
                 <article class="feature-card">
-                    <i class="fas fa-search-location"></i>
-                    <h3>Вакансии по всей стране</h3>
-                    <p>Просматривайте объекты рядом с вами и ищите подходящую работу бесплатно.</p>
-                </article>
-                <article class="feature-card">
                     <i class="fas fa-sync-alt"></i>
                     <h3>Облачное резервное копирование</h3>
                     <p>Не беспокойтесь при смене телефона. Просто войдите, чтобы восстановить все записи.</p>
+                </article>
+                <article class="feature-card">
+                    <i class="fas fa-language"></i>
+                    <h3>Многоязычная поддержка</h3>
+                    <p>Поддержка различных языков позволяет иностранным рабочим легко использовать приложение.</p>
                 </article>
             </div>
         </section>
@@ -129,8 +125,24 @@
                     <p>A. Да, никакой рекламы навсегда. <strong>Создатель Gongsu On сам работает на стройке.</strong> Зная, как это тяжело, мы убрали всю мешающую рекламу.</p>
                 </div>
                 <div class="faq-item">
+                    <h4>Q. Приложение платное?</h4>
+                    <p>A. Нет, все основные функции — от учета выходов до расчета зарплаты — бесплатны навсегда.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Q. Могу ли я импортировать данные из других приложений или Excel?</h4>
+                    <p>A. Да, это возможно. С помощью функции «Импорт данных» в меню настроек вы можете легко перенести файлы Excel или данные из других приложений, которые вы использовали ранее.</p>
+                </div>
+                <div class="faq-item">
                     <h4>Q. Можно ли использовать без регистрации?</h4>
-                    <p>A. Да, вы можете использовать все функции сразу. Но мы рекомендуем войти для облачного бэкапа.</p>
+                    <p>A. Да, вы можете использовать все функции сразу без регистрации. Однако при входе через соцсети данные сохраняются в облаке, что позволяет восстановить 100% записей при смене телефона.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Q. Сохранятся ли записи при смене телефона?</h4>
+                    <p>A. Да, если вы вошли через аккаунт Kakao или Google, все данные надежно хранятся в облаке и могут быть восстановлены в любое время.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Q. Могут ли использовать иностранные рабочие?</h4>
+                    <p>A. Да, мы поддерживаем различные языковые настройки, такие как русский, монгольский, вьетнамский, китайский и т. д., поэтому любой может легко их использовать.</p>
                 </div>
             </div>
         </section>

@@ -25,15 +25,11 @@
         .logo-img { width: 32px; height: 32px; border-radius: 6px; }
 
         .lang-switcher { display: flex; gap: 10px; }
-        .lang-switcher a { color: #fff; text-decoration: none; font-size: 0.9rem; opacity: 0.7; }
+        .lang-switcher a { color: #fff; text-decoration: none; font-size: 0.9rem; opacity: 0.7; transition: opacity 0.3s; }
+        .lang-switcher a:hover { opacity: 1; }
         .lang-switcher a.active { opacity: 1; font-weight: bold; }
 
-        .hero {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            padding: 50px 20px;
-            color: var(--text-light);
-            text-align: center;
-        }
+        .hero { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); padding: 50px 20px; color: var(--text-light); text-align: center; }
         .hero h1 { font-size: 3rem; margin-bottom: 1.5rem; font-weight: 900; line-height: 1.2; letter-spacing: -1px; }
         .hero p { font-size: 1.2rem; margin-bottom: 3rem; opacity: 0.9; max-width: 800px; margin-left: auto; margin-right: auto; }
         
@@ -109,14 +105,14 @@
                     <p>通过自定义设置，准确计算扣除所得税和四种保险后的实际到手工资。</p>
                 </article>
                 <article class="feature-card">
-                    <i class="fas fa-search-location"></i>
-                    <h3>全国工地招聘</h3>
-                    <p>查看您周围的工地信息，免费寻找最适合您的工作。</p>
-                </article>
-                <article class="feature-card">
                     <i class="fas fa-sync-alt"></i>
                     <h3>云端实时备份</h3>
                     <p>换手机也不用担心。只需社交账号登录，即可安全恢复所有记录。</p>
+                </article>
+                <article class="feature-card">
+                    <i class="fas fa-language"></i>
+                    <h3>多语言支持服务</h3>
+                    <p>支持多种语言设置，让外国员工也能无障碍轻松使用。</p>
                 </article>
             </div>
         </section>
@@ -129,8 +125,24 @@
                     <p>A. 是的，终身无广告。<strong>公数 On 的开发者也是一名在工地挥洒汗水的工人。</strong> 深知工作的辛劳，因此果断去除了干扰使用的不便广告。</p>
                 </div>
                 <div class="faq-item">
+                    <h4>Q. 应用程序使用费是免费的吗？</h4>
+                    <p>A. 是的，从考勤记录到工资计算、招聘服务等所有核心功能均可终身免费使用。</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Q. 可以导入其他应用或 Excel 数据吗？</h4>
+                    <p>A. 是的，可以。通过设置菜单中的“导入数据”功能，您可以轻松迁移之前管理的 Excel 文件或其他应用的数据。</p>
+                </div>
+                <div class="faq-item">
                     <h4>Q. 没有账号也可以使用吗？</h4>
-                    <p>A. 是的，无需注册即可立即使用所有功能。但登录后可以享受云端备份，确保数据永不丢失。</p>
+                    <p>A. 是的，无需注册即可立即使用所有功能。但如果您使用社交账号登录，数据将安全备份到云端，换手机时也能 100% 恢复记录。</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Q. 换手机后记录还会保留吗？</h4>
+                    <p>A. 是的，只要使用 Kakao 或 Google 账号登录，所有数据都安全存储在云端，随时可以恢复。</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Q. 外国员工也可以使用吗？</h4>
+                    <p>A. 是的，支持俄语、蒙古语、越南语、中文等多种语言设置，任何人都可以轻松使用。</p>
                 </div>
             </div>
         </section>
