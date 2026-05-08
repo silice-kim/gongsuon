@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>公数 On - 智能建筑工地考勤与工资计算应用</title>
+    <meta name="description" content="建筑工地的必备应用！在公数 On 记录考勤、实时计算工资和税金，并查看免费的招工信息。">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1E3E8E;
+            --primary-dark: #122a63;
+            --secondary: #FFD700;
+            --text-dark: #333;
+            --text-light: #fff;
+            --bg-light: #f8f9fa;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.6; color: var(--text-dark); background-color: #fff; overflow-x: hidden; }
+
+        header { background-color: var(--primary); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); }
+        .logo-text { color: var(--text-light); font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; gap: 0.5rem; text-decoration: none; }
+        .logo-text span { color: var(--secondary); }
+        .logo-img { width: 32px; height: 32px; border-radius: 6px; }
+
+        .lang-switcher { display: flex; gap: 10px; }
+        .lang-switcher a { color: #fff; text-decoration: none; font-size: 0.9rem; opacity: 0.7; }
+        .lang-switcher a.active { opacity: 1; font-weight: bold; }
+
+        .hero { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); padding: 80px 20px; color: var(--text-light); text-align: center; }
+        .hero h1 { font-size: 3rem; margin-bottom: 1.5rem; font-weight: 900; line-height: 1.2; letter-spacing: -1px; }
+        .hero p { font-size: 1.2rem; margin-bottom: 3rem; opacity: 0.9; max-width: 800px; margin-left: auto; margin-right: auto; }
+        
+        .download-btns { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
+        .btn { padding: 1rem 2.5rem; border-radius: 50px; font-weight: 700; text-decoration: none; transition: all 0.3s; display: inline-flex; align-items: center; gap: 0.8rem; font-size: 1.1rem; }
+        .btn-google { background-color: #fff; color: var(--primary); }
+
+        section { padding: 60px 20px; }
+        .section-title { font-size: 2.5rem; margin-bottom: 2.5rem; font-weight: 800; text-align: center; color: var(--primary); }
+
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto; }
+        .feature-card { background: #fff; padding: 2.5rem 1.5rem; border-radius: 24px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05); text-align: center; transition: all 0.3s; border: 1px solid #eee; }
+        .feature-card i { font-size: 3rem; color: var(--primary); margin-bottom: 1.5rem; }
+        .feature-card h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+
+        .faq { background-color: var(--bg-light); }
+        .faq-container { max-width: 800px; margin: 0 auto; text-align: left; }
+        .faq-item { margin-bottom: 1.5rem; background: #fff; padding: 1.5rem; border-radius: 12px; }
+        .faq-item h4 { color: var(--primary); margin-bottom: 0.5rem; }
+
+        .footer { background-color: #111; color: #aaa; padding: 40px 20px; text-align: center; }
+        .footer-links a { color: #888; text-decoration: none; margin: 0 15px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="../index.html" class="logo-text">
+            <img src="../assets/images/icon.png" alt="Logo" class="logo-img">
+            公数 <span>On</span>
+        </a>
+        <div class="lang-switcher">
+            <a href="../index.html">KR</a>
+            <a href="#" class="active">CN</a>
+            <a href="../vn/index.html">VN</a>
+            <a href="../mn/index.html">MN</a>
+            <a href="../ru/index.html">RU</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>开启智能工地管理新时代</h1>
+            <p>从复杂的考勤记录到全国范围的招聘信息！<br>公数 On 是您在建筑工地成功的最佳伙伴。</p>
+            <div class="download-btns">
+                <a href="#" class="btn btn-google">
+                    <i class="fab fa-google-play"></i> Google Play 下载
+                </a>
+            </div>
+        </section>
+
+        <section id="features">
+            <h2 class="section-title">核心功能</h2>
+            <div class="feature-grid">
+                <article class="feature-card" style="border: 2px solid var(--secondary);">
+                    <i class="fas fa-ban" style="color: #e74c3c;"></i>
+                    <h3 style="color: var(--primary);">终身无广告</h3>
+                    <p><strong>"由现场工作人员直接开发。"</strong> 承诺提供一个没有任何烦人广告、只专注于记录的清洁环境。</p>
+                </article>
+                <article class="feature-card">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3>直观的考勤日历</h3>
+                    <p>只需轻轻一点即可记录考勤，实时查看每月收入。</p>
+                </article>
+                <article class="feature-card">
+                    <i class="fas fa-file-import"></i>
+                    <h3>便捷的数据导入</h3>
+                    <p>一键导入其他应用的数据。从其他应用迁移到公数 On 变得非常简单。</p>
+                </article>
+                <article class="feature-card">
+                    <i class="fas fa-coins"></i>
+                    <h3>自动税金与工资计算</h3>
+                    <p>通过自定义设置，准确计算扣除所得税和四种保险后的实际到手工资。</p>
+                </article>
+                <article class="feature-card">
+                    <i class="fas fa-search-location"></i>
+                    <h3>全国工地招聘</h3>
+                    <p>查看您周围的工地信息，免费寻找最适合您的工作。</p>
+                </article>
+                <article class="feature-card">
+                    <i class="fas fa-sync-alt"></i>
+                    <h3>云端实时备份</h3>
+                    <p>换手机也不用担心。只需社交账号登录，即可安全恢复所有记录。</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="faq">
+            <h2 class="section-title">常见问题 (FAQ)</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h4>Q. 真的没有广告吗？</h4>
+                    <p>A. 是的，终身无广告。<strong>公数 On 的开发者也是一名在工地挥洒汗水的工人。</strong> 深知工作的辛劳，因此果断去除了干扰使用的不便广告。</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Q. 没有账号也可以使用吗？</h4>
+                    <p>A. 是的，无需注册即可立即使用所有功能。但登录后可以享受云端备份，确保数据永不丢失。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 公数 On | BizAdmin. All Rights Reserved.</p>
+        <nav class="footer-links">
+            <a href="../privacy.html">隐私政策</a>
+            <a href="mailto:admin.bizadmin@google.com">客户支持</a>
+        </nav>
+    </footer>
+
+</body>
+</html>

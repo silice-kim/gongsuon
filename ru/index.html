@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gongsu On - Умное приложение для учета выходов и расчета зарплаты на стройке</title>
+    <meta name="description" content="Незаменимое приложение для строителей! Учет выходов, реальный расчет зарплаты и налогов, бесплатные вакансии в приложении Gongsu On.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1E3E8E;
+            --primary-dark: #122a63;
+            --secondary: #FFD700;
+            --text-dark: #333;
+            --text-light: #fff;
+            --bg-light: #f8f9fa;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.6; color: var(--text-dark); background-color: #fff; overflow-x: hidden; }
+
+        header { background-color: var(--primary); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); }
+        .logo-text { color: var(--text-light); font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; gap: 0.5rem; text-decoration: none; }
+        .logo-text span { color: var(--secondary); }
+        .logo-img { width: 32px; height: 32px; border-radius: 6px; }
+
+        .lang-switcher { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+        .lang-switcher a { color: #fff; text-decoration: none; font-size: 0.8rem; opacity: 0.6; padding: 2px 5px; }
+        .lang-switcher a.active { opacity: 1; font-weight: bold; border-bottom: 2px solid var(--secondary); }
+
+        .hero { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); padding: 60px 20px; color: var(--text-light); text-align: center; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 1.5rem; font-weight: 900; line-height: 1.2; }
+        .hero p { font-size: 1.1rem; margin-bottom: 2.5rem; opacity: 0.9; max-width: 800px; margin-left: auto; margin-right: auto; }
+        
+        .download-btns { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+        .btn { padding: 0.9rem 2rem; border-radius: 50px; font-weight: 700; text-decoration: none; transition: all 0.3s; display: inline-flex; align-items: center; gap: 0.6rem; font-size: 1rem; }
+        .btn-google { background-color: #fff; color: var(--primary); }
+
+        section { padding: 50px 20px; }
+        .section-title { font-size: 2.2rem; margin-bottom: 2rem; font-weight: 800; text-align: center; color: var(--primary); }
+
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; max-width: 1200px; margin: 0 auto; }
+        .feature-card { background: #fff; padding: 2rem 1.2rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); text-align: center; border: 1px solid #eee; }
+        .feature-card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 1.2rem; }
+        .feature-card h3 { font-size: 1.3rem; margin-bottom: 0.8rem; }
+
+        .faq { background-color: var(--bg-light); }
+        .faq-container { max-width: 800px; margin: 0 auto; text-align: left; }
+        .faq-item { margin-bottom: 1rem; background: #fff; padding: 1.2rem; border-radius: 12px; }
+        .faq-item h4 { color: var(--primary); margin-bottom: 0.4rem; font-size: 1.1rem; }
+
+        .footer { background-color: #111; color: #aaa; padding: 30px 20px; text-align: center; }
+        .footer-links a { color: #888; text-decoration: none; margin: 0 10px; font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="../index.html" class="logo-text">
+            <img src="../assets/images/icon.png" alt="Logo" class="logo-img">
+            Gongsu <span>On</span>
+        </a>
+        <div class="lang-switcher">
+            <a href="../index.html">KR</a>
+            <a href="../cn/index.html">CN</a>
+            <a href="../vn/index.html">VN</a>
+            <a href="../mn/index.html">MN</a>
+            <a href="#" class="active">RU</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Новая эра управления строительными работами</h1>
+            <p>От сложного учета выходов до вакансий по всей стране!<br>Gongsu On — ваш лучший партнер для успеха на стройке.</p>
+            <div class="download-btns">
+                <a href="#" class="btn btn-google">
+                    <i class="fab fa-google-play"></i> Скачать в Google Play
+                </a>
+            </div>
+        </section>
+
+        <section id="features">
+            <h2 class="section-title">Основные функции</h2>
+            <div class="feature-grid">
+                <article class="feature-card" style="border: 2px solid var(--secondary);">
+                    <i class="fas fa-ban" style="color: #e74c3c;"></i>
+                    <h3 style="color: var(--primary);">Без рекламы навсегда</h3>
+                    <p><strong>"Создано строителем для строителей."</strong> Мы обещаем чистую среду без навязчивой рекламы.</p>
+                </article>
+                <article class="feature-card">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3>Умный календарь выходов</h3>
+                    <p>Записывайте выходы одним касанием и проверяйте доход за месяц в реальном времени.</p>
+                </article>
+                <article class="feature-card">
+                    <i class="fas fa-file-import"></i>
+                    <h3>Импорт данных</h3>
+                    <p>Перенесите данные из других приложений за один раз. Перейти на Gongsu On стало очень просто.</p>
+                </article>
+                <article class="feature-card">
+                    <i class="fas fa-coins"></i>
+                    <h3>Авторасчет налогов и зарплаты</h3>
+                    <p>Точный расчет чистой зарплаты за вычетом подоходного налога и страховок.</p>
+                </article>
+                <article class="feature-card">
+                    <i class="fas fa-search-location"></i>
+                    <h3>Вакансии по всей стране</h3>
+                    <p>Просматривайте объекты рядом с вами и ищите подходящую работу бесплатно.</p>
+                </article>
+                <article class="feature-card">
+                    <i class="fas fa-sync-alt"></i>
+                    <h3>Облачное резервное копирование</h3>
+                    <p>Не беспокойтесь при смене телефона. Просто войдите, чтобы восстановить все записи.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="faq">
+            <h2 class="section-title">Часто задаваемые вопросы (FAQ)</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h4>Q. Действительно ли нет рекламы?</h4>
+                    <p>A. Да, никакой рекламы навсегда. <strong>Создатель Gongsu On сам работает на стройке.</strong> Зная, как это тяжело, мы убрали всю мешающую рекламу.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Q. Можно ли использовать без регистрации?</h4>
+                    <p>A. Да, вы можете использовать все функции сразу. Но мы рекомендуем войти для облачного бэкапа.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Gongsu On | BizAdmin. All Rights Reserved.</p>
+        <nav class="footer-links">
+            <a href="../privacy.html">Политика конфиденциальности</a>
+            <a href="mailto:admin.bizadmin@google.com">Поддержка</a>
+        </nav>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gongsu On - Ứng dụng quản lý chấm công và tính lương công trường thông minh</title>
+    <meta name="description" content="Ứng dụng thiết yếu cho công trường! Ghi chép chấm công, tính lương và thuế thời gian thực, xem tin tuyển dụng miễn phí tại Gongsu On.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1E3E8E;
+            --primary-dark: #122a63;
+            --secondary: #FFD700;
+            --text-dark: #333;
+            --text-light: #fff;
+            --bg-light: #f8f9fa;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Lexend', -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.6; color: var(--text-dark); background-color: #fff; overflow-x: hidden; }
+
+        header { background-color: var(--primary); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); }
+        .logo-text { color: var(--text-light); font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; gap: 0.5rem; text-decoration: none; }
+        .logo-text span { color: var(--secondary); }
+        .logo-img { width: 32px; height: 32px; border-radius: 6px; }
+
+        .lang-switcher { display: flex; gap: 10px; }
+        .lang-switcher a { color: #fff; text-decoration: none; font-size: 0.9rem; opacity: 0.7; }
+        .lang-switcher a.active { opacity: 1; font-weight: bold; }
+
+        .hero { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); padding: 80px 20px; color: var(--text-light); text-align: center; }
+        .hero h1 { font-size: 2.8rem; margin-bottom: 1.5rem; font-weight: 900; line-height: 1.2; letter-spacing: -1px; }
+        .hero p { font-size: 1.2rem; margin-bottom: 3rem; opacity: 0.9; max-width: 800px; margin-left: auto; margin-right: auto; }
+        
+        .download-btns { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
+        .btn { padding: 1rem 2.5rem; border-radius: 50px; font-weight: 700; text-decoration: none; transition: all 0.3s; display: inline-flex; align-items: center; gap: 0.8rem; font-size: 1.1rem; }
+        .btn-google { background-color: #fff; color: var(--primary); }
+
+        section { padding: 60px 20px; }
+        .section-title { font-size: 2.5rem; margin-bottom: 2.5rem; font-weight: 800; text-align: center; color: var(--primary); }
+
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto; }
+        .feature-card { background: #fff; padding: 2.5rem 1.5rem; border-radius: 24px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05); text-align: center; transition: all 0.3s; border: 1px solid #eee; }
+        .feature-card i { font-size: 3rem; color: var(--primary); margin-bottom: 1.5rem; }
+        .feature-card h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+
+        .faq { background-color: var(--bg-light); }
+        .faq-container { max-width: 800px; margin: 0 auto; text-align: left; }
+        .faq-item { margin-bottom: 1.5rem; background: #fff; padding: 1.5rem; border-radius: 12px; }
+        .faq-item h4 { color: var(--primary); margin-bottom: 0.5rem; }
+
+        .footer { background-color: #111; color: #aaa; padding: 40px 20px; text-align: center; }
+        .footer-links a { color: #888; text-decoration: none; margin: 0 15px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="../index.html" class="logo-text">
+            <img src="../assets/images/icon.png" alt="Logo" class="logo-img">
+            Gongsu <span>On</span>
+        </a>
+        <div class="lang-switcher">
+            <a href="../index.html">KR</a>
+            <a href="../cn/index.html">CN</a>
+            <a href="#" class="active">VN</a>
+            <a href="../mn/index.html">MN</a>
+            <a href="../ru/index.html">RU</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Quản lý công trường thông minh hơn</h1>
+            <p>Từ ghi chép chấm công phức tạp đến thông tin tuyển dụng toàn quốc!<br>Gongsu On là đối tác tốt nhất cho sự thành công của bạn tại công trường.</p>
+            <div class="download-btns">
+                <a href="#" class="btn btn-google">
+                    <i class="fab fa-google-play"></i> Tải về Google Play
+                </a>
+            </div>
+        </section>
+
+        <section id="features">
+            <h2 class="section-title">Tính năng chính</h2>
+            <div class="feature-grid">
+                <article class="feature-card" style="border: 2px solid var(--secondary);">
+                    <i class="fas fa-ban" style="color: #e74c3c;"></i>
+                    <h3 style="color: var(--primary);">Không quảng cáo trọn đời</h3>
+                    <p><strong>"Được phát triển bởi chính người lao động công trường."</strong> Cam kết mang lại môi trường sạch sẽ, không quảng cáo làm phiền.</p>
+                </article>
+                <article class="feature-card">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3>Lịch chấm công trực quan</h3>
+                    <p>Chỉ cần một chạm để ghi chép và theo dõi thu nhập hàng tháng dễ dàng.</p>
+                </article>
+                <article class="feature-card">
+                    <i class="fas fa-file-import"></i>
+                    <h3>Nhập dữ liệu thuận tiện</h3>
+                    <p>Nhập dữ liệu từ các ứng dụng khác chỉ trong nháy mắt. Chuyển sang Gongsu On chưa bao giờ dễ dàng hơn.</p>
+                </article>
+                <article class="feature-card">
+                    <i class="fas fa-coins"></i>
+                    <h3>Tính lương và thuế tự động</h3>
+                    <p>Tính toán chính xác số tiền thực nhận sau khi trừ thuế thu nhập và bảo hiểm.</p>
+                </article>
+                <article class="feature-card">
+                    <i class="fas fa-search-location"></i>
+                    <h3>Tuyển dụng toàn quốc</h3>
+                    <p>Xem thông tin công trường xung quanh bạn và tìm việc làm phù hợp hoàn toàn miễn phí.</p>
+                </article>
+                <article class="feature-card">
+                    <i class="fas fa-sync-alt"></i>
+                    <h3>Sao lưu đám mây thời gian thực</h3>
+                    <p>Không lo mất dữ liệu khi đổi điện thoại. Chỉ cần đăng nhập để khôi phục mọi ghi chép.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="faq">
+            <h2 class="section-title">Câu hỏi thường gặp (FAQ)</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h4>Q. Ứng dụng thực sự không có quảng cáo?</h4>
+                    <p>A. Đúng vậy, Gongsu On không có quảng cáo trọn đời. <strong>Người điều hành Gongsu On cũng là một công nhân làm việc vất vả tại công trường.</strong> Vì hiểu rõ sự mệt mỏi nên chúng tôi đã loại bỏ các quảng cáo gây phiền nhiễu.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Q. Có thể sử dụng mà không cần tài khoản?</h4>
+                    <p>A. Có, bạn có thể sử dụng ngay mà không cần đăng ký. Tuy nhiên, đăng nhập sẽ giúp bạn sao lưu dữ liệu an toàn.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Gongsu On | BizAdmin. All Rights Reserved.</p>
+        <nav class="footer-links">
+            <a href="../privacy.html">Chính sách bảo mật</a>
+            <a href="mailto:admin.bizadmin@google.com">Hỗ trợ</a>
+        </nav>
+    </footer>
+
+</body>
+</html>
