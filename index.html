@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- SEO 기본 메타 태그 -->
     <title>공수 On - 스마트한 건설 현장 공수표 및 일당 계산 앱</title>
     <meta name="description" content="건설 현장 근로자를 위한 필수 앱! 간편한 공수 기록, 실시간 일당 및 세금 계산, 무료 구인구직 정보를 공수 On에서 확인하세요.">
@@ -50,87 +51,289 @@
             --bg-light: #f8f9fa;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif; line-height: 1.6; color: var(--text-dark); background-color: #fff; overflow-x: hidden; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        header { background-color: var(--primary); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); }
-        .logo-text { color: var(--text-light); font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; gap: 0.5rem; text-decoration: none; }
-        .logo-text span { color: var(--secondary); }
-        .logo-img { width: 32px; height: 32px; border-radius: 6px; }
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #fff;
+            overflow-x: hidden;
+        }
 
-        .lang-switcher { display: flex; gap: 10px; }
-        .lang-switcher a { color: #fff; text-decoration: none; font-size: 0.9rem; opacity: 0.7; transition: opacity 0.3s; }
-        .lang-switcher a:hover { opacity: 1; }
-        .lang-switcher a.active { opacity: 1; font-weight: bold; }
+        header {
+            background-color: var(--primary);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
 
-        .hero { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); padding: 50px 20px; color: var(--text-light); text-align: center; }
-        .hero h1 { font-size: 3.5rem; margin-bottom: 1.5rem; font-weight: 900; line-height: 1.2; letter-spacing: -1px; }
-        .hero p { font-size: 1.3rem; margin-bottom: 3rem; opacity: 0.9; max-width: 800px; margin-left: auto; margin-right: auto; }
-        
-        .download-btns { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
-        .btn { padding: 1.2rem 2.8rem; border-radius: 50px; font-weight: 700; text-decoration: none; transition: all 0.3s; display: inline-flex; align-items: center; gap: 0.8rem; font-size: 1.2rem; }
-        .btn-google { background-color: #fff; color: var(--primary); }
-        .btn-google:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); }
+        .logo-text {
+            color: var(--text-light);
+            font-size: 1.5rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
 
-        section { padding: 60px 20px; }
-        .section-title { font-size: 2.8rem; margin-bottom: 2.5rem; font-weight: 800; text-align: center; color: var(--primary); }
+        .logo-text span {
+            color: var(--secondary);
+        }
 
-        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; max-width: 1200px; margin: 0 auto; }
-        .feature-card { background: #fff; padding: 2.5rem 1.5rem; border-radius: 24px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05); text-align: center; transition: all 0.3s; border: 1px solid #eee; }
-        .feature-card:hover { transform: translateY(-10px); border-color: var(--primary); }
-        .feature-card i { font-size: 3.5rem; color: var(--primary); margin-bottom: 2rem; }
-        .feature-card h3 { font-size: 1.6rem; margin-bottom: 1.2rem; font-weight: 700; }
-        .feature-card p { color: #666; font-size: 1.1rem; }
+        .logo-img {
+            width: 32px;
+            height: 32px;
+            border-radius: 6px;
+        }
+
+        .lang-switcher {
+            display: flex;
+            gap: 10px;
+        }
+
+        .lang-switcher a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+
+        .lang-switcher a:hover {
+            opacity: 1;
+        }
+
+        .lang-switcher a.active {
+            opacity: 1;
+            font-weight: bold;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            padding: 50px 20px;
+            color: var(--text-light);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 900;
+            line-height: 1.2;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .download-btns {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1.2rem 2.8rem;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 1.2rem;
+        }
+
+        .btn-google {
+            background-color: #fff;
+            color: var(--primary);
+        }
+
+        .btn-google:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        section {
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            margin-bottom: 2.5rem;
+            font-weight: 800;
+            text-align: center;
+            color: var(--primary);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: #fff;
+            padding: 2.5rem 1.5rem;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: all 0.3s;
+            border: 1px solid #eee;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+        }
+
+        .feature-card i {
+            font-size: 3.5rem;
+            color: var(--primary);
+            margin-bottom: 2rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1.2rem;
+            font-weight: 700;
+        }
+
+        .feature-card p {
+            color: #666;
+            font-size: 1.1rem;
+        }
 
         /* 비디오 섹션 스타일 */
-        .video-section { background-color: #fff; padding: 60px 20px; }
-        .video-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-            gap: 2rem; 
-            max-width: 1200px; 
-            margin: 0 auto; 
+        .video-section {
+            background-color: #fff;
+            padding: 60px 20px;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
             justify-items: center;
         }
+
         .video-card {
             width: 100%;
             max-width: 315px;
             background: #000;
             border-radius: 36px;
             padding: 12px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
             border: 8px solid #333;
             aspect-ratio: 9/16;
             position: relative;
             overflow: hidden;
         }
+
         .video-card iframe {
             width: 100%;
             height: 100%;
             border-radius: 24px;
             border: none;
         }
-        .video-info { text-align: center; margin-top: 1rem; }
-        .video-info h4 { font-size: 1.1rem; color: var(--primary); }
 
-        .faq { background-color: var(--bg-light); }
-        .faq-container { max-width: 800px; margin: 0 auto; text-align: left; }
-        .faq-item { margin-bottom: 1.5rem; background: #fff; padding: 1.5rem; border-radius: 12px; }
-        .faq-item h4 { color: var(--primary); margin-bottom: 0.5rem; font-size: 1.2rem; }
-        .faq-item p { color: #555; }
+        .video-info {
+            text-align: center;
+            margin-top: 1rem;
+        }
 
-        .footer { background-color: #111; color: #aaa; padding: 40px 20px; text-align: center; }
-        .footer-links { margin-top: 20px; }
-        .footer-links a { color: #888; text-decoration: none; margin: 0 15px; font-size: 0.95rem; }
-        .footer-links a:hover { color: var(--secondary); }
+        .video-info h4 {
+            font-size: 1.1rem;
+            color: var(--primary);
+        }
+
+        .faq {
+            background-color: var(--bg-light);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 12px;
+        }
+
+        .faq-item h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .faq-item p {
+            color: #555;
+        }
+
+        .footer {
+            background-color: #111;
+            color: #aaa;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-top: 20px;
+        }
+
+        .footer-links a {
+            color: #888;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 0.95rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+        }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .hero p { font-size: 1.1rem; }
-            .section-title { font-size: 2.2rem; }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <header>
@@ -201,19 +404,23 @@
                 <!-- 첫 번째 영상 -->
                 <div class="video-item">
                     <div class="video-card">
-                        <iframe src="https://www.youtube.com/embed/Q60rTrWI8sE" title="공수 On 앱 가이드 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/Q60rTrWI8sE" title="공수 On 앱 가이드 1"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                     </div>
                     <div class="video-info">
-                        <h4>공수 On 사용법 안내</h4>
+                        <h4>광고 없는 공수 On</h4>
                     </div>
                 </div>
                 <!-- 두 번째 영상 -->
                 <div class="video-item">
                     <div class="video-card">
-                        <iframe src="https://www.youtube.com/embed/vVAQa6FYk2w" title="공수 On 앱 가이드 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/vVAQa6FYk2w" title="공수 On 앱 가이드 2"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                     </div>
                     <div class="video-info">
-                        <h4>빠르고 간편한 기록 방법</h4>
+                        <h4>편리한 공수 On</h4>
                     </div>
                 </div>
                 <!-- 여기에 새로운 <div class="video-item">...</div> 를 추가하면 자동으로 그리드에 붙습니다 -->
@@ -225,7 +432,8 @@
             <div class="faq-container">
                 <div class="faq-item">
                     <h4>Q. 공수 On 앱은 정말 광고가 없나요?</h4>
-                    <p>A. 네, 평생 광고 없이 운영됩니다. <strong>공수 On의 운영자 또한 현장에서 땀 흘려 일하는 근로자입니다.</strong> 현장의 고단함을 누구보다 잘 알기에, 사용을 방해하는 불편한 광고들을 과감히 없앴습니다.</p>
+                    <p>A. 네, 평생 광고 없이 운영됩니다. <strong>공수 On의 운영자 또한 현장에서 땀 흘려 일하는 근로자입니다.</strong> 현장의 고단함을 누구보다 잘 알기에,
+                        사용을 방해하는 불편한 광고들을 과감히 없앴습니다.</p>
                 </div>
                 <div class="faq-item">
                     <h4>Q. 앱 이용료는 무료인가요?</h4>
@@ -237,7 +445,8 @@
                 </div>
                 <div class="faq-item">
                     <h4>Q. 회원가입 없이도 사용할 수 있나요?</h4>
-                    <p>A. 네, 공수 On은 별도의 가입 절차 없이도 모든 기능을 즉시 사용하실 수 있습니다. 다만, 회원가입(소셜 로그인)을 하시면 데이터를 클라우드에 안전하게 백업할 수 있는 장점이 있습니다.</p>
+                    <p>A. 네, 공수 On은 별도의 가입 절차 없이도 모든 기능을 즉시 사용하실 수 있습니다. 다만, 회원가입(소셜 로그인)을 하시면 데이터를 클라우드에 안전하게 백업할 수 있는
+                        장점이 있습니다.</p>
                 </div>
                 <div class="faq-item">
                     <h4>Q. 휴대폰을 바꿔도 기록이 유지되나요?</h4>
@@ -260,4 +469,5 @@
     </footer>
 
 </body>
+
 </html>
