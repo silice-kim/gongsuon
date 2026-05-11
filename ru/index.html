@@ -1,200 +1,687 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gongsu On - Умное приложение для учета выходов и расчета зарплаты на стройке</title>
-    <meta name="description" content="Незаменимое приложение для строителей! Учет выходов, реальный расчет зарплаты и налогов, бесплатные вакансии в приложении Gongsu On.">
+
+    <!-- SEO Meta Tags -->
+    <title>Работать на стройке станет проще с Gongsu On — без рекламы и забот</title>
+    <meta name="description" content="Самое удобное приложение для учета рабочего времени без рекламы! Крупный шрифт, быстрый ввод, расчет налогов в реальном времени. Gongsu On.">
+    <meta name="keywords" content="калькулятор смен, учет рабочего времени, приложение для стройки, расчет зарплаты, табель, управление объектами, приложение без рекламы, Gongsu On, календарь смен">
     <link rel="icon" href="../assets/images/icon.png" type="image/png">
     <link rel="apple-touch-icon" href="../assets/images/icon.png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://silice-kim.github.io/gongsuon/ru/">
+    <meta property="og:title" content="Работать на стройке станет проще с Gongsu On">
+    <meta property="og:description" content="Самое удобное приложение для учета рабочего времени без рекламы! Крупный шрифт, быстрый ввод, расчет налогов.">
+    <meta property="og:image" content="https://silice-kim.github.io/gongsuon/assets/images/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://silice-kim.github.io/gongsuon/ru/">
+    <meta property="twitter:title" content="Работать на стройке станет проще с Gongsu On">
+    <meta property="twitter:description" content="Самое удобное приложение для учета рабочего времени без рекламы! Крупный шрифт, быстрый ввод, расчет налогов.">
+    <meta property="twitter:image" content="https://silice-kim.github.io/gongsuon/assets/images/og-image.png">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Gongsu On",
+      "operatingSystem": "ANDROID",
+      "applicationCategory": "BusinessApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "KRW"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "ratingCount": "100"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Действительно ли нет рекламы?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Да, Gongsu On работает без рекламы навсегда. Создатель приложения сам работает на стройке и понимает все неудобства рекламы."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Все функции бесплатны?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Да, учет смен, расчет зарплаты, поиск вакансий и другие основные функции доступны бесплатно."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Что если я сменю телефон?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "При входе через Kakao или Google ваши данные сохраняются в облаке, поэтому все записи будут доступны на новом устройстве."
+        }
+      }]
+    }
+    </script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary: #1E3E8E;
-            --primary-dark: #122a63;
+            --primary: #007AFF;
+            --primary-dark: #0056b3;
             --secondary: #FFD700;
-            --text-dark: #333;
-            --text-light: #fff;
-            --bg-light: #f8f9fa;
+            --danger: #FF3B30;
+            --text-dark: #1C1C1E;
+            --text-gray: #8E8E93;
+            --bg-light: #F2F2F7;
+            --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.6; color: var(--text-dark); background-color: #fff; overflow-x: hidden; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        header { background-color: var(--primary); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); }
-        .logo-text { color: var(--text-light); font-size: 1.5rem; font-weight: 800; display: flex; align-items: center; gap: 0.5rem; text-decoration: none; }
-        .logo-text span { color: var(--secondary); }
-        .logo-img { width: 32px; height: 32px; border-radius: 6px; }
+        body {
+            font-family: 'Lexend', 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #fff;
+            overflow-x: hidden;
+            word-break: keep-all;
+        }
 
-        .lang-switcher { display: flex; gap: 10px; }
-        .lang-switcher a { color: #fff; text-decoration: none; font-size: 0.9rem; opacity: 0.7; transition: opacity 0.3s; }
-        .lang-switcher a:hover { opacity: 1; }
-        .lang-switcher a.active { opacity: 1; font-weight: bold; }
+        /* Utility */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-        .hero { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); padding: 50px 20px; color: var(--text-light); text-align: center; }
-        .hero h1 { font-size: 2.5rem; margin-bottom: 1.5rem; font-weight: 900; line-height: 1.2; }
-        .hero p { font-size: 1.1rem; margin-bottom: 2.5rem; opacity: 0.9; max-width: 800px; margin-left: auto; margin-right: auto; }
-        
-        .download-btns { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
-        .btn { padding: 1rem 2.5rem; border-radius: 50px; font-weight: 700; text-decoration: none; transition: all 0.3s; display: inline-flex; align-items: center; gap: 0.8rem; font-size: 1.1rem; }
-        .btn-google { background-color: #fff; color: var(--primary); }
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+        }
 
-        section { padding: 60px 20px; }
-        .section-title { font-size: 2.5rem; margin-bottom: 2.5rem; font-weight: 800; text-align: center; color: var(--primary); }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto; }
-        .feature-card { background: #fff; padding: 2.5rem 1.5rem; border-radius: 24px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05); text-align: center; transition: all 0.3s; border: 1px solid #eee; }
-        .feature-card i { font-size: 3rem; color: var(--primary); margin-bottom: 1.5rem; }
-        .feature-card h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+        .logo-text {
+            color: var(--primary);
+            font-size: 1.5rem;
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
 
-        /* Video Section Styles */
-        .video-section { background-color: #fff; padding: 60px 20px; }
-        .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto; justify-items: center; }
-        .video-card { width: 100%; max-width: 315px; background: #000; border-radius: 36px; padding: 4px; box-shadow: 0 20px 40px rgba(0,0,0,0.2); border: 8px solid #333; aspect-ratio: 9/16; position: relative; overflow: hidden; }
-        .video-card iframe { width: 100%; height: 100%; border-radius: 28px; border: none; }
-        .video-info { text-align: center; margin-top: 1rem; }
-        .video-info h4 { font-size: 1.1rem; color: var(--primary); }
+        .logo-img {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+        }
 
-        .faq { background-color: var(--bg-light); }
-        .faq-container { max-width: 800px; margin: 0 auto; text-align: left; }
-        .faq-item { margin-bottom: 1.5rem; background: #fff; padding: 1.5rem; border-radius: 12px; }
-        .faq-item h4 { color: var(--primary); margin-bottom: 0.5rem; }
+        .lang-switcher {
+            display: flex;
+            gap: 12px;
+        }
 
-        .footer { background-color: #111; color: #aaa; padding: 40px 20px; text-align: center; }
-        .footer-links a { color: #888; text-decoration: none; margin: 0 15px; }
+        .lang-switcher a {
+            text-decoration: none;
+            font-size: 1.2rem;
+            filter: grayscale(1);
+            opacity: 0.5;
+            transition: all 0.3s;
+        }
+
+        .lang-switcher a:hover, .lang-switcher a.active {
+            filter: grayscale(0);
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(180deg, #fff 0%, var(--bg-light) 100%);
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            font-weight: 900;
+            line-height: 1.5;
+            letter-spacing: -1px;
+            color: #000;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--text-gray);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 500;
+        }
+
+        .download-btns {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1.2rem 2.5rem;
+            border-radius: 16px;
+            font-weight: 800;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.2rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 122, 255, 0.25);
+        }
+
+        /* Pain Points */
+        .pain-points {
+            padding: 30px 0;
+            background-color: #fff;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 900;
+            text-align: center;
+            letter-spacing: -1px;
+        }
+
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .pain-card {
+            background: var(--bg-light);
+            padding: 20px;
+            border-radius: 20px;
+            text-align: left;
+        }
+
+        .pain-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pain-card i {
+            color: var(--danger);
+        }
+
+        .pain-card p {
+            color: var(--text-gray);
+            font-size: 1.05rem;
+        }
+
+        /* Solution / Proof */
+        .proof-section {
+            padding: 30px 0;
+            background-color: var(--bg-light);
+        }
+
+        .proof-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .proof-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .proof-text {
+            flex: 1;
+        }
+
+        .proof-text h3 {
+            font-size: 1.8rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .proof-text p {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            margin-bottom: 20px;
+        }
+
+        .proof-img {
+            flex: 1.2;
+            border-radius: 32px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+            overflow: hidden;
+            transition: transform 0.5s ease;
+        }
+
+        .proof-img:hover {
+            transform: scale(1.02);
+        }
+
+        .proof-img img {
+            width: 100%;
+            display: block;
+        }
+
+        /* Features */
+        .features {
+            padding: 30px 0;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 24px;
+            box-shadow: var(--card-shadow);
+            transition: all 0.3s;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0, 122, 255, 0.1);
+        }
+
+        .feature-card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 25px;
+            display: block;
+        }
+
+        .feature-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        .feature-card p {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
+        /* FAQ */
+        .faq {
+            background-color: var(--bg-light);
+            padding: 30px 0;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+            background: #fff;
+            padding: 25px 30px;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+        }
+
+        .faq-item h4 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+            font-weight: 800;
+        }
+
+        .faq-item p {
+            color: var(--text-dark);
+            font-size: 1.1rem;
+        }
+
+        /* CTA */
+        .final-cta {
+            padding: 40px 0;
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: #fff;
+        }
+
+        .final-cta h2 {
+            font-size: 2.2rem;
+            font-weight: 900;
+            margin-bottom: 30px;
+        }
+
+        .cta-logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-white {
+            background-color: #fff;
+            color: var(--primary);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #fff;
+            color: var(--text-gray);
+            padding: 20px 0;
+            text-align: center;
+            border-top: 1px solid var(--bg-light);
+        }
+
+        .footer-links {
+            margin-top: 30px;
+        }
+
+        .footer-links a {
+            color: var(--text-gray);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+        }
+
+        /* 비디오 섹션 스타일 */
+        .video-section {
+            background-color: #fff;
+            padding: 60px 20px;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            justify-items: center;
+        }
+
+        .video-card {
+            width: 100%;
+            max-width: 315px;
+            background: #000;
+            border-radius: 36px;
+            padding: 4px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            border: 8px solid #333;
+            aspect-ratio: 9/16;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .video-card iframe {
+            width: 100%;
+            height: 100%;
+            border-radius: 28px;
+            border: none;
+        }
+
+        .video-info {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .video-info h4 {
+            font-size: 1.1rem;
+            color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+        }
     </style>
 </head>
+
 <body>
 
     <header>
-        <a href="../index.html" class="logo-text">
-            <img src="../assets/images/icon.png" alt="Logo" class="logo-img">
-            Gongsu <span>On</span>
-        </a>
-        <div class="lang-switcher">
-            <a href="../index.html" title="한국어">🇰🇷</a>
-            <a href="../cn/index.html" title="中文">🇨🇳</a>
-            <a href="../vn/index.html" title="Tiếng Việt">🇻🇳</a>
-            <a href="../mn/index.html" title="Монгол">🇲🇳</a>
-            <a href="#" class="active" title="Русский">🇷🇺</a>
+        <div class="container">
+            <a href="../index.html" class="logo-text">
+                <img src="../assets/images/icon.png" alt="Gongsu On Logo" class="logo-img">
+            </a>
+            <div class="lang-switcher">
+                <a href="../index.html" title="한국어">🇰🇷</a>
+                <a href="../cn/index.html" title="中文">🇨🇳</a>
+                <a href="../vn/index.html" title="Tiếng Việt">🇻🇳</a>
+                <a href="../mn/index.html" title="Монгол">🇲🇳</a>
+                <a href="#" class="active" title="Русский">🇷🇺</a>
+            </div>
         </div>
     </header>
 
     <main>
         <section class="hero">
-            <h1>Новая эра управления строительными работами</h1>
-            <p>От сложного учета выходов до вакансий по всей стране!<br>Gongsu On — ваш лучший партнер для успеха на стройке.</p>
-            <div class="download-btns">
-                <a href="https://play.google.com/store/apps/details?id=kr.co.bizadmin.gongsuon" class="btn btn-google">
-                    <i class="fab fa-google-play"></i> Скачать в Google Play
-                </a>
+            <div class="container">
+                <h1>Работать на стройке станет проще<br><span>Gongsu On</span></h1>
+                <p>Устали от рекламы? Начните вести учет рабочего времени без лишних забот и проверяйте реальный доход в режиме реального времени.</p>
+                <div class="download-btns">
+                    <a href="https://play.google.com/store/apps/details?id=kr.co.bizadmin.gongsuon" class="btn btn-primary">
+                        <i class="fab fa-google-play"></i> Скачать Gongsu On
+                    </a>
+                </div>
             </div>
         </section>
 
-        <section id="features">
-            <h2 class="section-title">Основные функции</h2>
-            <div class="feature-grid">
-                <article class="feature-card" style="border: 2px solid var(--secondary);">
-                    <i class="fas fa-ban" style="color: #e74c3c;"></i>
-                    <h3 style="color: var(--primary);">Без рекламы навсегда</h3>
-                    <p><strong>"Создано строителем для строителей."</strong> Мы обещаем чистую среду без навязчивой рекламы.</p>
-                </article>
-                <article class="feature-card">
-                    <i class="fas fa-calendar-alt"></i>
-                    <h3>Умный календарь выходов</h3>
-                    <p>Записывайте выходы одним касанием и проверяйте доход за месяц в реальном времени.</p>
-                </article>
-                <article class="feature-card">
-                    <i class="fas fa-file-import"></i>
-                    <h3>Импорт данных</h3>
-                    <p>Перенесите данные из других приложений за один раз. Перейти на Gongsu On стало очень просто.</p>
-                </article>
-                <article class="feature-card">
-                    <i class="fas fa-coins"></i>
-                    <h3>Авторасчет налогов и зарплаты</h3>
-                    <p>Точный расчет чистой зарплаты за вычетом подоходного налога и страховок.</p>
-                </article>
-                <article class="feature-card">
-                    <i class="fas fa-sync-alt"></i>
-                    <h3>Облачное резервное копирование</h3>
-                    <p>Не беспокойтесь при смене телефона. Просто войдите, чтобы восстановить все записи.</p>
-                </article>
-                <article class="feature-card">
-                    <i class="fas fa-language"></i>
-                    <h3>Многоязычная поддержка</h3>
-                    <p>Поддержка различных языков позволяет иностранным рабочим легко использовать приложение.</p>
-                </article>
+        <section class="pain-points">
+            <div class="container">
+                <h2 class="section-title">Хватит терпеть неудобства на стройке!</h2>
+                <div class="pain-grid">
+                    <div class="pain-card">
+                        <h4><i class="fas fa-times-circle"></i> Назойливая реклама</h4>
+                        <p>Бесит, когда нужно быстро записать смену, а всплывает реклама на весь экран?</p>
+                    </div>
+                    <div class="pain-card">
+                        <h4><i class="fas fa-eye-slash"></i> Мелкий шрифт</h4>
+                        <p>Глаза устают после работы, а мелкий шрифт в приложениях только усложняет ввод данных?</p>
+                    </div>
+                    <div class="pain-card">
+                        <h4><i class="fas fa-database"></i> Потеря всех записей</h4>
+                        <p>Сменили телефон и все записи о сменах пропали? Больше об этом можно не беспокоиться.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="proof-section">
+            <div class="container">
+                <div class="proof-item">
+                    <div class="proof-text">
+                        <h3>Без рекламы и лишнего</h3>
+                        <p>В Gongsu On нет никакой лишней рекламы. Это приложение создано теми, кто сам работает на объектах.</p>
+                    </div>
+                    <div class="proof-img">
+                        <img src="../assets/images/screenshot_noads.png" alt="Сравнение без рекламы">
+                    </div>
+                </div>
+
+                <div class="proof-item">
+                    <div class="proof-text">
+                        <h3>Крупный шрифт и ввод в одно касание</h3>
+                        <p>Gongsu On позволяет быстро и точно вводить данные даже при сильной усталости.</p>
+                    </div>
+                    <div class="proof-img">
+                        <img src="../assets/images/screenshot_input.png" alt="Экран быстрого ввода">
+                    </div>
+                </div>
+
+                <div class="proof-item">
+                    <div class="proof-text">
+                        <h3>Сумма к получению сразу!</h3>
+                        <p>Проверьте, сколько денег вы получите в этом месяце с учетом всех налогов и вычетов.</p>
+                    </div>
+                    <div class="proof-img">
+                        <img src="../assets/images/screenshot_tax.png" alt="Экран расчета налогов">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">Еще больше возможностей Gongsu On</h2>
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <i class="fas fa-sync-alt"></i>
+                        <h3>Безопасное хранение данных</h3>
+                        <p>Ваши записи сохранятся даже при смене телефона! Облачное хранилище защитит все ваши данные.</p>
+                    </article>
+                    <article class="feature-card">
+                        <i class="fas fa-file-import"></i>
+                        <h3>Легкий переезд с других приложений</h3>
+                        <p>Пользовались другим приложением? Не проблема. Импортируйте все данные в один клик.</p>
+                    </article>
+                    <article class="feature-card">
+                        <i class="fas fa-language"></i>
+                        <h3>Подходит для иностранных коллег</h3>
+                        <p>Поддержка китайского, вьетнамского, монгольского и русского языков для удобства всех рабочих.</p>
+                    </article>
+                </div>
             </div>
         </section>
 
         <section class="video-section">
             <h2 class="section-title">Преимущества Gongsu On</h2>
             <div class="video-grid">
+                <!-- Video 1 -->
                 <div class="video-item">
                     <div class="video-card">
-                        <iframe src="https://www.youtube.com/embed/Q60rTrWI8sE?modestbranding=1&rel=0" title="Руководство по Gongsu On 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/Q60rTrWI8sE" title="Gongsu On App Guide 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
                     </div>
                     <div class="video-info">
                         <h4>Gongsu On без рекламы</h4>
                     </div>
                 </div>
+                <!-- Video 2 -->
                 <div class="video-item">
                     <div class="video-card">
-                        <iframe src="https://www.youtube.com/embed/vVAQa6FYk2w?modestbranding=1&rel=0" title="Руководство по Gongsu On 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/vVAQa6FYk2w" title="Gongsu On App Guide 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
                     </div>
                     <div class="video-info">
                         <h4>Удобный Gongsu On</h4>
                     </div>
                 </div>
+                <!-- Video 3 -->
                 <div class="video-item">
                     <div class="video-card">
-                        <iframe src="https://www.youtube.com/embed/tVm_gVzPil8?modestbranding=1&rel=0" title="Руководство по Gongsu On 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/tVm_gVzPil8" title="Gongsu On App Guide 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
                     </div>
                     <div class="video-info">
-                        <h4>Gongsu On с поддержкой многих языков</h4>
+                        <h4>Gongsu On с поддержкой нескольких языков</h4>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="faq">
-            <h2 class="section-title">Часто задаваемые вопросы (FAQ)</h2>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <h4>Q. Действительно ли нет рекламы?</h4>
-                    <p>A. Да, никакой рекламы навсегда. <strong>Создатель Gongsu On сам работает на стройке.</strong> Зная, как это тяжело, мы убрали всю мешающую рекламу.</p>
+            <div class="container">
+                <h2 class="section-title">Часто задаваемые вопросы</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <h4>Q. Действительно ли нет рекламы?</h4>
+                        <p>A. Да, Gongsu On работает без рекламы навсегда. Создатель приложения сам работает на стройке и понимает все неудобства рекламы.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Q. Все функции бесплатны?</h4>
+                        <p>A. Да, учет смен, расчет зарплаты, поиск вакансий и другие основные функции доступны бесплатно.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Q. Что если я сменю телефон?</h4>
+                        <p>A. При входе через Kakao или Google ваши данные сохраняются в облаке, поэтому все записи будут доступны на новом устройстве.</p>
+                    </div>
                 </div>
-                <div class="faq-item">
-                    <h4>Q. Приложение платное?</h4>
-                    <p>A. Нет, все основные функции — от учета выходов до расчета зарплаты — бесплатны навсегда.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Q. Могу ли я импортировать данные из других приложений или Excel?</h4>
-                    <p>A. Да, это возможно. С помощью функции «Импорт данных» в меню настроек вы можете легко перенести файлы Excel или данные из других приложений, которые вы использовали ранее.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Q. Можно ли использовать без регистрации?</h4>
-                    <p>A. Да, вы можете использовать все функции сразу без регистрации. Однако при входе через соцсети данные сохраняются в облаке, что позволяет восстановить 100% записей при смене телефона.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Q. Сохранятся ли записи при смене телефона?</h4>
-                    <p>A. Да, если вы вошли через аккаунт Kakao или Google, все данные надежно хранятся в облаке и могут быть восстановлены в любое время.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Q. Могут ли использовать иностранные рабочие?</h4>
-                    <p>A. Да, мы поддерживаем различные языковые настройки, такие как русский, монгольский, вьетнамский, китайский и т. д., поэтому любой может легко их использовать.</p>
-                </div>
+            </div>
+        </section>
+
+        <section class="final-cta">
+            <div class="container">
+                <img src="../assets/images/icon.png" alt="Gongsu On Logo" class="cta-logo">
+                <h2>Работать на стройке станет проще<br>Gongsu On</h2>
+                <a href="https://play.google.com/store/apps/details?id=kr.co.bizadmin.gongsuon" class="btn btn-white">
+                    <i class="fab fa-google-play"></i> Скачать сейчас
+                </a>
             </div>
         </section>
     </main>
 
     <footer class="footer">
-        <p>&copy; 2026 Gongsu On | BizAdmin. All Rights Reserved.</p>
-        <nav class="footer-links">
-            <a href="../privacy.html">Политика конфиденциальности</a>
-            <a href="mailto:admin.bizadmin@google.com">Поддержка</a>
-        </nav>
+        <div class="container">
+            <p>&copy; 2026 Gongsu On | BizAdmin. All Rights Reserved.</p>
+            <nav class="footer-links">
+                <a href="../privacy.html">Политика конфиденциальности</a>
+                <a href="mailto:admin.bizadmin@google.com">Поддержка</a>
+            </nav>
+        </div>
     </footer>
 
 </body>
+
 </html>
