@@ -171,17 +171,42 @@
             text-align: center;
         }
 
-        .hero h1 {
-            font-size: 2.8rem;
-            margin-bottom: 0.5rem;
-            font-weight: 900;
-            line-height: 1.5;
-            letter-spacing: -1px;
-            color: #000;
+                .hero h1 {
+            margin-bottom: 2rem;
+            line-height: 1.1;
+            letter-spacing: -2px;
         }
 
-        .hero h1 span {
+        .hero h1 .sub-title {
+            font-size: 1.2rem;
+            font-weight: 600;
             color: var(--primary);
+            display: block;
+            margin-bottom: 12px;
+            letter-spacing: 2px;
+        }
+
+        .hero h1 .main-title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--text-dark);
+            display: block;
+        }
+
+        .hero h1 .main-title span {
+            color: var(--primary);
+        }
+
+        .no-ads-badge {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: var(--text-dark);
+            font-size: 0.9rem;
+            font-weight: 800;
+            padding: 4px 12px;
+            border-radius: 100px;
+            vertical-align: middle;
+            margin-bottom: 15px;
         }
 
         .hero p {
@@ -521,13 +546,25 @@
     <main>
         <section class="hero">
             <div class="container">
-                <h1>Làm việc tại công trường dễ dàng hơn<br><span>Gongsu On</span></h1>
-                <p>Bạn mệt mỏi vì phải xem quảng cáo? Giờ đây, hãy ghi chép ngay không quảng cáo và kiểm tra số tiền thực nhận theo thời gian thực.</p>
+                                <h1>
+                    <span class="sub-title">Làm việc tại công trường dễ dàng hơn</span>
+                    <span class="no-ads-badge">Không quảng cáo</span>
+                    <span class="main-title"><span>Gongsu On</span></span>
+                </h1>
+                <p>Gongsu On giúp quản lý công việc và nhật ký lao động dễ dàng hơn.</p>
                 <div class="download-btns">
                     <a href="https://play.google.com/store/apps/details?id=kr.co.bizadmin.gongsuon" class="btn btn-primary">
                         <i class="fab fa-google-play"></i> Tải Gongsu On ngay
                     </a>
                 </div>
+            </div>
+        </section>
+
+        <section style="background-color: #fff; padding: 20px 0; border-bottom: 1px solid var(--bg-light);">
+            <div class="container" style="text-align: center;">
+                <p style="font-weight: 900; font-size: 1.25rem; color: var(--primary); line-height: 1.4;">
+                    Gongsu On là ứng dụng chấm công cho phép quản lý hồ sơ công việc và nhật ký lao động hàng ngày mà không có quảng cáo.
+                </p>
             </div>
         </section>
 
@@ -547,6 +584,57 @@
                         <h4><i class="fas fa-database"></i> Mất sạch dữ liệu</h4>
                         <p>Đổi điện thoại xong toàn bộ lịch sử chấm công biến mất? Giờ đây bạn không cần lo lắng về điều đó nữa.</p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section style="background-color: var(--text-dark); color: #fff; padding: 60px 0; text-align: center;">
+            <div class="container">
+                <h2 style="font-size: 2.2rem; font-weight: 900; margin-bottom: 20px; color: var(--secondary);">Lý do tạo ra Gongsu On</h2>
+                <p style="font-size: 1.5rem; font-weight: 700; line-height: 1.6; margin-bottom: 15px;">
+                    "Tại công trường, ghi chép nhanh là quan trọng nhất."
+                </p>
+                <p style="font-size: 1.25rem; font-weight: 500; opacity: 0.9; max-width: 800px; margin: 0 auto;">
+                    Chúng tôi đã loại bỏ mọi quảng cáo phiền phức và màn hình phức tạp.<br>Chỉ tập trung vào khả năng sử dụng vượt trội tại hiện trường thực tế.
+                </p>
+            </div>
+        </section>
+
+        <section class="comparison" style="padding: 40px 0; background-color: #fff;">
+            <div class="container">
+                <h2 class="section-title">Tại sao chọn Gongsu On?</h2>
+                <div style="max-width: 700px; margin: 0 auto; overflow: hidden; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid var(--bg-light);">
+                    <table style="width: 100%; border-collapse: collapse; background-color: #fff; text-align: center; font-size: 1.1rem;">
+                        <thead>
+                            <tr style="background-color: var(--bg-light); color: var(--text-dark);">
+                                <th style="padding: 20px; border-bottom: 2px solid #ddd;">Hạng mục</th>
+                                <th style="padding: 20px; border-bottom: 2px solid #ddd;">Ứng dụng khác</th>
+                                <th style="padding: 20px; border-bottom: 2px solid var(--primary); color: var(--primary); font-weight: 900;">Gongsu On</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding: 15px; border-bottom: 1px solid #eee; font-weight: 600;">Quảng cáo</td>
+                                <td style="padding: 15px; border-bottom: 1px solid #eee; color: var(--text-gray);">Nhiều quảng cáo</td>
+                                <td style="padding: 15px; border-bottom: 1px solid #eee; color: var(--primary); font-weight: 800;">Không quảng cáo</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 15px; border-bottom: 1px solid #eee; font-weight: 600;">Cỡ chữ</td>
+                                <td style="padding: 15px; border-bottom: 1px solid #eee; color: var(--text-gray);">Chữ nhỏ</td>
+                                <td style="padding: 15px; border-bottom: 1px solid #eee; color: var(--primary); font-weight: 800;">Chữ to</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 15px; border-bottom: 1px solid #eee; font-weight: 600;">Tốc độ nhập</td>
+                                <td style="padding: 15px; border-bottom: 1px solid #eee; color: var(--text-gray);">Nhập liệu chậm</td>
+                                <td style="padding: 15px; border-bottom: 1px solid #eee; color: var(--primary); font-weight: 800;">Nhập liệu nhanh</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 15px; font-weight: 600;">Dữ liệu</td>
+                                <td style="padding: 15px; color: var(--text-gray);">Dữ liệu không ổn định</td>
+                                <td style="padding: 15px; color: var(--primary); font-weight: 800;">Sao lưu đám mây</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </section>
@@ -608,6 +696,30 @@
             </div>
         </section>
 
+        <section class="reviews" style="padding: 50px 0; background-color: var(--bg-light);">
+            <div class="container">
+                <h2 class="section-title">Đồng nghiệp nói gì về chúng tôi</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                    <div style="background: #fff; padding: 25px; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                        <p style="font-size: 1.1rem; font-weight: 700; margin-bottom: 15px; color: var(--primary);">"Không có quảng cáo nên rất thoải mái."</p>
+                        <p style="color: var(--text-gray); font-size: 0.95rem;">- Anh Kim - Đội sắt</p>
+                    </div>
+                    <div style="background: #fff; padding: 25px; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                        <p style="font-size: 1.1rem; font-weight: 700; margin-bottom: 15px; color: var(--primary);">"Chữ to nên rất dễ nhìn tại công trường."</p>
+                        <p style="color: var(--text-gray); font-size: 0.95rem;">- Anh Park - Thợ mộc</p>
+                    </div>
+                    <div style="background: #fff; padding: 25px; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                        <p style="font-size: 1.1rem; font-weight: 700; margin-bottom: 15px; color: var(--primary);">"Chuyển dữ liệu dễ dàng nên rất hài lòng!"</p>
+                        <p style="color: var(--text-gray); font-size: 0.95rem;">- Anh Choi - Đội điện nước</p>
+                    </div>
+                    <div style="background: #fff; padding: 25px; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                        <p style="font-size: 1.1rem; font-weight: 700; margin-bottom: 15px; color: var(--primary);">"Tính toán công rất chính xác."</p>
+                        <p style="color: var(--text-gray); font-size: 0.95rem;">- Anh Lee - Đội cốp pha</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="video-section">
             <h2 class="section-title">Kênh YouTube Gongsu On</h2>
             <div class="video-grid">
@@ -645,6 +757,14 @@
             <div class="container">
                 <h2 class="section-title">Câu hỏi thường gặp</h2>
                 <div class="faq-container">
+                    <div class="faq-item">
+                        <h4>Q. Có thể sao lưu dữ liệu không?</h4>
+                        <p>A. Có, bạn có thể sao lưu dữ liệu an toàn lên đám mây và khôi phục bất cứ lúc nào.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Q. Có thể nhập dữ liệu từ ứng dụng cũ không?</h4>
+                        <p>A. Có, chúng tôi hỗ trợ tính năng nhập dữ liệu từ các ứng dụng chấm công khác.</p>
+                    </div>
                     <div class="faq-item">
                         <h4>Q. Ứng dụng thực sự không có quảng cáo?</h4>
                         <p>A. Đúng vậy, ứng dụng hoạt động không quảng cáo trọn đời. Người điều hành cũng làm việc tại công trường nên rất thấu hiểu sự bất tiện này.</p>

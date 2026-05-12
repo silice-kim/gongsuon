@@ -171,17 +171,42 @@
             text-align: center;
         }
 
-        .hero h1 {
-            font-size: 2.8rem;
-            margin-bottom: 0.5rem;
-            font-weight: 900;
-            line-height: 1.5;
-            letter-spacing: -1px;
-            color: #000;
+                .hero h1 {
+            margin-bottom: 2rem;
+            line-height: 1.1;
+            letter-spacing: -2px;
         }
 
-        .hero h1 span {
+        .hero h1 .sub-title {
+            font-size: 1.2rem;
+            font-weight: 600;
             color: var(--primary);
+            display: block;
+            margin-bottom: 12px;
+            letter-spacing: 2px;
+        }
+
+        .hero h1 .main-title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--text-dark);
+            display: block;
+        }
+
+        .hero h1 .main-title span {
+            color: var(--primary);
+        }
+
+        .no-ads-badge {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: var(--text-dark);
+            font-size: 0.9rem;
+            font-weight: 800;
+            padding: 4px 12px;
+            border-radius: 100px;
+            vertical-align: middle;
+            margin-bottom: 15px;
         }
 
         .hero p {
@@ -521,13 +546,25 @@
     <main>
         <section class="hero">
             <div class="container">
-                <h1>让现场记录更轻松<br><span>工数 On</span></h1>
-                <p>无需忍受广告。立即开始无广告记工，实时确认实际收入。</p>
+                                <h1>
+                    <span class="sub-title">现场记录更轻松</span>
+                    <span class="no-ads-badge">无广告</span>
+                    <span class="main-title"><span>Gongsu On</span></span>
+                </h1>
+                <p>工数 On 让现场工数计算和日薪管理更简单。</p>
                 <div class="download-btns">
                     <a href="https://play.google.com/store/apps/details?id=kr.co.bizadmin.gongsuon" class="btn btn-primary">
                         <i class="fab fa-google-play"></i> 工数 On 下载
                     </a>
                 </div>
+            </div>
+        </section>
+
+        <section style="background-color: #fff; padding: 20px 0; border-bottom: 1px solid var(--bg-light);">
+            <div class="container" style="text-align: center;">
+                <p style="font-weight: 900; font-size: 1.25rem; color: var(--primary); line-height: 1.4;">
+                    工数 On 是一款无广告的工数计算器应用，可管理工数记录和日薪工人工作明细。
+                </p>
             </div>
         </section>
 
@@ -547,6 +584,57 @@
                         <h4><i class="fas fa-database"></i> 记录全部丢失</h4>
                         <p>换了手机发现之前的记工记录全没了？现在不用担心了。</p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section style="background-color: var(--text-dark); color: #fff; padding: 60px 0; text-align: center;">
+            <div class="container">
+                <h2 style="font-size: 2.2rem; font-weight: 900; margin-bottom: 20px; color: var(--secondary);">为什么创建工数 On</h2>
+                <p style="font-size: 1.5rem; font-weight: 700; line-height: 1.6; margin-bottom: 15px;">
+                    "在现场，快速记录比什么都重要。"
+                </p>
+                <p style="font-size: 1.25rem; font-weight: 500; opacity: 0.9; max-width: 800px; margin: 0 auto;">
+                    我们剔除了所有繁杂的广告和复杂的界面。<br>只专注于实际现场中压倒性的易用性。
+                </p>
+            </div>
+        </section>
+
+        <section class="comparison" style="padding: 40px 0; background-color: #fff;">
+            <div class="container">
+                <h2 class="section-title">为什么选择工数 On？</h2>
+                <div style="max-width: 700px; margin: 0 auto; overflow: hidden; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid var(--bg-light);">
+                    <table style="width: 100%; border-collapse: collapse; background-color: #fff; text-align: center; font-size: 1.1rem;">
+                        <thead>
+                            <tr style="background-color: var(--bg-light); color: var(--text-dark);">
+                                <th style="padding: 20px; border-bottom: 2px solid #ddd;">项目</th>
+                                <th style="padding: 20px; border-bottom: 2px solid #ddd;">普通应用</th>
+                                <th style="padding: 20px; border-bottom: 2px solid var(--primary); color: var(--primary); font-weight: 900;">Gongsu On</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding: 15px; border-bottom: 1px solid #eee; font-weight: 600;">广告</td>
+                                <td style="padding: 15px; border-bottom: 1px solid #eee; color: var(--text-gray);">广告多</td>
+                                <td style="padding: 15px; border-bottom: 1px solid #eee; color: var(--primary); font-weight: 800;">无广告</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 15px; border-bottom: 1px solid #eee; font-weight: 600;">字体</td>
+                                <td style="padding: 15px; border-bottom: 1px solid #eee; color: var(--text-gray);">小字体</td>
+                                <td style="padding: 15px; border-bottom: 1px solid #eee; color: var(--primary); font-weight: 800;">大字体</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 15px; border-bottom: 1px solid #eee; font-weight: 600;">速度</td>
+                                <td style="padding: 15px; border-bottom: 1px solid #eee; color: var(--text-gray);">输入慢</td>
+                                <td style="padding: 15px; border-bottom: 1px solid #eee; color: var(--primary); font-weight: 800;">输入快</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 15px; font-weight: 600;">数据</td>
+                                <td style="padding: 15px; color: var(--text-gray);">数据不稳定</td>
+                                <td style="padding: 15px; color: var(--primary); font-weight: 800;">云端备份</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </section>
@@ -608,6 +696,30 @@
             </div>
         </section>
 
+        <section class="reviews" style="padding: 50px 0; background-color: var(--bg-light);">
+            <div class="container">
+                <h2 class="section-title">现场工友的真实评价</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                    <div style="background: #fff; padding: 25px; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                        <p style="font-size: 1.1rem; font-weight: 700; margin-bottom: 15px; color: var(--primary);">"没有广告，用起来非常舒服。"</p>
+                        <p style="color: var(--text-gray); font-size: 0.95rem;">- 金先生 - 钢筋组</p>
+                    </div>
+                    <div style="background: #fff; padding: 25px; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                        <p style="font-size: 1.1rem; font-weight: 700; margin-bottom: 15px; color: var(--primary);">"字体很大，在现场看得很清楚。"</p>
+                        <p style="color: var(--text-gray); font-size: 0.95rem;">- 朴先生 - 木工</p>
+                    </div>
+                    <div style="background: #fff; padding: 25px; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                        <p style="font-size: 1.1rem; font-weight: 700; margin-bottom: 15px; color: var(--primary);">"数据迁移很方便，非常满意！"</p>
+                        <p style="color: var(--text-gray); font-size: 0.95rem;">- 崔先生 - 水电组</p>
+                    </div>
+                    <div style="background: #fff; padding: 25px; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                        <p style="font-size: 1.1rem; font-weight: 700; margin-bottom: 15px; color: var(--primary);">"工数计算非常精准。"</p>
+                        <p style="color: var(--text-gray); font-size: 0.95rem;">- 李先生 - 模板组</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="video-section">
             <h2 class="section-title">公数 On YouTube 频道</h2>
             <div class="video-grid">
@@ -645,6 +757,14 @@
             <div class="container">
                 <h2 class="section-title">常见问题</h2>
                 <div class="faq-container">
+                    <div class="faq-item">
+                        <h4>Q. 可以备份数据吗？</h4>
+                        <p>A. 可以。登录后可通过云端备份功能安全保存并随时恢复数据。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Q. 可以导入旧应用的数据吗？</h4>
+                        <p>A. 可以。我们支持从其他工数应用导入数据的便捷功能。</p>
+                    </div>
                     <div class="faq-item">
                         <h4>Q. 真的没有广告吗？</h4>
                         <p>A. 是的，工数 On 承诺永久无广告。运营者本人也在现场工作，深知广告带来的不便。</p>

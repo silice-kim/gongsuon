@@ -171,17 +171,42 @@
             text-align: center;
         }
 
-        .hero h1 {
-            font-size: 2.8rem;
-            margin-bottom: 0.5rem;
-            font-weight: 900;
-            line-height: 1.5;
-            letter-spacing: -1px;
-            color: #000;
+                .hero h1 {
+            margin-bottom: 2rem;
+            line-height: 1.1;
+            letter-spacing: -2px;
         }
 
-        .hero h1 span {
+        .hero h1 .sub-title {
+            font-size: 1.2rem;
+            font-weight: 600;
             color: var(--primary);
+            display: block;
+            margin-bottom: 12px;
+            letter-spacing: 2px;
+        }
+
+        .hero h1 .main-title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--text-dark);
+            display: block;
+        }
+
+        .hero h1 .main-title span {
+            color: var(--primary);
+        }
+
+        .no-ads-badge {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: var(--text-dark);
+            font-size: 0.9rem;
+            font-weight: 800;
+            padding: 4px 12px;
+            border-radius: 100px;
+            vertical-align: middle;
+            margin-bottom: 15px;
         }
 
         .hero p {
@@ -521,13 +546,25 @@
     <main>
         <section class="hero">
             <div class="container">
-                <h1>Талбайн ажлыг илүү хялбар<br><span>Gongsu On</span></h1>
-                <p>Зар сурталчилгаанаас залхаж байна уу? Одоо зар сурталчилгаагүйгээр ирцээ бүртгэж, бодит цалингаа шууд шалгаарай.</p>
+                                <h1>
+                    <span class="sub-title">Талбайн бүртгэлийг илүү хялбар</span>
+                    <span class="no-ads-badge">Зар сурталчилгаагүй</span>
+                    <span class="main-title"><span>Gongsu On</span></span>
+                </h1>
+                <p>Gongsu On нь талбайн ажлын бүртгэл болон цалингийн тооцоог хялбарчилдаг.</p>
                 <div class="download-btns">
                     <a href="https://play.google.com/store/apps/details?id=kr.co.bizadmin.gongsuon" class="btn btn-primary">
                         <i class="fab fa-google-play"></i> Gongsu On татах
                     </a>
                 </div>
+            </div>
+        </section>
+
+        <section style="background-color: #fff; padding: 20px 0; border-bottom: 1px solid var(--bg-light);">
+            <div class="container" style="text-align: center;">
+                <p style="font-weight: 900; font-size: 1.25rem; color: var(--primary); line-height: 1.4;">
+                    Gongsu On нь зар сурталчилгаагүйгээр ажлын бүртгэл болон өдрийн ажилчдын мэдээллийг удирдах боломжтой апп юм.
+                </p>
             </div>
         </section>
 
@@ -547,6 +584,57 @@
                         <h4><i class="fas fa-database"></i> Мэдээллээ алдах</h4>
                         <p>Утсаа солиход ирцийн бүх бүртгэл чинь устаж байсан уу? Одоо санаа зовох хэрэггүй.</p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section style="background-color: var(--text-dark); color: #fff; padding: 60px 0; text-align: center;">
+            <div class="container">
+                <h2 style="font-size: 2.2rem; font-weight: 900; margin-bottom: 20px; color: var(--secondary);">Яагаад Gongsu On-ийг бүтээсэн бэ</h2>
+                <p style="font-size: 1.5rem; font-weight: 700; line-height: 1.6; margin-bottom: 15px;">
+                    "Талбай дээр хамгийн гол нь хурдан бүртгэх явдал юм."
+                </p>
+                <p style="font-size: 1.25rem; font-weight: 500; opacity: 0.9; max-width: 800px; margin: 0 auto;">
+                    Бид бүх зар сурталчилгаа болон төвөгтэй дэлгэцүүдийг хассан.<br>Зөвхөн талбайн бодит хэрэглээнд анхаарлаа хандуулсан.
+                </p>
+            </div>
+        </section>
+
+        <section class="comparison" style="padding: 40px 0; background-color: #fff;">
+            <div class="container">
+                <h2 class="section-title">Яагаад Gongsu On гэж?</h2>
+                <div style="max-width: 700px; margin: 0 auto; overflow: hidden; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid var(--bg-light);">
+                    <table style="width: 100%; border-collapse: collapse; background-color: #fff; text-align: center; font-size: 1.1rem;">
+                        <thead>
+                            <tr style="background-color: var(--bg-light); color: var(--text-dark);">
+                                <th style="padding: 20px; border-bottom: 2px solid #ddd;">Төрөл</th>
+                                <th style="padding: 20px; border-bottom: 2px solid #ddd;">Бусад апп</th>
+                                <th style="padding: 20px; border-bottom: 2px solid var(--primary); color: var(--primary); font-weight: 900;">Gongsu On</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding: 15px; border-bottom: 1px solid #eee; font-weight: 600;">Зар</td>
+                                <td style="padding: 15px; border-bottom: 1px solid #eee; color: var(--text-gray);">Их зартай</td>
+                                <td style="padding: 15px; border-bottom: 1px solid #eee; color: var(--primary); font-weight: 800;">Заргүй</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 15px; border-bottom: 1px solid #eee; font-weight: 600;">Үсэг</td>
+                                <td style="padding: 15px; border-bottom: 1px solid #eee; color: var(--text-gray);">Жижиг</td>
+                                <td style="padding: 15px; border-bottom: 1px solid #eee; color: var(--primary); font-weight: 800;">Том</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 15px; border-bottom: 1px solid #eee; font-weight: 600;">Хурд</td>
+                                <td style="padding: 15px; border-bottom: 1px solid #eee; color: var(--text-gray);">Удаан</td>
+                                <td style="padding: 15px; border-bottom: 1px solid #eee; color: var(--primary); font-weight: 800;">Хурдан</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 15px; font-weight: 600;">Өгөгдөл</td>
+                                <td style="padding: 15px; color: var(--text-gray);">Найдваргүй</td>
+                                <td style="padding: 15px; color: var(--primary); font-weight: 800;">Үүлэн нөөцлөлт</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </section>
@@ -608,6 +696,30 @@
             </div>
         </section>
 
+        <section class="reviews" style="padding: 50px 0; background-color: var(--bg-light);">
+            <div class="container">
+                <h2 class="section-title">Хэрэглэгчдийн сэтгэгдэл</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                    <div style="background: #fff; padding: 25px; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                        <p style="font-size: 1.1rem; font-weight: 700; margin-bottom: 15px; color: var(--primary);">"Зар сурталчилгаа байхгүй болохоор маш тухтай байна."</p>
+                        <p style="color: var(--text-gray); font-size: 0.95rem;">- Ким ОО</p>
+                    </div>
+                    <div style="background: #fff; padding: 25px; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                        <p style="font-size: 1.1rem; font-weight: 700; margin-bottom: 15px; color: var(--primary);">"Үсэг нь том болохоор талбай дээр харахад амар байна."</p>
+                        <p style="color: var(--text-gray); font-size: 0.95rem;">- Парк ОО</p>
+                    </div>
+                    <div style="background: #fff; padding: 25px; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                        <p style="font-size: 1.1rem; font-weight: 700; margin-bottom: 15px; color: var(--primary);">"Өгөгдөл шилжүүлэх амархан, маш их таалагдлаа!"</p>
+                        <p style="color: var(--text-gray); font-size: 0.95rem;">- Чой ОО</p>
+                    </div>
+                    <div style="background: #fff; padding: 25px; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                        <p style="font-size: 1.1rem; font-weight: 700; margin-bottom: 15px; color: var(--primary);">"Тооцоолол маш үнэн зөв байна."</p>
+                        <p style="color: var(--text-gray); font-size: 0.95rem;">- Ли ОО</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="video-section">
             <h2 class="section-title">Gongsu On YouTube суваг</h2>
             <div class="video-grid">
@@ -645,6 +757,14 @@
             <div class="container">
                 <h2 class="section-title">Түгээмэл асуултууд</h2>
                 <div class="faq-container">
+                    <div class="faq-item">
+                        <h4>Q. Өгөгдөл нөөцлөх боломжтой юу?</h4>
+                        <p>A. Тиймээ, үүлэн нөөцлөлт ашиглан өгөгдлөө найдвартай хадгалах боломжтой.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Q. Хуучин апп-аас өгөгдөл татаж авах боломжтой юу?</h4>
+                        <p>A. Тиймээ, бусад апп-аас өгөгдөл шилжүүлэн авахыг дэмждэг.</p>
+                    </div>
                     <div class="faq-item">
                         <h4>Q. Үнэхээр зар сурталчилгаа байхгүй юу?</h4>
                         <p>A. Тийм ээ, Gongsu On нь үүрд зар сурталчилгаагүй байх болно. Үүсгэн байгуулагч нь өөрөө талбай дээр ажилладаг тул зар сурталчилгааны хүндрэлийг сайн мэддэг.</p>
