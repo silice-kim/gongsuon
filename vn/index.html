@@ -294,15 +294,23 @@
 
         /* Solution / Proof */
         .proof-section {
-            padding: 30px 0;
+            padding: 50px 0;
             background-color: var(--bg-light);
         }
 
         .proof-item {
             display: flex;
             align-items: center;
-            gap: 20px;
-            margin-bottom: 30px;
+            justify-content: center;
+            gap: 80px;
+            margin-bottom: 60px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .proof-item:last-child {
+            margin-bottom: 0;
         }
 
         .proof-item:nth-child(even) {
@@ -327,11 +335,14 @@
         }
 
         .proof-img {
-            flex: 1.2;
+            width: 100%;
+            max-width: 310px;
             border-radius: 32px;
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
             overflow: hidden;
             transition: transform 0.5s ease;
+            background-color: #fff;
+            border: 6px solid #333;
         }
 
         .proof-img:hover {
@@ -394,7 +405,7 @@
         }
 
         .faq-container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
@@ -522,6 +533,26 @@
             .section-title {
                 font-size: 2.2rem;
             }
+
+            .proof-item {
+                flex-direction: column-reverse !important;
+                text-align: center;
+                gap: 30px;
+                margin-bottom: 50px;
+            }
+
+            .proof-item:nth-child(even) {
+                flex-direction: column-reverse !important;
+            }
+
+            .proof-text {
+                width: 100%;
+            }
+
+            .proof-img {
+                margin: 0 auto;
+                max-width: 260px;
+            }
         }
     </style>
 </head>
@@ -546,12 +577,12 @@
     <main>
         <section class="hero">
             <div class="container">
-                                <h1>
-                    <span class="sub-title">Làm việc tại công trường dễ dàng hơn</span>
-                    <span class="no-ads-badge">Không quảng cáo</span>
-                    <span class="main-title"><span>Gongsu On</span></span>
+                <h1>
+                    <span class="no-ads-badge" style="background-color: var(--secondary); color: var(--text-dark); margin-bottom: 20px; vertical-align: middle;">100% Miễn phí & Không quảng cáo</span>
+                    <span class="sub-title" style="font-size: 1.6rem; font-weight: 700; color: var(--text-dark); display: block; margin-bottom: 10px; letter-spacing: -0.5px;">Làm việc tại công trường dễ dàng hơn</span>
+                    <span class="main-title" style="font-size: 3.8rem; font-weight: 900; display: block; line-height: 1.2;"><span>Gongsu On</span></span>
                 </h1>
-                <p>Gongsu On giúp quản lý công việc và nhật ký lao động dễ dàng hơn.</p>
+                <p>Gongsu On giúp quản lý công việc, lịch chấm công và nhật ký lao động dễ dàng hơn.</p>
                 <div class="download-btns">
                     <a href="https://play.google.com/store/apps/details?id=kr.co.bizadmin.gongsuon" class="btn btn-primary">
                         <i class="fab fa-google-play"></i> Tải Gongsu On ngay
@@ -588,14 +619,14 @@
             </div>
         </section>
 
-        <section style="background-color: var(--text-dark); color: #fff; padding: 60px 0; text-align: center;">
+        <section style="background-color: #F4F9FF; color: var(--text-dark); padding: 60px 0; text-align: center; border-top: 1px solid rgba(0, 122, 255, 0.08); border-bottom: 1px solid rgba(0, 122, 255, 0.08);">
             <div class="container">
-                <h2 style="font-size: 2.2rem; font-weight: 900; margin-bottom: 20px; color: var(--secondary);">Lý do tạo ra Gongsu On</h2>
-                <p style="font-size: 1.5rem; font-weight: 700; line-height: 1.6; margin-bottom: 15px;">
+                <h2 style="font-size: 2.2rem; font-weight: 900; margin-bottom: 20px; color: var(--primary);">Lý do tạo ra Gongsu On</h2>
+                <p style="font-size: 1.5rem; font-weight: 700; line-height: 1.6; margin-bottom: 15px; color: var(--text-dark);">
                     "Tại công trường, ghi chép nhanh là quan trọng nhất."
                 </p>
-                <p style="font-size: 1.25rem; font-weight: 500; opacity: 0.9; max-width: 800px; margin: 0 auto;">
-                    Chúng tôi đã loại bỏ mọi quảng cáo phiền phức và màn hình phức tạp.<br>Chỉ tập trung vào khả năng sử dụng vượt trội tại hiện trường thực tế.
+                <p style="font-size: 1.25rem; font-weight: 500; color: var(--text-gray); max-width: 800px; margin: 0 auto;">
+                    Chúng tôi đã loại bỏ mọi quảng cáo phiền phức và màn hình phức tạp.<br>Chỉ tập trung vào <b style="color: var(--primary);">khả năng sử dụng vượt trội</b> tại hiện trường thực tế.
                 </p>
             </div>
         </section>
@@ -668,6 +699,16 @@
                     </div>
                     <div class="proof-img">
                         <img src="../assets/images/screenshot_tax.png" alt="Màn hình tính thuế">
+                    </div>
+                </div>
+
+                <div class="proof-item">
+                    <div class="proof-text">
+                        <h3>Sao lưu và chuyển dữ liệu dễ dàng</h3>
+                        <p>An tâm ngay cả khi đổi hoặc mất điện thoại! Hỗ trợ sao lưu đám mây và nhập dữ liệu từ các ứng dụng tính công cũ một cách hoàn hảo.</p>
+                    </div>
+                    <div class="proof-img">
+                        <img src="../assets/images/screenshot_data.png" alt="Màn hình sao lưu và chuyển dữ liệu">
                     </div>
                 </div>
             </div>
@@ -744,10 +785,19 @@
                 <!-- Video 3 -->
                 <div class="video-item">
                     <div class="video-card">
-                        <iframe src="https://www.youtube.com/embed/tVm_gVzPil8" title="Gongsu On App Guide 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                        <iframe loading="lazy" src="https://www.youtube.com/embed/tVm_gVzPil8" title="Gongsu On App Guide 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
                     </div>
                     <div class="video-info">
                         <h4>Gongsu On hỗ trợ đa ngôn ngữ</h4>
+                    </div>
+                </div>
+                <!-- Video 4 -->
+                <div class="video-item">
+                    <div class="video-card">
+                        <iframe loading="lazy" src="https://www.youtube.com/embed/oolmIWpYYhc" title="Gongsu On App Guide 4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h4>Hiện trường không có thời gian</h4>
                     </div>
                 </div>
             </div>
