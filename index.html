@@ -577,11 +577,23 @@
 
         .video-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(4, 1fr);
             gap: 2rem;
             max-width: 1200px;
             margin: 0 auto;
             justify-items: center;
+        }
+
+        @media (max-width: 1200px) {
+            .video-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 680px) {
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         .video-card {
@@ -884,7 +896,7 @@
 
         <section class="reviews" style="padding: 50px 0; background-color: var(--bg-light);">
             <div class="container">
-                <h2 class="section-title">현장의 생생한 후기</h2>
+                <h2 class="section-title">현장에서 직접 써본 분들의 이야기</h2>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
                     <div
                         style="background: #fff; padding: 25px; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
@@ -920,6 +932,17 @@
                 <!-- 첫 번째 영상 -->
                 <div class="video-item">
                     <div class="video-card">
+                        <iframe loading="lazy" src="https://www.youtube.com/embed/T2AGgbpWkpI" title="공수 On 소개 쇼츠"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen=""></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h4>공수 On 소개 쇼츠</h4>
+                    </div>
+                </div>
+                <!-- 두 번째 영상 -->
+                <div class="video-item">
+                    <div class="video-card">
                         <iframe loading="lazy" src="https://www.youtube.com/embed/Q60rTrWI8sE" title="공수 On 앱 가이드 1"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen=""></iframe>
@@ -928,7 +951,7 @@
                         <h4>광고 없는 공수 On</h4>
                     </div>
                 </div>
-                <!-- 두 번째 영상 -->
+                <!-- 세 번째 영상 -->
                 <div class="video-item">
                     <div class="video-card">
                         <iframe loading="lazy" src="https://www.youtube.com/embed/vVAQa6FYk2w" title="공수 On 앱 가이드 2"
@@ -939,7 +962,7 @@
                         <h4>편리한 공수 On</h4>
                     </div>
                 </div>
-                <!-- 세 번째 영상 -->
+                <!-- 네 번째 영상 -->
                 <div class="video-item">
                     <div class="video-card">
                         <iframe loading="lazy" src="https://www.youtube.com/embed/tVm_gVzPil8" title="공수 On 앱 가이드 3"
@@ -950,7 +973,7 @@
                         <h4>다국어 지원 공수 On</h4>
                     </div>
                 </div>
-                <!-- 네 번째 영상 -->
+                <!-- 다섯 번째 영상 -->
                 <div class="video-item">
                     <div class="video-card">
                         <iframe loading="lazy" src="https://www.youtube.com/embed/oolmIWpYYhc" title="공수 On 앱 가이드 4"

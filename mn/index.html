@@ -484,11 +484,23 @@
 
         .video-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(4, 1fr);
             gap: 2rem;
             max-width: 1200px;
             margin: 0 auto;
             justify-items: center;
+        }
+
+        @media (max-width: 1200px) {
+            .video-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 680px) {
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         .video-card {
@@ -764,7 +776,16 @@
         <section class="video-section">
             <h2 class="section-title">Gongsu On YouTube суваг</h2>
             <div class="video-grid">
-                <!-- Video 1 -->
+                <!-- Video 1 (Shorts) -->
+                <div class="video-item">
+                    <div class="video-card">
+                        <iframe loading="lazy" src="https://www.youtube.com/embed/T2AGgbpWkpI" title="Gongsu On танилцуулга богино бичлэг" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h4>Gongsu On танилцуулга богино бичлэг</h4>
+                    </div>
+                </div>
+                <!-- Video 2 -->
                 <div class="video-item">
                     <div class="video-card">
                         <iframe src="https://www.youtube.com/embed/Q60rTrWI8sE" title="Gongsu On App Guide 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
@@ -773,7 +794,7 @@
                         <h4>Зар сурталчилгаагүй Gongsu On</h4>
                     </div>
                 </div>
-                <!-- Video 2 -->
+                <!-- Video 3 -->
                 <div class="video-item">
                     <div class="video-card">
                         <iframe src="https://www.youtube.com/embed/vVAQa6FYk2w" title="Gongsu On App Guide 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
@@ -782,7 +803,7 @@
                         <h4>Тохиромжтой Gongsu On</h4>
                     </div>
                 </div>
-                <!-- Video 3 -->
+                <!-- Video 4 -->
                 <div class="video-item">
                     <div class="video-card">
                         <iframe loading="lazy" src="https://www.youtube.com/embed/tVm_gVzPil8" title="Gongsu On App Guide 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
@@ -791,7 +812,7 @@
                         <h4>Олон хэлний дэмжлэгтэй Gongsu On</h4>
                     </div>
                 </div>
-                <!-- Video 4 -->
+                <!-- Video 5 -->
                 <div class="video-item">
                     <div class="video-card">
                         <iframe loading="lazy" src="https://www.youtube.com/embed/oolmIWpYYhc" title="Gongsu On App Guide 4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>

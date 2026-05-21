@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- 한국어 메인 페이지 -->
+  <url>
+    <loc>https://silice-kim.github.io/gongsuon/</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- 중국어 페이지 -->
+  <url>
+    <loc>https://silice-kim.github.io/gongsuon/cn/</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 베트남어 페이지 -->
+  <url>
+    <loc>https://silice-kim.github.io/gongsuon/vn/</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 몽골어 페이지 -->
+  <url>
+    <loc>https://silice-kim.github.io/gongsuon/mn/</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 러시아어 페이지 -->
+  <url>
+    <loc>https://silice-kim.github.io/gongsuon/ru/</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 개인정보 처리방침 -->
+  <url>
+    <loc>https://silice-kim.github.io/gongsuon/privacy.html</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>
