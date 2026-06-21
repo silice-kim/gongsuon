@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../Downloads/gongsuon-main/assets"
+		},
+		{
+			"path": "../../Downloads/gongsuon-main/cn"
+		},
+		{
+			"path": "../../Downloads/gongsuon-main/mn"
+		},
+		{
+			"path": "../../Downloads/gongsuon-main/ru"
+		},
+		{
+			"path": "../../Downloads/gongsuon-main/vn"
+		}
+	],
+	"settings": {}
+}

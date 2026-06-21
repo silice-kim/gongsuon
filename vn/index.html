@@ -164,6 +164,94 @@
             transform: scale(1.1);
         }
 
+        .logo-name {
+            display: inline-block;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .nav-item {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 700;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .nav-item:hover {
+            color: var(--primary);
+        }
+
+        .nav-download {
+            background-color: var(--primary);
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+        }
+
+        .nav-download:hover {
+            background-color: var(--primary-dark);
+            color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 122, 255, 0.2);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            cursor: pointer;
+            padding: 4px 8px;
+        }
+
+        @media (max-width: 850px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(10px);
+                padding: 20px;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+                border-top: 1px solid rgba(0, 0, 0, 0.05);
+                gap: 16px;
+                align-items: stretch;
+                text-align: center;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+            
+            .nav-download {
+                border-radius: 12px;
+            }
+
+            .logo-name {
+                display: none; /* 모바일에서 공간 부족 시 로고 텍스트 숨김 */
+            }
+        }
+
         /* Hero */
         .hero {
             background: linear-gradient(180deg, #fff 0%, var(--bg-light) 100%);
@@ -573,15 +661,29 @@
 
     <header>
         <div class="container">
-            <a href="../index.html" class="logo-text">
+            <a href="../index.html" class="logo-text" aria-label="Gongsu On Trang chủ">
                 <img src="../assets/images/icon.png" alt="Gongsu On Logo" class="logo-img">
+                <span class="logo-name">Gongsu On</span>
             </a>
-            <div class="lang-switcher">
-                <a href="../index.html" title="한국어">🇰🇷</a>
-                <a href="../cn/index.html" title="中文">🇨🇳</a>
-                <a href="#" class="active" title="Tiếng Việt">🇻🇳</a>
-                <a href="../mn/index.html" title="Монгол">🇲🇳</a>
-                <a href="../ru/index.html" title="Русский">🇷🇺</a>
+            <nav class="nav-menu">
+                <a href="../intro.html" class="nav-item">Giới thiệu</a>
+                <a href="../guide.html" class="nav-item">Hướng dẫn</a>
+                <a href="../story.html" class="nav-item">Câu chuyện</a>
+                <a href="../blog.html" class="nav-item">Blog</a>
+                <a href="#faq" class="nav-item">Hỏi đáp</a>
+                <a href="#final-cta" class="nav-item nav-download">Tải App</a>
+            </nav>
+            <div class="header-right">
+                <div class="lang-switcher">
+                    <a href="../index.html" title="한국어">🇰🇷</a>
+                    <a href="../cn/index.html" title="中文">🇨🇳</a>
+                    <a href="#" class="active" title="Tiếng Việt">🇻🇳</a>
+                    <a href="../mn/index.html" title="Монгол">🇲🇳</a>
+                    <a href="../ru/index.html" title="Русский">🇷🇺</a>
+                </div>
+                <button class="menu-toggle" aria-label="Mở menu">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </div>
     </header>
@@ -824,7 +926,7 @@
             </div>
         </section>
 
-        <section class="faq">
+        <section class="faq" id="faq">
             <div class="container">
                 <h2 class="section-title">Câu hỏi thường gặp</h2>
                 <div class="faq-container">
@@ -852,7 +954,7 @@
             </div>
         </section>
 
-        <section class="final-cta">
+        <section class="final-cta" id="final-cta">
             <div class="container">
                 <img src="../assets/images/icon.png" alt="Gongsu On Logo" class="cta-logo">
                 <h2>Làm việc tại công trường dễ dàng hơn<br>Gongsu On</h2>
@@ -873,6 +975,22 @@
         </div>
     </footer>
 
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            if (navMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+    </script>
 </body>
 
 </html>
