@@ -4,48 +4,80 @@
   
   <!-- 한국어 메인 페이지 -->
   <url>
-    <loc>https://silice-kim.github.io/gongsuon/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <loc>https://gongsuon.bizadmin.co.kr/</loc>
+    <lastmod>2026-06-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+  </url>
+
+  <!-- 앱 소개 페이지 -->
+  <url>
+    <loc>https://gongsuon.bizadmin.co.kr/intro.html</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 사용 가이드 페이지 -->
+  <url>
+    <loc>https://gongsuon.bizadmin.co.kr/guide.html</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 개발 스토리 페이지 -->
+  <url>
+    <loc>https://gongsuon.bizadmin.co.kr/story.html</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 블로그 목록 페이지 -->
+  <url>
+    <loc>https://gongsuon.bizadmin.co.kr/blog.html</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   
   <!-- 중국어 페이지 -->
   <url>
-    <loc>https://silice-kim.github.io/gongsuon/cn/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <loc>https://gongsuon.bizadmin.co.kr/cn/</loc>
+    <lastmod>2026-06-21</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
 
   <!-- 베트남어 페이지 -->
   <url>
-    <loc>https://silice-kim.github.io/gongsuon/vn/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <loc>https://gongsuon.bizadmin.co.kr/vn/</loc>
+    <lastmod>2026-06-21</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
 
   <!-- 몽골어 페이지 -->
   <url>
-    <loc>https://silice-kim.github.io/gongsuon/mn/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <loc>https://gongsuon.bizadmin.co.kr/mn/</loc>
+    <lastmod>2026-06-21</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
 
   <!-- 러시아어 페이지 -->
   <url>
-    <loc>https://silice-kim.github.io/gongsuon/ru/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <loc>https://gongsuon.bizadmin.co.kr/ru/</loc>
+    <lastmod>2026-06-21</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
 
   <!-- 개인정보 처리방침 -->
   <url>
-    <loc>https://silice-kim.github.io/gongsuon/privacy.html</loc>
-    <lastmod>2026-05-21</lastmod>
+    <loc>https://gongsuon.bizadmin.co.kr/privacy.html</loc>
+    <lastmod>2026-06-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

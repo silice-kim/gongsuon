@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO 기본 메타 태그 -->
+    <title>앱 소개 - 공수 On</title>
+    <meta name="description" content="공수 On의 주요 기능을 스크린샷과 함께 한눈에 확인해보세요. 광고 없는 공수 기록, 간편한 공수 입력, 엑셀 내보내기, 안전한 데이터 백업, 친절한 고객센터 FAQ 등 다양한 강점을 소개합니다.">
+    <meta name="keywords" content="공수 On 소개, 공수 계산기 기능, 공수 달력 앱, 일용직 달력, 공수 백업, 공수 엑셀">
+    <link rel="canonical" href="https://gongsuon.bizadmin.co.kr/intro.html">
+    <link rel="alternate" hreflang="ko" href="https://gongsuon.bizadmin.co.kr/intro.html">
+    <link rel="alternate" hreflang="zh" href="https://gongsuon.bizadmin.co.kr/cn/">
+    <link rel="alternate" hreflang="vi" href="https://gongsuon.bizadmin.co.kr/vn/">
+    <link rel="alternate" hreflang="mn" href="https://gongsuon.bizadmin.co.kr/mn/">
+    <link rel="alternate" hreflang="ru" href="https://gongsuon.bizadmin.co.kr/ru/">
+    <link rel="alternate" hreflang="x-default" href="https://gongsuon.bizadmin.co.kr/intro.html">
+    <link rel="icon" href="assets/images/icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="assets/images/icon.png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gongsuon.bizadmin.co.kr/intro.html">
+    <meta property="og:title" content="앱 소개 - 공수 On">
+    <meta property="og:description" content="공수 On의 주요 기능을 스크린샷과 함께 한눈에 확인해보세요. 광고 없는 공수 기록, 간편한 공수 입력, 엑셀 내보내기, 안전한 데이터 백업, 친절한 고객센터 FAQ 등 다양한 강점을 소개합니다.">
+    <meta property="og:image" content="https://gongsuon.bizadmin.co.kr/assets/images/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://gongsuon.bizadmin.co.kr/intro.html">
+    <meta property="twitter:title" content="앱 소개 - 공수 On">
+    <meta property="twitter:description" content="공수 On의 주요 기능을 스크린샷과 함께 한눈에 확인해보세요. 광고 없는 공수 기록, 간편한 공수 입력, 엑셀 내보내기, 안전한 데이터 백업, 친절한 고객센터 FAQ 등 다양한 강점을 소개합니다.">
+    <meta property="twitter:image" content="https://gongsuon.bizadmin.co.kr/assets/images/og-image.png">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "앱 소개 - 공수 On",
+      "description": "공수 On의 주요 기능을 스크린샷과 함께 한눈에 확인해보세요. 광고 없는 공수 기록, 간편한 공수 입력, 엑셀 내보내기, 안전한 데이터 백업, 친절한 고객센터 FAQ 등 다양한 강점을 소개합니다.",
+      "url": "https://gongsuon.bizadmin.co.kr/intro.html",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "공수 On",
+        "url": "https://gongsuon.bizadmin.co.kr/"
+      }
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #007AFF;
+            --primary-dark: #0056b3;
+            --secondary: #FFD700;
+            --danger: #FF3B30;
+            --text-dark: #1C1C1E;
+            --text-gray: #8E8E93;
+            --bg-light: #F2F2F7;
+            --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #fff;
+            overflow-x: hidden;
+            word-break: keep-all;
+        }
+
+        /* Utility */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-text {
+            color: var(--primary);
+            font-size: 1.5rem;
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-img {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+        }
+
+        .logo-name {
+            display: inline-block;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .nav-item {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 700;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .nav-item:hover,
+        .nav-item.active {
+            color: var(--primary);
+        }
+
+        .nav-download {
+            background-color: var(--primary);
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+        }
+
+        .nav-download:hover {
+            background-color: var(--primary-dark);
+            color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 122, 255, 0.2);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            cursor: pointer;
+            padding: 4px 8px;
+        }
+
+        .lang-switcher {
+            display: flex;
+            gap: 12px;
+        }
+
+        .lang-switcher a {
+            text-decoration: none;
+            font-size: 1.2rem;
+            filter: grayscale(1);
+            opacity: 0.5;
+            transition: all 0.3s;
+        }
+
+        .lang-switcher a:hover,
+        .lang-switcher a.active {
+            filter: grayscale(0);
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        /* Hero Section */
+        .intro-hero {
+            background: linear-gradient(180deg, #fff 0%, var(--bg-light) 100%);
+            padding: 80px 0 60px 0;
+            text-align: center;
+        }
+
+        .intro-hero h1 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            margin-top: 15px;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+            letter-spacing: -1px;
+        }
+
+        .intro-hero h1 span {
+            color: var(--primary);
+        }
+
+        .intro-hero p {
+            font-size: 1.25rem;
+            color: #48484a;
+            max-width: 700px;
+            margin: 0 auto 35px auto;
+            line-height: 1.6;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background-color: rgba(0, 122, 255, 0.1);
+            color: var(--primary);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 14px;
+            font-weight: 800;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 8px 20px rgba(0, 122, 255, 0.25);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(0, 122, 255, 0.35);
+        }
+
+        .btn-secondary {
+            background-color: #fff;
+            color: var(--text-dark);
+            border: 2px solid var(--bg-light);
+            padding: 1rem 2rem;
+            border-radius: 14px;
+            font-weight: 800;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--bg-light);
+            transform: translateY(-2px);
+        }
+
+        /* Features Layout */
+        .intro-features {
+            padding: 100px 0;
+            background-color: #fff;
+        }
+
+        .feature-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 80px;
+            margin-bottom: 120px;
+        }
+
+        .feature-card:last-child {
+            margin-bottom: 0;
+        }
+
+        .feature-card:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .feature-content {
+            flex: 1.2;
+        }
+
+        .feature-badge {
+            display: inline-block;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .feature-content h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            line-height: 1.35;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+
+        .feature-content p {
+            font-size: 1.1rem;
+            color: #48484a;
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+
+        .feature-points {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .feature-points li {
+            position: relative;
+            padding-left: 28px;
+            font-size: 1.05rem;
+            color: var(--text-dark);
+        }
+
+        .feature-points li i {
+            position: absolute;
+            left: 0;
+            top: 4px;
+            color: var(--primary);
+            font-size: 1.15rem;
+        }
+
+        /* Device Frame Mockup */
+        .feature-mockup-wrapper {
+            flex: 0.8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .phone-mockup {
+            position: relative;
+            width: 100%;
+            max-width: 290px;
+            border: 12px solid #1c1c1e;
+            border-radius: 40px;
+            box-shadow: 0 20px 45px rgba(0,0,0,0.12), 0 4px 12px rgba(0,0,0,0.05);
+            background-color: #1c1c1e;
+            overflow: hidden;
+            transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.5s ease;
+        }
+
+        .phone-mockup:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.22);
+        }
+
+        .phone-notch {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 110px;
+            height: 18px;
+            background-color: #1c1c1e;
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+            z-index: 10;
+        }
+
+        .phone-screen {
+            width: 100%;
+            height: auto;
+            background-color: #fff;
+            overflow: hidden;
+        }
+
+        .phone-screen img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Final CTA */
+        .intro-cta {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .intro-cta img.cta-logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 18px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .intro-cta h2 {
+            font-size: 2.4rem;
+            font-weight: 900;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .intro-cta p {
+            font-size: 1.15rem;
+            margin-bottom: 35px;
+            opacity: 0.9;
+        }
+
+        .btn-white {
+            background-color: #fff;
+            color: var(--primary);
+            padding: 1.1rem 2.2rem;
+            border-radius: 14px;
+            font-weight: 800;
+            text-decoration: none;
+            font-size: 1.15rem;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .btn-white:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #fff;
+            color: var(--text-gray);
+            padding: 20px 0;
+            text-align: center;
+            border-top: 1px solid var(--bg-light);
+        }
+
+        .footer-links {
+            margin-top: 30px;
+        }
+
+        .footer-links a {
+            color: var(--text-gray);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+        }
+
+        /* Responsive */
+        @media (max-width: 850px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.98);
+                padding: 20px;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+                border-top: 1px solid rgba(0,0,0,0.05);
+                gap: 16px;
+                text-align: center;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-download {
+                width: 100%;
+                max-width: 250px;
+            }
+
+            .intro-hero {
+                padding: 60px 0 40px 0;
+            }
+
+            .intro-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .intro-hero p {
+                font-size: 1.1rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+            }
+
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                max-width: 320px;
+                justify-content: center;
+            }
+
+            .feature-card {
+                flex-direction: column !important;
+                gap: 40px;
+                margin-bottom: 80px;
+            }
+
+            .feature-content {
+                text-align: center;
+            }
+
+            .feature-content h2 {
+                font-size: 1.8rem;
+            }
+
+            .feature-points {
+                align-items: flex-start;
+                max-width: 480px;
+                margin: 0 auto;
+            }
+
+            .feature-points li {
+                text-align: left;
+            }
+
+            .feature-mockup-wrapper {
+                width: 100%;
+            }
+
+            .phone-mockup {
+                max-width: 260px;
+            }
+
+            .intro-cta h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo-text" aria-label="공수 On 홈">
+                <img src="assets/images/icon.png" alt="공수 On 로고" class="logo-img">
+                <span class="logo-name">공수 On</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="intro.html" class="nav-item active">앱 소개</a>
+                <a href="guide.html" class="nav-item">사용 가이드</a>
+                <a href="story.html" class="nav-item">개발 스토리</a>
+                <a href="blog.html" class="nav-item">블로그</a>
+                <a href="index.html#faq" class="nav-item">자주 묻는 질문</a>
+                <a href="index.html#final-cta" class="nav-item nav-download">다운로드</a>
+            </nav>
+            <div class="header-right">
+                <div class="lang-switcher">
+                    <a href="#" class="active" title="한국어">🇰🇷</a>
+                    <a href="cn/index.html" title="中文">🇨🇳</a>
+                    <a href="vn/index.html" title="Tiếng Việt">🇻🇳</a>
+                    <a href="mn/index.html" title="Монгол">🇲🇳</a>
+                    <a href="ru/index.html" title="Русский">🇷🇺</a>
+                </div>
+                <button class="menu-toggle" aria-label="메뉴 열기">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="intro-hero">
+            <div class="container">
+                <span class="hero-badge">App Introduction</span>
+                <h1>광고 없는 편리함, <span>공수 On</span></h1>
+                <p>일하는 사람의 마음에 딱 맞춘 시원시원한 공수 기록 애플리케이션.<br>실제 현장 스크린샷과 함께 공수 On의 유용한 기능을 지금 확인해 보세요.</p>
+                <div class="hero-buttons">
+                    <a href="https://play.google.com/store/apps/details?id=kr.co.bizadmin.gongsuon" class="btn-primary" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-google-play"></i> Google Play 다운로드
+                    </a>
+                    <a href="guide.html" class="btn-secondary">
+                        사용 설명서 보기 <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Detail Sections -->
+        <section class="intro-features">
+            <div class="container">
+
+                <!-- Feature 1: Main Intro -->
+                <article class="feature-card">
+                    <div class="feature-content">
+                        <span class="feature-badge">1. 메인 인트로</span>
+                        <h2>광고 없이 깔끔하게 관리하는<br>나만의 모바일 공수 장부</h2>
+                        <p>작업 중에 계속해서 튀어나오는 전면 광고 때문에 불편하고 지치지 않으셨나요? 공수 On은 현장 일에만 집중할 수 있도록 평생 광고 없는 환경을 고집합니다. 큰 글씨와 시원한 구성으로 한눈에 한 달 기록을 모니터링할 수 있습니다.</p>
+                        <ul class="feature-points">
+                            <li><i class="fas fa-check-circle"></i> <strong>평생 100% 광고 없음</strong>: 불필요한 배너나 전면 광고 전면 차단</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>달력 내 정산 내역 요약</strong>: 당월의 근무일과 총 정산 예상 금액 즉시 표시</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>직관적인 대시보드</strong>: 복잡한 설정 없이 실행하자마자 볼 수 있는 첫 화면</li>
+                        </ul>
+                    </div>
+                    <div class="feature-mockup-wrapper">
+                        <div class="phone-mockup">
+                            <div class="phone-notch"></div>
+                            <div class="phone-screen">
+                                <img src="assets/images/store_intro.png" alt="공수 On 첫 화면 메인 스크린샷" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Feature 2: Easy Input -->
+                <article class="feature-card">
+                    <div class="feature-content">
+                        <span class="feature-badge">2. 간편 공수 입력</span>
+                        <h2>손끝 터치 한 번으로 끝내는<br>오늘 하루 공수 기록</h2>
+                        <p>매번 현장 이름을 타이핑하고 일당 금액을 수동으로 입력할 필요가 없습니다. 주로 가는 기본 현장과 단가를 미리 정해두면 터치 한 번으로 오늘 하루의 공수 저장이 끝납니다.</p>
+                        <ul class="feature-points">
+                            <li><i class="fas fa-check-circle"></i> <strong>0.5 ~ 2공수 원버튼 입력</strong>: 퇴근 길 터치 한 번으로 1초 만에 완료</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>현장 맞춤형 관리</strong>: 현장별 일당 단가 개별 지정 및 기본현장 설정</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>수당 정산 체크</strong>: 미지급금 체크로 누락된 노임 단가 관리 완벽 방지</li>
+                        </ul>
+                    </div>
+                    <div class="feature-mockup-wrapper">
+                        <div class="phone-mockup">
+                            <div class="phone-notch"></div>
+                            <div class="phone-screen">
+                                <img src="assets/images/store_input.png" alt="공수 간편 입력 기능 화면 스크린샷" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Feature 3: Excel Export -->
+                <article class="feature-card">
+                    <div class="feature-content">
+                        <span class="feature-badge">3. 엑셀 내보내기</span>
+                        <h2>골치 아픈 월말 정산 전송도<br>엑셀 파일로 원클릭 내보내기</h2>
+                        <p>수첩에 적어둔 공수를 종이에 옮겨 쓰거나 폰 카메라로 찍어 보내는 번거로움은 이제 끝입니다. 터치 한 번에 깔끔한 표 양식의 엑셀 보고서로 추출하여 메신저나 이메일로 바로 전송할 수 있습니다.</p>
+                        <ul class="feature-points">
+                            <li><i class="fas fa-check-circle"></i> <strong>스마트한 필터링</strong>: 원하는 현장과 보고 싶은 날짜 범위 지정 필터 지원</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>다양한 형식 공유</strong>: 카카오톡, 이메일로 엑셀 파일 바로 보내기</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>클립보드 복사</strong>: 텍스트 요약본 복사 기능으로 간단한 문자 전송 가능</li>
+                        </ul>
+                    </div>
+                    <div class="feature-mockup-wrapper">
+                        <div class="phone-mockup">
+                            <div class="phone-notch"></div>
+                            <div class="phone-screen">
+                                <img src="assets/images/store_excel.png" alt="현장 공수 엑셀 공유 기능 화면 스크린샷" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Feature 4: Cloud Backup -->
+                <article class="feature-card">
+                    <div class="feature-content">
+                        <span class="feature-badge">4. 클라우드 백업</span>
+                        <h2>기기 분실 및 고장 걱정 없는<br>안전한 이중 백업 시스템</h2>
+                        <p>스마트폰을 분실하거나 다른 폰으로 기기를 변경해도 소중한 공수 기록이 사라질 염려가 없습니다. 구글 드라이브 동기화 기능을 활용해 복구할 수 있으며, 기존에 쓰던 타사 공수 앱 데이터 이사도 지원합니다.</p>
+                        <ul class="feature-points">
+                            <li><i class="fas fa-check-circle"></i> <strong>구글 드라이브 백업</strong>: 연동 후 터치 한 번으로 안전하게 보관</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>계정 동기화</strong>: 새 기기에서 로그인 즉시 기존 데이터 자동 복원</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>타 앱 데이터 가져오기</strong>: 다른 앱에서 사용하던 공수 데이터도 원클릭 전송</li>
+                        </ul>
+                    </div>
+                    <div class="feature-mockup-wrapper">
+                        <div class="phone-mockup">
+                            <div class="phone-notch"></div>
+                            <div class="phone-screen">
+                                <img src="assets/images/store_backup.png" alt="클라우드 백업 및 데이터 복원 화면 스크린샷" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Feature 5: Customer Center FAQ -->
+                <article class="feature-card">
+                    <div class="feature-content">
+                        <span class="feature-badge">5. 든든한 고객센터</span>
+                        <h2>자주 묻는 질문 해결 및<br>신속한 개발자 1:1 고객지원</h2>
+                        <p>앱 작동 중에 어려운 점이나 수정 제안이 있으신가요? 고객센터 문의 기능을 통해 개발자에게 직접 1:1 건의가 가능하며, 사용 설명과 FAQ가 내장되어 언제든 해결책을 찾을 수 있습니다.</p>
+                        <ul class="feature-points">
+                            <li><i class="fas fa-check-circle"></i> <strong>원클릭 1:1 피드백</strong>: 사용자와 개발자가 카카오톡/이메일로 소통</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>테마별 FAQ 탑재</strong>: 백업 오류, 계정 설정 등 자가 점검 해결책 내장</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>현장 중심 업데이트</strong>: 사용자의 소중한 아이디어를 수렴하여 주기적인 패치</li>
+                        </ul>
+                    </div>
+                    <div class="feature-mockup-wrapper">
+                        <div class="phone-mockup">
+                            <div class="phone-notch"></div>
+                            <div class="phone-screen">
+                                <img src="assets/images/store_help.png" alt="고객센터 및 FAQ 자주묻는질문 화면 스크린샷" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="intro-cta">
+            <div class="container">
+                <img src="assets/images/icon.png" alt="공수 On 앱 아이콘" class="cta-logo" loading="lazy">
+                <h2>현장 필수 앱, 지금 무료로 내려받으세요</h2>
+                <p>일할 때는 일에만 온전히 집중할 수 있도록, 광고 없는 깨끗한 공수 On을 지금 시작해 보세요.</p>
+                <a href="https://play.google.com/store/apps/details?id=kr.co.bizadmin.gongsuon" class="btn-white" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-google-play"></i> 무료 다운로드
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 공수 On | 비즈어드민 (BizAdmin). All Rights Reserved.</p>
+            <nav class="footer-links">
+                <a href="privacy.html">개인정보 처리방침</a>
+                <a href="mailto:admin.bizadmin@google.com">고객지원</a>
+            </nav>
+        </div>
+    </footer >
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            if (navMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+    </script>
+</body>
+
+</html>
