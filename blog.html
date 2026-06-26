@@ -472,16 +472,15 @@
         }
 
         .toon-badge {
-            position: absolute;
-            top: 15px;
-            left: 20px;
+            display: inline-block;
+            align-self: flex-start;
+            margin-bottom: 12px;
             background-color: rgba(0, 122, 255, 0.1);
             color: var(--primary);
             font-size: 0.8rem;
             font-weight: 800;
             padding: 4px 10px;
             border-radius: 50px;
-            z-index: 10;
         }
 
         .toon-card-body {
@@ -874,10 +873,10 @@
                         <!-- Toon 1 -->
                         <div class="toon-card" onclick="openToonModal(0)">
                             <div class="toon-card-image-wrap">
-                                <span class="toon-badge">광고 없음</span>
                                 <img src="assets/images/cartoons/toon_no_ads.png" alt="광고 없는 공수 계산기" class="toon-card-image">
                             </div>
                             <div class="toon-card-body">
+                                <span class="toon-badge">광고 없음</span>
                                 <h3>광고 없이 깔끔하게! 공수온 탄생 비화</h3>
                                 <p>공수 한 번 입력하려고 할 때마다 나오는 전체 화면 광고, 지겨우셨죠? 광고 없이 시원하고 쾌적하게 쓸 수 있는 공수온의 탄생 비하인드 스토리입니다.</p>
                                 <div class="toon-card-footer">
@@ -890,10 +889,10 @@
                         <!-- Toon 2 -->
                         <div class="toon-card" onclick="openToonModal(1)">
                             <div class="toon-card-image-wrap">
-                                <span class="toon-badge">큰 글씨 UI</span>
                                 <img src="assets/images/cartoons/toon_large_ui.png" alt="대화면 큰 글씨 UI" class="toon-card-image">
                             </div>
                             <div class="toon-card-body">
+                                <span class="toon-badge">큰 글씨 UI</span>
                                 <h3>눈이 침침해도 걱정 없는 대화면 큰 글씨</h3>
                                 <p>어두운 야외 현장에서 먼지 낀 화면을 보며 찡그릴 필요 없습니다! 장갑 낀 손으로도 시원시원하게 누를 수 있는 큼직하고 직관적인 UI의 매력을 느껴보세요.</p>
                                 <div class="toon-card-footer">
@@ -906,10 +905,10 @@
                         <!-- Toon 3 -->
                         <div class="toon-card" onclick="openToonModal(2)">
                             <div class="toon-card-image-wrap">
-                                <span class="toon-badge">안전 백업</span>
                                 <img src="assets/images/cartoons/toon_backup.png" alt="소중한 데이터 백업" class="toon-card-image">
                             </div>
                             <div class="toon-card-body">
+                                <span class="toon-badge">안전 백업</span>
                                 <h3>휴대폰 바꿔도 안심! 데이터 백업과 복구</h3>
                                 <p>스마트폰 분실이나 기기 변경 시 소중하게 입력한 내 공수 내역이 날아갈까 불안하셨나요? 평생 모은 데이터를 단 몇 초 만에 안전하게 서버에 올리고 복구하는 방법입니다.</p>
                                 <div class="toon-card-footer">
@@ -922,10 +921,10 @@
                         <!-- Toon 4 -->
                         <div class="toon-card" onclick="openToonModal(3)">
                             <div class="toon-card-image-wrap">
-                                <span class="toon-badge">현장별 단가</span>
                                 <img src="assets/images/cartoons/toon_multiple_sites.png" alt="여러 현장 등록" class="toon-card-image">
                             </div>
                             <div class="toon-card-body">
+                                <span class="toon-badge">현장별 단가</span>
                                 <h3>여러 현장도 헷갈림 없이! 현장별 일당 분리</h3>
                                 <p>오전에는 A 건설 현장, 오후에는 B 인력사무소? 현장마다 제각각 다른 일당 단가와 출퇴근 기록도 공수온에서는 꼬임 없이 똑똑하게 나누어 누적 계산해 줍니다.</p>
                                 <div class="toon-card-footer">
@@ -938,10 +937,10 @@
                         <!-- Toon 5 -->
                         <div class="toon-card" onclick="openToonModal(4)">
                             <div class="toon-card-image-wrap">
-                                <span class="toon-badge">다국어 지원</span>
                                 <img src="assets/images/cartoons/toon_multilingual.png" alt="다국어 지원" class="toon-card-image">
                             </div>
                             <div class="toon-card-body">
+                                <span class="toon-badge">다국어 지원</span>
                                 <h3>글로벌 현장을 위한 5개 국어 동시 지원</h3>
                                 <p>한국어뿐만 아니라 중국어, 베트남어, 몽골어, 러시아어까지 완벽 대응! 말이 안 통하는 다국적 동료들과도 공수온 하나로 함께 일일 공수를 맞춰볼 수 있습니다.</p>
                                 <div class="toon-card-footer">
@@ -954,10 +953,10 @@
                         <!-- Toon 6 -->
                         <div class="toon-card" onclick="openToonModal(5)">
                             <div class="toon-card-image-wrap">
-                                <span class="toon-badge">데이터 가져오기</span>
                                 <img src="assets/images/cartoons/toon_migration.png" alt="기존 공수달력 연동" class="toon-card-image">
                             </div>
                             <div class="toon-card-body">
+                                <span class="toon-badge">데이터 가져오기</span>
                                 <h3>기존 앱 데이터도 손쉽게 쓱! 쉬운 데이터 이전</h3>
                                 <p>다른 공수달력 어플에 적어둔 이전 기록들 때문에 공수온으로 넘어오기가 망설여지시나요? 복잡한 절차 없이 간편하게 공수온으로 기존 데이터를 가져오는 꿀팁 대공개!</p>
                                 <div class="toon-card-footer">
