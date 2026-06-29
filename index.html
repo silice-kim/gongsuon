@@ -7,8 +7,7 @@
 
     <!-- SEO 기본 메타 태그 -->
     <title>공수달력·공수계산기앱 - 광고 없는 큰글씨 공수온 (공수On)</title>
-    <meta name="description"
-        content="공수계산기, 공수달력을 광고 없이 편리하게! 공수온은 건설현장 일용직 근로자를 위한 모바일 출근부, 일당 정산, 클라우드 백업을 지원합니다.">
+    <meta name="description" content="공수계산기, 공수달력을 광고 없이 편리하게! 공수온은 건설현장 일용직 근로자를 위한 모바일 출근부, 일당 정산, 클라우드 백업을 지원합니다.">
     <meta name="keywords"
         content="공수온, 공수On, 공수계산기, 공수달력, 공수계산기앱, 공수달력앱, 공수 계산기, 공수 달력, 공수 기록, 일용직 계산기, 건설 현장 앱, 일당달력, 출근부앱, 일당출근부, 현장출근부, 일용직출근부, 건설일용직, 노가다달력, 노가다공수">
     <link rel="canonical" href="https://gongsuon.bizadmin.co.kr/">
@@ -506,7 +505,7 @@
             text-align: center;
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
             color: #fff;
-            box-shadow: inset 0 0 100px rgba(0,0,0,0.1);
+            box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.1);
         }
 
         .final-cta h2 {
@@ -600,28 +599,37 @@
             font-weight: 700;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 850px) {
             .hero {
-                padding: 50px 0;
+                padding: 60px 0 40px 0;
             }
 
+            .download-btns {
+                justify-content: center !important;
+            }
+        }
+
+        @media (max-width: 768px) {
             .hero h1 .main-title {
-                font-size: 2.8rem;
+                font-size: 2.5rem;
+                line-height: 1.25;
             }
 
             .hero p {
                 font-size: 1.05rem;
+                margin-bottom: 24px;
             }
 
             .section-title {
                 font-size: 1.8rem;
+                margin-bottom: 2rem;
             }
 
             .proof-item {
                 flex-direction: column-reverse !important;
                 text-align: center;
-                gap: 40px;
-                margin-bottom: 60px;
+                gap: 24px;
+                margin-bottom: 48px;
             }
 
             .proof-item:nth-child(even) {
@@ -632,9 +640,80 @@
                 width: 100%;
             }
 
+            .proof-text h3 {
+                font-size: 1.6rem;
+            }
+
             .proof-img {
                 margin: 0 auto;
-                max-width: 250px;
+                max-width: 240px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 40px 0 20px 0;
+            }
+
+            .hero h1 .main-title {
+                font-size: 2rem;
+                line-height: 1.3;
+            }
+
+            .hero h1 .sub-title {
+                font-size: 1.15rem !important;
+            }
+
+            .hero p {
+                font-size: 0.95rem;
+                padding: 0 10px;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 320px;
+                justify-content: center;
+                padding: 0.9rem 1.5rem;
+                font-size: 1rem;
+            }
+
+            .hero-badge-item {
+                font-size: 0.78rem;
+                padding: 5px 10px;
+            }
+
+            /* 비교표 모바일 극소화 방지 */
+            .comparison table {
+                font-size: 0.9rem !important;
+            }
+
+            .comparison th,
+            .comparison td {
+                padding: 12px 8px !important;
+            }
+
+            .faq-item {
+                padding: 18px 20px;
+            }
+
+            .faq-item h4 {
+                font-size: 1.05rem;
+            }
+
+            .faq-item p {
+                font-size: 0.92rem;
+            }
+
+            .reviews {
+                padding: 50px 0;
+            }
+
+            .reviews div[style*="grid-template-columns"] {
+                gap: 16px !important;
+            }
+
+            .reviews div[style*="background"] {
+                padding: 20px !important;
             }
         }
     </style>
@@ -677,13 +756,14 @@
                 <div class="hero-wrapper">
                     <div class="hero-text">
                         <h1>
-                            <span class="no-ads-badge">평생 광고 없음</span>
-                            <span class="sub-title">현장 일을 더 시원하고 편하게</span>
-                            <span class="main-title">공수달력·공수계산기<br><span>공수 On</span></span>
+                            <span class="no-ads-badge">광고 없고 큰 글씨</span>
+                            <span class="sub-title">현장을 더 편하게</span>
+                            <span class="main-title">공수달력 · 공수계산기<br><span>공수 On</span></span>
                         </h1>
-                        <p>공수 On은 건설 현장 공수 계산, 큰 글씨 공수 달력, 일용직 출근부 관리를 가장 쉽고 빠르게 도와줍니다.</p>
+                        <p>공수계산을 더 쉽고 빠르게, 공수달력은 큰 글씨 편하게</p>
                         <div class="download-btns" style="justify-content: flex-start;">
-                            <a href="https://play.google.com/store/apps/details?id=kr.co.bizadmin.gongsuon" class="btn btn-primary">
+                            <a href="https://play.google.com/store/apps/details?id=kr.co.bizadmin.gongsuon"
+                                class="btn btn-primary">
                                 <i class="fab fa-google-play"></i> 구글 플레이 다운로드
                             </a>
                         </div>
@@ -707,7 +787,7 @@
         <!-- Pain Points -->
         <section class="pain-points">
             <div class="container">
-                <h2 class="section-title">현장 공수 기록의 불편함, 이제 참지 마세요!</h2>
+                <h2 class="section-title">공수기록의 불편함, 참지 마세요!</h2>
                 <div class="pain-grid">
                     <div class="pain-card">
                         <h4><i class="fas fa-times-circle"></i>짜증나는 광고</h4>
@@ -726,10 +806,13 @@
         </section>
 
         <!-- Why Section -->
-        <section style="background-color: var(--bg-light); color: var(--text-dark); padding: 80px 0; text-align: center; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+        <section
+            style="background-color: var(--bg-light); color: var(--text-dark); padding: 80px 0; text-align: center; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
             <div class="container" style="max-width: 800px;">
-                <h2 style="font-size: 2.2rem; font-weight: 900; margin-bottom: 24px; color: var(--primary);">공수 On을 만든 이유</h2>
-                <p style="font-size: 1.4rem; font-weight: 700; line-height: 1.6; margin-bottom: 18px; color: var(--text-dark);">
+                <h2 style="font-size: 2.2rem; font-weight: 900; margin-bottom: 24px; color: var(--primary);">공수 On을 만든
+                    이유</h2>
+                <p
+                    style="font-size: 1.4rem; font-weight: 700; line-height: 1.6; margin-bottom: 18px; color: var(--text-dark);">
                     "현장에서는 무엇보다 빠르고 직관적이어야 합니다."
                 </p>
                 <p style="font-size: 1.15rem; font-weight: 500; color: var(--text-muted); line-height: 1.7;">
@@ -743,35 +826,63 @@
         <section class="comparison" style="padding: 80px 0; background-color: #fff;">
             <div class="container">
                 <h2 class="section-title">왜 공수 On인가?</h2>
-                <div style="max-width: 700px; margin: 0 auto; overflow: hidden; border-radius: var(--radius-md); box-shadow: var(--shadow-md); border: 1px solid var(--border-color);">
-                    <table style="width: 100%; border-collapse: collapse; background-color: #fff; text-align: center; font-size: 1.05rem;">
+                <div
+                    style="max-width: 700px; margin: 0 auto; overflow: hidden; border-radius: var(--radius-md); box-shadow: var(--shadow-md); border: 1px solid var(--border-color);">
+                    <table
+                        style="width: 100%; border-collapse: collapse; background-color: #fff; text-align: center; font-size: 1.05rem;">
                         <thead>
                             <tr style="background-color: var(--bg-light); color: var(--text-dark);">
-                                <th style="padding: 20px; border-bottom: 2px solid var(--border-color); font-weight: 800;">구분</th>
-                                <th style="padding: 20px; border-bottom: 2px solid var(--border-color); font-weight: 600; color: var(--text-muted);">일반 공수 앱</th>
-                                <th style="padding: 20px; border-bottom: 2px solid var(--primary); color: var(--primary); font-weight: 900; background-color: rgba(30, 64, 175, 0.02);">공수 On</th>
+                                <th
+                                    style="padding: 20px; border-bottom: 2px solid var(--border-color); font-weight: 800;">
+                                    구분</th>
+                                <th
+                                    style="padding: 20px; border-bottom: 2px solid var(--border-color); font-weight: 600; color: var(--text-muted);">
+                                    일반 공수 앱</th>
+                                <th
+                                    style="padding: 20px; border-bottom: 2px solid var(--primary); color: var(--primary); font-weight: 900; background-color: rgba(30, 64, 175, 0.02);">
+                                    공수 On</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td style="padding: 16px; border-bottom: 1px solid var(--border-color); font-weight: 700;">광고 노출</td>
-                                <td style="padding: 16px; border-bottom: 1px solid var(--border-color); color: var(--text-muted);">잦은 전면/배너 광고</td>
-                                <td style="padding: 16px; border-bottom: 1px solid var(--border-color); color: var(--primary); font-weight: 800; background-color: rgba(30, 64, 175, 0.02);">평생 100% 광고 없음</td>
+                                <td
+                                    style="padding: 16px; border-bottom: 1px solid var(--border-color); font-weight: 700;">
+                                    광고 노출</td>
+                                <td
+                                    style="padding: 16px; border-bottom: 1px solid var(--border-color); color: var(--text-muted);">
+                                    잦은 전면/배너 광고</td>
+                                <td
+                                    style="padding: 16px; border-bottom: 1px solid var(--border-color); color: var(--primary); font-weight: 800; background-color: rgba(30, 64, 175, 0.02);">
+                                    평생 100% 광고 없음</td>
                             </tr>
                             <tr>
-                                <td style="padding: 16px; border-bottom: 1px solid var(--border-color); font-weight: 700;">화면 글씨</td>
-                                <td style="padding: 16px; border-bottom: 1px solid var(--border-color); color: var(--text-muted);">작고 침침한 글씨</td>
-                                <td style="padding: 16px; border-bottom: 1px solid var(--border-color); color: var(--primary); font-weight: 800; background-color: rgba(30, 64, 175, 0.02);">시원시원한 대화면 큰 글씨</td>
+                                <td
+                                    style="padding: 16px; border-bottom: 1px solid var(--border-color); font-weight: 700;">
+                                    화면 글씨</td>
+                                <td
+                                    style="padding: 16px; border-bottom: 1px solid var(--border-color); color: var(--text-muted);">
+                                    작고 침침한 글씨</td>
+                                <td
+                                    style="padding: 16px; border-bottom: 1px solid var(--border-color); color: var(--primary); font-weight: 800; background-color: rgba(30, 64, 175, 0.02);">
+                                    시원시원한 대화면 큰 글씨</td>
                             </tr>
                             <tr>
-                                <td style="padding: 16px; border-bottom: 1px solid var(--border-color); font-weight: 700;">기록 속도</td>
-                                <td style="padding: 16px; border-bottom: 1px solid var(--border-color); color: var(--text-muted);">복잡한 다단계 입력</td>
-                                <td style="padding: 16px; border-bottom: 1px solid var(--border-color); color: var(--primary); font-weight: 800; background-color: rgba(30, 64, 175, 0.02);">퀵 버튼 터치 한번에 완료</td>
+                                <td
+                                    style="padding: 16px; border-bottom: 1px solid var(--border-color); font-weight: 700;">
+                                    기록 속도</td>
+                                <td
+                                    style="padding: 16px; border-bottom: 1px solid var(--border-color); color: var(--text-muted);">
+                                    복잡한 다단계 입력</td>
+                                <td
+                                    style="padding: 16px; border-bottom: 1px solid var(--border-color); color: var(--primary); font-weight: 800; background-color: rgba(30, 64, 175, 0.02);">
+                                    퀵 버튼 터치 한번에 완료</td>
                             </tr>
                             <tr>
                                 <td style="padding: 16px; font-weight: 700;">데이터 보존</td>
                                 <td style="padding: 16px; color: var(--text-muted);">백업 유실 우려</td>
-                                <td style="padding: 16px; color: var(--primary); font-weight: 800; background-color: rgba(30, 64, 175, 0.02);">실시간 안전 클라우드 백업</td>
+                                <td
+                                    style="padding: 16px; color: var(--primary); font-weight: 800; background-color: rgba(30, 64, 175, 0.02);">
+                                    실시간 안전 클라우드 백업</td>
                             </tr>
                         </tbody>
                     </table>
@@ -784,7 +895,9 @@
             <div class="container">
                 <div class="proof-item">
                     <div class="proof-text">
-                        <span style="color: var(--primary); font-weight: 800; font-size: 0.95rem; display: block; margin-bottom: 8px;">SCREEN 01</span>
+                        <span
+                            style="color: var(--primary); font-weight: 800; font-size: 0.95rem; display: block; margin-bottom: 8px;">SCREEN
+                            01</span>
                         <h3>광고 없이 편하게 관리하는 달력</h3>
                         <p>공수 On은 불필요한 배너나 팝업 없이 쾌적하게 한 달간의 근무 이력을 한눈에 들여다볼 수 있습니다.</p>
                     </div>
@@ -795,7 +908,9 @@
 
                 <div class="proof-item">
                     <div class="proof-text">
-                        <span style="color: var(--primary); font-weight: 800; font-size: 0.95rem; display: block; margin-bottom: 8px;">SCREEN 02</span>
+                        <span
+                            style="color: var(--primary); font-weight: 800; font-size: 0.95rem; display: block; margin-bottom: 8px;">SCREEN
+                            02</span>
                         <h3>큰 글씨와 간편한 터치 입력</h3>
                         <p>자주 쓰는 소수점 공수 값(0.5공수, 1공수 등)을 원클릭 퀵 버튼으로 지정하여 1초 만에 입력을 마칩니다.</p>
                     </div>
@@ -806,7 +921,9 @@
 
                 <div class="proof-item">
                     <div class="proof-text">
-                        <span style="color: var(--primary); font-weight: 800; font-size: 0.95rem; display: block; margin-bottom: 8px;">SCREEN 03</span>
+                        <span
+                            style="color: var(--primary); font-weight: 800; font-size: 0.95rem; display: block; margin-bottom: 8px;">SCREEN
+                            03</span>
                         <h3>정확한 수령액 & 세금 정산</h3>
                         <p>일당 단가 계산부터 고용보험, 3.3% 사업소득세 공제 설정까지 지원하여 실수령액을 미리 계산해 줍니다.</p>
                     </div>
@@ -817,7 +934,9 @@
 
                 <div class="proof-item">
                     <div class="proof-text">
-                        <span style="color: var(--primary); font-weight: 800; font-size: 0.95rem; display: block; margin-bottom: 8px;">SCREEN 04</span>
+                        <span
+                            style="color: var(--primary); font-weight: 800; font-size: 0.95rem; display: block; margin-bottom: 8px;">SCREEN
+                            04</span>
                         <h3>안전한 백업과 데이터 이사</h3>
                         <p>스마트폰 기기 변경 시 백업은 물론, 다른 공수 앱에서 기록하던 예전 데이터 파일 가져오기도 완벽 연동됩니다.</p>
                     </div>
@@ -853,23 +972,33 @@
         </section>
 
         <!-- Reviews / Social Proof -->
-        <section class="reviews" style="padding: 80px 0; background-color: var(--bg-light); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+        <section class="reviews"
+            style="padding: 80px 0; background-color: var(--bg-light); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
             <div class="container">
                 <h2 class="section-title">실제 현장에서 써본 분들의 솔직한 후기</h2>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px;">
-                    <div style="background: #fff; padding: 30px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border: 1px solid rgba(226, 232, 240, 0.6);">
-                        <p style="font-size: 1.05rem; font-weight: 700; margin-bottom: 15px; color: var(--primary);">"광고가 전혀 없어 만족합니다"</p>
-                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 12px;">퇴근할 때 장갑 낀 채 광고 끌 필요가 없어서 속이 다 시원합니다. 현장에서 쓰기에 최고입니다.</p>
+                    <div
+                        style="background: #fff; padding: 30px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border: 1px solid rgba(226, 232, 240, 0.6);">
+                        <p style="font-size: 1.05rem; font-weight: 700; margin-bottom: 15px; color: var(--primary);">
+                            "광고가 전혀 없어 만족합니다"</p>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 12px;">
+                            퇴근할 때 장갑 낀 채 광고 끌 필요가 없어서 속이 다 시원합니다. 현장에서 쓰기에 최고입니다.</p>
                         <p style="color: var(--text-dark); font-weight: 700; font-size: 0.9rem;">철근팀 김OO 사장님</p>
                     </div>
-                    <div style="background: #fff; padding: 30px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border: 1px solid rgba(226, 232, 240, 0.6);">
-                        <p style="font-size: 1.05rem; font-weight: 700; margin-bottom: 15px; color: var(--primary);">"눈이 침침한데 글씨가 큽니다"</p>
-                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 12px;">햇빛 아래서 일하다 보면 폰 글씨가 잘 안 보였는데, 공수 On은 큼직큼직하게 잘 보여 아주 편합니다.</p>
+                    <div
+                        style="background: #fff; padding: 30px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border: 1px solid rgba(226, 232, 240, 0.6);">
+                        <p style="font-size: 1.05rem; font-weight: 700; margin-bottom: 15px; color: var(--primary);">"눈이
+                            침침한데 글씨가 큽니다"</p>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 12px;">
+                            햇빛 아래서 일하다 보면 폰 글씨가 잘 안 보였는데, 공수 On은 큼직큼직하게 잘 보여 아주 편합니다.</p>
                         <p style="color: var(--text-dark); font-weight: 700; font-size: 0.9rem;">형틀목수 박OO 반장님</p>
                     </div>
-                    <div style="background: #fff; padding: 30px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border: 1px solid rgba(226, 232, 240, 0.6);">
-                        <p style="font-size: 1.05rem; font-weight: 700; margin-bottom: 15px; color: var(--primary);">"기록 이사가 3초 만에 끝났네요"</p>
-                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 12px;">이전 다른 어플 백업 데이터가 그대로 옮겨와서 기존 2년치 공수 내역 날리지 않고 잘 쓰고 있습니다.</p>
+                    <div
+                        style="background: #fff; padding: 30px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border: 1px solid rgba(226, 232, 240, 0.6);">
+                        <p style="font-size: 1.05rem; font-weight: 700; margin-bottom: 15px; color: var(--primary);">"기록
+                            이사가 3초 만에 끝났네요"</p>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 12px;">
+                            이전 다른 어플 백업 데이터가 그대로 옮겨와서 기존 2년치 공수 내역 날리지 않고 잘 쓰고 있습니다.</p>
                         <p style="color: var(--text-dark); font-weight: 700; font-size: 0.9rem;">배관설비 최OO 반장님</p>
                     </div>
                 </div>
@@ -932,15 +1061,18 @@
                 <div class="faq-container">
                     <div class="faq-item">
                         <h4>Q. 정말 평생 광고가 없나요?</h4>
-                        <p>A. 네, 공수온 (공수On)은 사용자가 광고 팝업 때문에 방해받지 않고 오직 현장 출근부 기록에만 100% 집중할 수 있도록 평생 광고 없는 환경을 제공합니다.</p>
+                        <p>A. 네, 공수온 (공수On)은 사용자가 광고 팝업 때문에 방해받지 않고 오직 현장 출근부 기록에만 100% 집중할 수 있도록 평생 광고 없는 환경을 제공합니다.
+                        </p>
                     </div>
                     <div class="faq-item">
                         <h4>Q. 여러 현장의 단가를 따로 정산할 수 있나요?</h4>
-                        <p>A. 네, [현장 관리] 메뉴에서 다양한 근무처를 등록하고 현장별 일당 단가, 3.3% 원천징수 세금 옵션 등을 설정해두면 달력에서 터치할 때마다 현장별로 따로 정산액이 자동 분류됩니다.</p>
+                        <p>A. 네, [현장 관리] 메뉴에서 다양한 근무처를 등록하고 현장별 일당 단가, 3.3% 원천징수 세금 옵션 등을 설정해두면 달력에서 터치할 때마다 현장별로 따로
+                            정산액이 자동 분류됩니다.</p>
                     </div>
                     <div class="faq-item">
                         <h4>Q. 휴대폰을 바꿨을 때 공수 기록은 안전한가요?</h4>
-                        <p>A. 네, 간편 로그인을 통해 데이터를 클라우드에 백업해 두실 수 있습니다. 기기 분실이나 스마트폰 변경 시에도 새 폰에서 로그인 후 [데이터 불러오기]를 탭하면 모든 기록이 고스란히 복구됩니다.</p>
+                        <p>A. 네, 간편 로그인을 통해 데이터를 클라우드에 백업해 두실 수 있습니다. 기기 분실이나 스마트폰 변경 시에도 새 폰에서 로그인 후 [데이터 불러오기]를 탭하면 모든
+                            기록이 고스란히 복구됩니다.</p>
                     </div>
                     <div class="faq-item">
                         <h4>Q. 엑셀 파일로 현장 사무실에 전송할 수 있나요?</h4>
