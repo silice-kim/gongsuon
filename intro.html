@@ -173,11 +173,14 @@
 
         .feature-badge {
             display: inline-block;
+            background-color: rgba(30, 64, 175, 0.08);
             color: var(--primary);
-            font-size: 0.95rem;
-            font-weight: 800;
-            margin-bottom: 12px;
-            letter-spacing: -0.01em;
+            padding: 8px 18px;
+            border-radius: 100px;
+            font-weight: 900;
+            font-size: 1.15rem; /* 뱃지 폰트 크게 강조 */
+            margin-bottom: 20px;
+            letter-spacing: 0.02em;
         }
 
         .feature-content h2 {
@@ -539,6 +542,95 @@
                 font-size: 0.95rem;
             }
         }
+
+        /* Lightbox Image Zoom-in Modal */
+        .phone-mockup {
+            cursor: pointer;
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            box-sizing: border-box;
+        }
+        
+        .lightbox.show {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+        }
+
+        .lightbox-content {
+            margin: 0 auto;
+            display: block;
+            width: 85%;
+            max-width: 360px; /* 스마트폰 목업 스크린 비율 보장 */
+            max-height: 80vh;
+            object-fit: contain;
+            border-radius: var(--radius-md);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+            border: 4px solid #fff;
+        }
+
+        .lightbox.show .lightbox-content {
+            transform: scale(1);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 25px;
+            right: 35px;
+            color: #f1f5f9;
+            font-size: 45px;
+            font-weight: 800;
+            transition: 0.2s;
+            cursor: pointer;
+            user-select: none;
+            z-index: 2100;
+        }
+
+        .lightbox-close:hover {
+            color: var(--primary-light);
+            transform: scale(1.1);
+        }
+
+        #lightbox-caption {
+            margin-top: 20px;
+            text-align: center;
+            color: #fff;
+            font-size: 1.3rem;
+            font-weight: 800;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        @media (max-width: 480px) {
+            .lightbox-close {
+                top: 15px;
+                right: 20px;
+                font-size: 38px;
+            }
+            .lightbox-content {
+                max-width: 290px;
+            }
+            #lightbox-caption {
+                font-size: 1.1rem;
+            }
+        }
     </style>
 </head>
 
@@ -765,6 +857,13 @@
         </section>
     </main>
 
+    <!-- Lightbox Modal -->
+    <div id="image-lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="이미지 크게 보기">
+        <span class="lightbox-close" aria-label="닫기">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" alt="확대된 이미지">
+        <div id="lightbox-caption"></div>
+    </div>
+
     <footer class="footer">
         <div class="container">
             <p>&copy; 2026 공수 On | 비즈어드민 (BizAdmin). All Rights Reserved.</p>
@@ -776,6 +875,7 @@
     </footer>
 
     <script>
+        // 모바일 메뉴 토글
         const menuToggle = document.querySelector('.menu-toggle');
         const navMenu = document.querySelector('.nav-menu');
 
@@ -788,6 +888,48 @@
             } else {
                 icon.classList.remove('fa-times');
                 icon.classList.add('fa-bars');
+            }
+        });
+
+        // 스크린샷 이미지 클릭 확대 (Lightbox) 로직
+        const lightbox = document.getElementById('image-lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+        const closeBtn = document.querySelector('.lightbox-close');
+        
+        document.querySelectorAll('.phone-mockup').forEach(mockup => {
+            mockup.addEventListener('click', () => {
+                const img = mockup.querySelector('img');
+                if (img) {
+                    lightbox.classList.add('show');
+                    lightbox.setAttribute('aria-hidden', 'false');
+                    lightboxImg.src = img.src;
+                    lightboxImg.alt = img.alt;
+                    lightboxCaption.textContent = img.alt;
+                    document.body.style.overflow = 'hidden'; // 뒷배경 스크롤 잠금
+                }
+            });
+        });
+
+        const closeLightbox = () => {
+            lightbox.classList.remove('show');
+            lightbox.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = ''; // 스크롤 복구
+        };
+
+        closeBtn.addEventListener('click', closeLightbox);
+        
+        // 배경 클릭 시 닫기
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox || e.target === closeBtn) {
+                closeLightbox();
+            }
+        });
+
+        // ESC 키 클릭 시 닫기
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('show')) {
+                closeLightbox();
             }
         });
     </script>
