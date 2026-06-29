@@ -720,8 +720,12 @@
         }
 
         /* Lightbox Image Zoom-in Modal */
-        .phone-mockup {
+        .phone-mockup, .proof-img {
             cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+        .phone-mockup:hover, .proof-img:hover {
+            transform: translateY(-4px);
         }
 
         .lightbox {
@@ -1225,10 +1229,10 @@
         const lightboxCaption = document.getElementById('lightbox-caption');
         const closeBtn = document.querySelector('.lightbox-close');
         
-        document.querySelectorAll('.phone-mockup').forEach(mockup => {
+        document.querySelectorAll('.phone-mockup, .proof-img').forEach(mockup => {
             mockup.addEventListener('click', () => {
-                const img = mockup.querySelector('img');
-                if (img) {
+                const img = mockup.querySelector('img') || mockup;
+                if (img && img.tagName === 'IMG') {
                     lightbox.classList.add('show');
                     lightbox.setAttribute('aria-hidden', 'false');
                     lightboxImg.src = img.src;
