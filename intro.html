@@ -380,6 +380,165 @@
                 font-size: 1.8rem;
             }
         }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Anchor Navigation Chips */
+        .anchor-nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            max-width: 800px;
+            margin: 30px auto 0 auto;
+        }
+
+        .anchor-chip {
+            background-color: #fff;
+            border: 1.5px solid var(--border-color);
+            color: var(--text-dark);
+            padding: 10px 22px;
+            border-radius: 100px;
+            font-weight: 700;
+            font-size: 1.02rem;
+            text-decoration: none;
+            transition: var(--transition-smooth);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .anchor-chip:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            background-color: rgba(30, 64, 175, 0.02);
+            transform: translateY(-2px);
+        }
+
+        /* Inline CTA Band */
+        .inline-cta-band {
+            background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+            color: #fff;
+            padding: 45px 0;
+            margin: 80px 0;
+            border-radius: var(--radius-md);
+            text-align: center;
+            box-shadow: var(--shadow-md);
+        }
+
+        .inline-cta-band h3 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            color: #fff;
+        }
+
+        .inline-cta-band p {
+            font-size: 1.1rem;
+            opacity: 0.85;
+            margin-bottom: 24px;
+        }
+
+        .btn-inline-play {
+            background-color: var(--primary);
+            color: #fff;
+            padding: 0.8rem 1.8rem;
+            border-radius: 100px;
+            font-weight: 800;
+            text-decoration: none;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition-smooth);
+            box-shadow: 0 4px 12px rgba(30, 64, 175, 0.3);
+        }
+
+        .btn-inline-play:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        /* Support & Trust Section */
+        .support-section {
+            background-color: var(--bg-light);
+            padding: 90px 0;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .support-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            margin-top: 40px;
+        }
+
+        .support-card {
+            background-color: #fff;
+            padding: 35px 28px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            text-align: center;
+            transition: var(--transition-smooth);
+        }
+
+        .support-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: rgba(30, 64, 175, 0.15);
+        }
+
+        .support-card i {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .support-card h3 {
+            font-size: 1.25rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+        }
+
+        .support-card p {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 850px) {
+            .anchor-nav {
+                max-width: 340px;
+                gap: 8px;
+            }
+
+            .anchor-chip {
+                padding: 8px 16px;
+                font-size: 0.92rem;
+            }
+
+            .support-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .inline-cta-band {
+                margin: 40px 10px;
+                padding: 30px 15px;
+            }
+
+            .inline-cta-band h3 {
+                font-size: 1.35rem;
+            }
+
+            .inline-cta-band p {
+                font-size: 0.95rem;
+            }
+        }
     </style>
 </head>
 
@@ -419,8 +578,8 @@
         <section class="intro-hero">
             <div class="container">
                 <span class="hero-badge">App Introduction</span>
-                <h1>광고 없는 편리함, <span>공수 On</span></h1>
-                <p>일하는 사람의 마음에 딱 맞춘 시원시원한 공수 기록 애플리케이션.<br>실제 현장 스크린샷과 함께 공수 On의 유용한 기능을 지금 확인해 보세요.</p>
+                <h1>공수 기록부터 정산, 백업까지</h1>
+                <p>일하는 사람의 마음에 딱 맞춘 시원시원한 공수 기록 애플리케이션.<br>실제 현장 스크린샷과 함께 공수 On의 핵심 기능을 빠르게 확인해 보세요.</p>
                 <div class="hero-buttons">
                     <a href="https://play.google.com/store/apps/details?id=kr.co.bizadmin.gongsuon" class="btn-primary" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-google-play"></i> Google Play 다운로드
@@ -429,6 +588,15 @@
                         사용 설명서 보기 <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
+                <!-- 퀵 네비게이션 앵커 칩 추가 -->
+                <div class="anchor-nav">
+                    <a href="#feature-calendar" class="anchor-chip">큰글씨 달력</a>
+                    <a href="#feature-input" class="anchor-chip">간편 공수입력</a>
+                    <a href="#feature-settle" class="anchor-chip">실수령 정산</a>
+                    <a href="#feature-excel" class="anchor-chip">엑셀 파일공유</a>
+                    <a href="#feature-backup" class="anchor-chip">클라우드 백업</a>
+                    <a href="#feature-support" class="anchor-chip">든든한 지원</a>
+                </div>
             </div>
         </section>
 
@@ -436,16 +604,16 @@
         <section class="intro-features">
             <div class="container">
 
-                <!-- Feature 1: Main Intro -->
-                <article class="feature-card">
+                <!-- Feature 1: Main Calendar View (Revised) -->
+                <article class="feature-card" id="feature-calendar">
                     <div class="feature-content">
-                        <span class="feature-badge">1. 메인 인트로</span>
-                        <h2>광고 없이 깔끔하게 관리하는<br>나만의 모바일 공수 장부</h2>
-                        <p>작업 중에 계속해서 튀어나오는 전면 광고 때문에 불편하고 지치지 않으셨나요? 공수 On은 현장 일에만 집중할 수 있도록 평생 광고 없는 환경을 고집합니다. 큰 글씨와 시원한 구성으로 한눈에 한 달 기록을 모니터링할 수 있습니다.</p>
+                        <span class="feature-badge">1. 큰글씨 달력</span>
+                        <h2>광고 없이 넓고 깨끗한<br>한눈에 들어오는 큰 글씨 달력</h2>
+                        <p>작업 중에 계속해서 튀어나오는 전면 광고 때문에 불편하고 지치지 않으셨나요? 공수 On은 현장 일에만 집중할 수 있도록 <strong>평생 광고 없는 환경</strong>을 약속합니다. 큰 글씨와 시원시원한 달력 화면으로 하루 일당과 메모 기록을 직관적으로 모니터링할 수 있습니다.</p>
                         <ul class="feature-points">
-                            <li><i class="fas fa-check-circle"></i> <strong>평생 100% 광고 없음</strong>: 불필요한 배너나 전면 광고 전면 차단</li>
-                            <li><i class="fas fa-check-circle"></i> <strong>달력 내 정산 내역 요약</strong>: 당월의 근무일과 총 정산 예상 금액 즉시 표시</li>
-                            <li><i class="fas fa-check-circle"></i> <strong>직관적인 대시보드</strong>: 복잡한 설정 없이 실행하자마자 볼 수 있는 첫 화면</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>평생 100% 광고 없음</strong>: 불필요한 배너나 전면 광고를 완벽 차단</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>대시보드식 정보</strong>: 당월 근무일과 정산 예상 금액을 달력 내에 즉시 표시</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>현장 중심의 높은 가독성</strong>: 침침함 없이 한눈에 식별 가능한 큼직한 화면 구성</li>
                         </ul>
                     </div>
                     <div class="feature-mockup-wrapper">
@@ -458,16 +626,16 @@
                     </div>
                 </article>
 
-                <!-- Feature 2: Easy Input -->
-                <article class="feature-card">
+                <!-- Feature 2: Easy Input (Revised) -->
+                <article class="feature-card" id="feature-input">
                     <div class="feature-content">
-                        <span class="feature-badge">2. 간편한 공수 입력</span>
-                        <h2>터치 한 번으로 끝나는<br>빠르고 간편한 공수 입력</h2>
-                        <p>현장에서 일하느라 피곤하고 바쁜데, 공수 입력이 복잡하고 오래 걸리면 안 되겠죠? 공수 On은 큰 글씨와 단순화된 레이아웃으로 누구나 터치 한 번에 빠르게 공수를 입력할 수 있도록 설계되었습니다. 단가 설정과 현장 선택도 물 흐르듯 간편합니다.</p>
+                        <span class="feature-badge">2. 원터치 공수입력</span>
+                        <h2>바쁜 퇴근 시간도 걱정 없는<br>1초 완성 원터치 공수 기록</h2>
+                        <p>현장에서 일하느라 피곤하고 바쁜데 입력이 어려우면 안 되겠죠? 공수 On은 <strong>간결화된 원터치 버튼</strong>으로 퇴근길 단 1초 만에 공수를 입력합니다. 복잡한 단계 없이 달력의 날짜를 누르고 퀵 버튼만 선택하면 입력이 끝납니다.</p>
                         <ul class="feature-points">
-                            <li><i class="fas fa-check-circle"></i> <strong>원클릭 퀵 입력</strong>: 0.5공수, 1공수, 1.5공수 등 자주 쓰는 값을 원터치로 바로 입력</li>
-                            <li><i class="fas fa-check-circle"></i> <strong>단가 & 현장 자동 지정</strong>: 현장별로 다른 일당 단가를 설정하여 등록 시 자동 계산</li>
-                            <li><i class="fas fa-check-circle"></i> <strong>캘린더 연동 실시간 보기</strong>: 날짜를 선택하고 입력하는 즉시 달력에 바로 반영</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>원클릭 퀵 입력</strong>: 0.5공수, 1공수, 1.5공수, 휴무 등 원터치로 빠르게 기록</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>현장별 단가 관리</strong>: 현장별로 다른 일당 단가를 지정해 등록 시 수당 자동 산정</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>스마트 세부 메모</strong>: 일당 외에 특별 일수, 잔업 기록 등 다양한 내용 보조 기입</li>
                         </ul>
                     </div>
                     <div class="feature-mockup-wrapper">
@@ -480,38 +648,16 @@
                     </div>
                 </article>
 
-                <!-- Feature 3: Environmental Settings -->
-                <article class="feature-card">
+                <!-- Feature 3: Settlement Statement (Revised) -->
+                <article class="feature-card" id="feature-settle">
                     <div class="feature-content">
-                        <span class="feature-badge">3. 환경설정</span>
-                        <h2>내 현장에 맞는 커스텀 설정으로<br>나만의 맞춤 공수 계산기 완성</h2>
-                        <p>공수 On은 사용자의 작업 현장 패턴에 맞게 세부 기능들을 직접 변경할 수 있습니다. 기본값, 퀵 입력 버튼, 세율, 그리고 알림 주기와 UI 테마 컬러까지 내 사용성에 딱 맞추어 관리해 보세요.</p>
+                        <span class="feature-badge">3. 실수령액 정산</span>
+                        <h2>현장별 세금 계산까지 완벽!<br>스마트한 실수령액 자동 정산</h2>
+                        <p>일당 총액과 실제 통장에 꽂히는 금액이 달라 계산에 애를 먹은 적 있으시죠? 소득세 3.3%, 지방세, 고용보험 등 현장별 세금 및 4대보험 공제율을 <strong>소수점 자리까지 투명하게 공제</strong>해 정확한 실수령액을 보여줍니다.</p>
                         <ul class="feature-points">
-                            <li><i class="fas fa-check-circle"></i> <strong>기본값 & 퀵 버튼 커스텀</strong>: 자주 쓰는 근무 방식과 기본 단가를 빠른 탭 버튼으로 자동 구성</li>
-                            <li><i class="fas fa-check-circle"></i> <strong>실시간 세율 조정</strong>: 세금 공제 설정(3.3%, 일용 소득세 등)을 원하는 비율로 맞춤 조정</li>
-                            <li><i class="fas fa-check-circle"></i> <strong>개인화 테마 UI</strong>: 보기에 가장 편한 앱 테마와 화면 구성으로 시인성 증대</li>
-                        </ul>
-                    </div>
-                    <div class="feature-mockup-wrapper">
-                        <div class="phone-mockup">
-                            <div class="phone-notch"></div>
-                            <div class="phone-screen">
-                                <img src="assets/images/store_settings.png" alt="환경설정 기능 화면 스크린샷" loading="lazy">
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Feature 4: Settlement Statement -->
-                <article class="feature-card">
-                    <div class="feature-content">
-                        <span class="feature-badge">4. 정산 명세서</span>
-                        <h2>예상 실수령액까지 한눈에!<br>정산 명세서로 정확하게 확인</h2>
-                        <p>현장 마감 때 일당 총액과 실제 수령액이 달라 난처했던 적 있으시죠? 소득세, 지방세, 고용보험, 건강보험 등 각종 공제 항목을 소수점 자리까지 투명하게 계산하여 실수령액을 미리 파악할 수 있습니다.</p>
-                        <ul class="feature-points">
-                            <li><i class="fas fa-check-circle"></i> <strong>기간별 정산 조회</strong>: 원하는 정산 기간을 설정해 당월 총 임금과 미수금액 상세 추적</li>
-                            <li><i class="fas fa-check-circle"></i> <strong>공제 항목 자동 계산</strong>: 근로 형태(간이세율, 일용직, 4대보험)에 맞는 공제액 자동 산출</li>
-                            <li><i class="fas fa-check-circle"></i> <strong>투명한 정산서 관리</strong>: 예상 실지급액 계산을 지원하여 현장 사무실과의 정산 오차 최소화</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>실시간 공제 계산</strong>: 일용직, 상용직 등 근로 형태에 따른 공제율 자동 계산</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>현장별 맞춤 설정</strong>: 현장 등록 시 공제 옵션을 한 번만 셋팅하면 평생 자동 정산</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>미수금 관리</strong>: 정산이 완료된 일급과 아직 받지 못한 미수금을 일목요연하게 표시</li>
                         </ul>
                     </div>
                     <div class="feature-mockup-wrapper">
@@ -524,16 +670,25 @@
                     </div>
                 </article>
 
-                <!-- Feature 5: Excel Export -->
-                <article class="feature-card">
+                <!-- 중간 간이 CTA 밴드 추가 -->
+                <div class="inline-cta-band">
+                    <h3>오늘 공수 기록부터 광고 없이 쾌적하게 시작하세요</h3>
+                    <p>이미 수많은 현장 선배 반장님들이 검증한 대한민국 대표 큰글씨 공수장부</p>
+                    <a href="https://play.google.com/store/apps/details?id=kr.co.bizadmin.gongsuon" class="btn-inline-play" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-google-play"></i> 구글 플레이 무료 내려받기
+                    </a>
+                </div>
+
+                <!-- Feature 4: Excel Export & Sharing (Revised) -->
+                <article class="feature-card" id="feature-excel">
                     <div class="feature-content">
-                        <span class="feature-badge">5. 엑셀 내보내기</span>
-                        <h2>골치 아픈 월말 정산 전송도<br>엑셀 파일로 원클릭 내보내기</h2>
-                        <p>수첩에 적어둔 공수를 종이에 옮겨 쓰거나 폰 카메라로 찍어 보내는 번거로움은 이제 끝입니다. 터치 한 번에 깔끔한 표 양식의 엑셀 보고서로 추출하여 메신저나 이메일로 바로 전송할 수 있습니다.</p>
+                        <span class="feature-badge">4. 엑셀 파일공유</span>
+                        <h2>카카오톡으로 즉시 전송!<br>공수 내역 엑셀 파일 공유</h2>
+                        <p>수첩에 적어둔 공수를 일일이 받아 적거나 카메라로 찍어 사무실에 보내는 복잡함은 이제 그만하세요. 공수 On은 <strong>클릭 한 번에 깔끔한 표 양식의 엑셀 문서로 변환</strong>하여 카카오톡이나 문자, 이메일로 바로 전송할 수 있습니다.</p>
                         <ul class="feature-points">
-                            <li><i class="fas fa-check-circle"></i> <strong>스마트한 필터링</strong>: 원하는 현장과 보고 싶은 날짜 범위 지정 필터 지원</li>
-                            <li><i class="fas fa-check-circle"></i> <strong>다양한 형식 공유</strong>: 카카오톡, 이메일로 엑셀 파일 바로 보내기</li>
-                            <li><i class="fas fa-check-circle"></i> <strong>클립보드 복사</strong>: 텍스트 요약본 복사 기능으로 간단한 문자 전송 가능</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>기간별/현장별 필터링</strong>: 원하는 정산 범위만 선택해 맞춤형 엑셀 파일 생성</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>간편 클립보드 복사</strong>: 카톡 텍스트 형식으로도 복사하여 빠른 전송 지원</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>투명한 정산 보고</strong>: 엑셀 데이터를 출력해 증빙 자료나 영수증으로 활용 가능</li>
                         </ul>
                     </div>
                     <div class="feature-mockup-wrapper">
@@ -546,16 +701,16 @@
                     </div>
                 </article>
 
-                <!-- Feature 6: Cloud Backup -->
-                <article class="feature-card">
+                <!-- Feature 5: Cloud Backup & Migrate (Revised - Settings Integrated) -->
+                <article class="feature-card" id="feature-backup">
                     <div class="feature-content">
-                        <span class="feature-badge">6. 클라우드 백업</span>
-                        <h2>기기 분실 및 고장 걱정 없는<br>안전한 이중 백업 시스템</h2>
-                        <p>스마트폰을 분실하거나 다른 폰으로 기기를 변경해도 소중한 공수 기록이 사라질 염려가 없습니다. 구글 드라이브 동기화 기능을 활용해 복구할 수 있으며, 기존에 쓰던 타사 공수 앱 데이터 이사도 지원합니다.</p>
+                        <span class="feature-badge">5. 클라우드 백업</span>
+                        <h2>스마트폰 변경 시에도 안전하게!<br>클라우드 백업 및 설정 이사</h2>
+                        <p>스마트폰을 고장으로 잃어버리거나 다른 최신 폰으로 변경해도 <strong>기존 기록 유실 염려가 전혀 없습니다</strong>. 간편한 구글 연동으로 데이터를 클라우드 서버에 암호화하여 보존하며, 기존 타 앱의 공수 데이터 가져오기도 완벽 연동됩니다.</p>
                         <ul class="feature-points">
-                            <li><i class="fas fa-check-circle"></i> <strong>구글 드라이브 백업</strong>: 연동 후 터치 한 번으로 안전하게 보관</li>
-                            <li><i class="fas fa-check-circle"></i> <strong>계정 동기화</strong>: 새 기기에서 로그인 즉시 기존 데이터 자동 복원</li>
-                            <li><i class="fas fa-check-circle"></i> <strong>타 앱 데이터 가져오기</strong>: 다른 앱에서 사용하던 공수 데이터도 원클릭 전송</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>안전한 클라우드 동기화</strong>: 연동 시 실시간 혹은 1초 만에 안전한 백업 파일 생성</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>기존 데이터 이사</strong>: 다른 공수 앱 데이터를 그대로 가지고 와 연속 기입 지원</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>계정 일괄 연동</strong>: 폰 분실 시에도 로그인만 하면 전 근무 이력이 100% 복구</li>
                         </ul>
                     </div>
                     <div class="feature-mockup-wrapper">
@@ -568,30 +723,35 @@
                     </div>
                 </article>
 
-                <!-- Feature 7: Customer Center FAQ -->
-                <article class="feature-card">
-                    <div class="feature-content">
-                        <span class="feature-badge">7. 든든한 고객센터</span>
-                        <h2>자주 묻는 질문 해결 및<br>신속한 개발자 1:1 고객지원</h2>
-                        <p>앱 작동 중에 어려운 점이나 수정 제안이 있으신가요? 고객센터 문의 기능을 통해 개발자에게 직접 1:1 건의가 가능하며, 사용 설명과 FAQ가 내장되어 언제든 해결책을 찾을 수 있습니다.</p>
-                        <ul class="feature-points">
-                            <li><i class="fas fa-check-circle"></i> <strong>원클릭 1:1 피드백</strong>: 사용자와 개발자가 카카오톡/이메일로 소통</li>
-                            <li><i class="fas fa-check-circle"></i> <strong>테마별 FAQ 탑재</strong>: 백업 오류, 계정 설정 등 자가 점검 해결책 내장</li>
-                            <li><i class="fas fa-check-circle"></i> <strong>현장 중심 업데이트</strong>: 사용자의 소중한 아이디어를 수렴하여 주기적인 패치</li>
-                        </ul>
-                    </div>
-                    <div class="feature-mockup-wrapper">
-                        <div class="phone-mockup">
-                            <div class="phone-notch"></div>
-                            <div class="phone-screen">
-                                <img src="assets/images/store_help.png" alt="고객센터 및 FAQ 자주묻는질문 화면 스크린샷" loading="lazy">
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
             </div>
         </section>
+
+        <!-- 든든한 고객 지원 및 신뢰 섹션 분리 -->
+        <section class="support-section" id="feature-support">
+            <div class="container">
+                <h2 class="section-title" style="text-align: center; margin-bottom: 10px;">든든한 동반자가 되어 드립니다</h2>
+                <p style="text-align: center; color: var(--text-muted); font-size: 1.15rem; max-width: 600px; margin: 0 auto 50px auto; line-height: 1.6;">공수 On은 단순한 어플에 머무르지 않고 일하시는 근로자분들과 함께 걸어갑니다.</p>
+                
+                <div class="support-grid">
+                    <div class="support-card">
+                        <i class="fas fa-comments-dollar"></i>
+                        <h3>1:1 문의 채널 개설</h3>
+                        <p>어려운 사용법이나 정산 오류 등은 이메일이나 문의 기능을 통해 실시간 개발자 피드백으로 즉각 답변 드립니다.</p>
+                    </div>
+                    <div class="support-card">
+                        <i class="fas fa-tools"></i>
+                        <h3>의견 기반 빠른 패치</h3>
+                        <p>현장에서 주신 반장님들의 소중한 피드백을 검토하여 필요한 기능을 계속 보완하는 주 단위 패치를 제공합니다.</p>
+                    </div>
+                    <div class="support-card">
+                        <i class="fas fa-book-reader"></i>
+                        <h3>상세 자가 가이드</h3>
+                        <p>동영상 가이드 및 맞춤 FAQ를 탑재하여 누구나 쉽게 사용법을 배우고 실수령 설정을 맞출 수 있습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Final CTA Section -->
         <section class="intro-cta">
             <div class="container">
