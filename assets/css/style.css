@@ -7,9 +7,9 @@
     --primary-rgb: 30, 64, 175;
     --secondary: #F59E0B; /* 골드 앰버 옐로우 */
     --danger: #EF4444;
-    --text-dark: #0F172A; /* 짙은 Slate 그레이 */
-    --text-muted: #64748B;
-    --text-gray: #64748B; /* 제안서 변수 에러 대응 추가 */
+    --text-dark: #030712; /* 가독성을 대폭 극대화한 완전 어두운 딥 차콜 */
+    --text-muted: #374151; /* 눈의 피로를 없애기 위해 기존 대비 훨씬 더 짙어진 다크 슬레이트 회색 */
+    --text-gray: #374151; /* 짙은 톤 통일 */
     --bg-light: #F8FAFC; /* 매우 부드러운 오프화이트 슬레이트 */
     --bg-card: #FFFFFF;
     --border-color: #E2E8F0;
