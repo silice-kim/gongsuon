@@ -9,6 +9,7 @@
     --danger: #EF4444;
     --text-dark: #0F172A; /* 짙은 Slate 그레이 */
     --text-muted: #64748B;
+    --text-gray: #64748B; /* 제안서 변수 에러 대응 추가 */
     --bg-light: #F8FAFC; /* 매우 부드러운 오프화이트 슬레이트 */
     --bg-card: #FFFFFF;
     --border-color: #E2E8F0;
@@ -270,5 +271,102 @@ header .container {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* Hero 2단 Layout */
+.hero-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    text-align: left;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.hero-text {
+    flex: 1.2;
+    text-align: left;
+}
+
+.hero-visual {
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-visual .phone-mockup {
+    width: 100%;
+    max-width: 290px;
+    border: 8px solid #0F172A;
+    border-radius: 40px;
+    box-shadow: var(--shadow-lg);
+    background-color: #0F172A;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+}
+
+.hero-visual .phone-mockup:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-hover);
+}
+
+.hero-visual .phone-screen img {
+    width: 100%;
+    display: block;
+}
+
+/* 신뢰 배지 인포 라인 */
+.hero-badges-line {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.hero-badge-item {
+    font-size: 0.82rem;
+    font-weight: 800;
+    color: var(--primary);
+    background-color: rgba(30, 64, 175, 0.08);
+    padding: 6px 14px;
+    border-radius: 100px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    letter-spacing: -0.01em;
+}
+
+.hero-badge-item i {
+    font-size: 0.9rem;
+}
+
+/* 모바일 Above the fold 최적화 미디어 쿼리 */
+@media (max-width: 850px) {
+    .hero-wrapper {
+        flex-direction: column;
+        text-align: center;
+        gap: 32px;
+    }
+    
+    .hero-text {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .hero-badges-line {
+        justify-content: center;
+    }
+    
+    .hero-visual {
+        width: 100%;
+    }
+    
+    .hero-visual .phone-mockup {
+        max-width: 240px;
+        margin: 0 auto;
     }
 }
