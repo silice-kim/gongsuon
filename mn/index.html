@@ -85,6 +85,7 @@
     </script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <style>
         :root {
             --primary: #007AFF;
@@ -97,167 +98,7 @@
             --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        body {
-            font-family: 'Lexend', 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            background-color: #fff;
-            overflow-x: hidden;
-            word-break: keep-all;
-        }
-
-        /* Utility */
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        header {
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
-        }
-
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo-text {
-            color: var(--primary);
-            font-size: 1.5rem;
-            font-weight: 900;
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-            text-decoration: none;
-            letter-spacing: -0.5px;
-        }
-
-        .logo-img {
-            width: 36px;
-            height: 36px;
-            border-radius: 8px;
-        }
-
-        .lang-switcher {
-            display: flex;
-            gap: 12px;
-        }
-
-        .lang-switcher a {
-            text-decoration: none;
-            font-size: 1.2rem;
-            filter: grayscale(1);
-            opacity: 0.5;
-            transition: all 0.3s;
-        }
-
-        .lang-switcher a:hover, .lang-switcher a.active {
-            filter: grayscale(0);
-            opacity: 1;
-            transform: scale(1.1);
-        }
-
-        .logo-name {
-            display: inline-block;
-        }
-
-        .header-right {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .nav-menu {
-            display: flex;
-            gap: 24px;
-            align-items: center;
-        }
-
-        .nav-item {
-            text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 700;
-            font-size: 1rem;
-            transition: color 0.3s;
-        }
-
-        .nav-item:hover {
-            color: var(--primary);
-        }
-
-        .nav-download {
-            background-color: var(--primary);
-            color: #fff;
-            padding: 8px 16px;
-            border-radius: 50px;
-            font-size: 0.95rem;
-            transition: all 0.3s;
-        }
-
-        .nav-download:hover {
-            background-color: var(--primary-dark);
-            color: #fff;
-            box-shadow: 0 4px 10px rgba(0, 122, 255, 0.2);
-        }
-
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: var(--text-dark);
-            cursor: pointer;
-            padding: 4px 8px;
-        }
-
-        @media (max-width: 850px) {
-            .menu-toggle {
-                display: block;
-            }
-
-            .nav-menu {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: rgba(255, 255, 255, 0.98);
-                backdrop-filter: blur(10px);
-                padding: 20px;
-                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-                border-top: 1px solid rgba(0, 0, 0, 0.05);
-                gap: 16px;
-                align-items: stretch;
-                text-align: center;
-            }
-
-            .nav-menu.active {
-                display: flex;
-            }
-            
-            .nav-download {
-                border-radius: 12px;
-            }
-
-            .logo-name {
-                display: none; /* 모바일에서 공간 부족 시 로고 텍스트 숨김 */
-            }
-        }
 
         /* Hero */
         .hero {
@@ -524,52 +365,7 @@
             font-size: 1.1rem;
         }
 
-        /* CTA */
-        .final-cta {
-            padding: 40px 0;
-            text-align: center;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: #fff;
-        }
 
-        .final-cta h2 {
-            font-size: 2.2rem;
-            font-weight: 900;
-            margin-bottom: 30px;
-        }
-
-        .cta-logo {
-            width: 80px;
-            height: 80px;
-            border-radius: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .btn-white {
-            background-color: #fff;
-            color: var(--primary);
-        }
-
-        /* Footer */
-        .footer {
-            background-color: #fff;
-            color: var(--text-gray);
-            padding: 20px 0;
-            text-align: center;
-            border-top: 1px solid var(--bg-light);
-        }
-
-        .footer-links {
-            margin-top: 30px;
-        }
-
-        .footer-links a {
-            color: var(--text-gray);
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: 600;
-        }
 
         /* 비디오 섹션 스타일 */
         .video-section {
@@ -961,7 +757,7 @@
             </div>
         </section>
 
-        <section class="final-cta" id="final-cta">
+        <section class="cta-section" id="final-cta">
             <div class="container">
                 <img src="../assets/images/icon.png" alt="Gongsu On Logo" class="cta-logo">
                 <h2>Талбайн ажлыг илүү хялбар<br>Gongsu On</h2>

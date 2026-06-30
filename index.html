@@ -252,30 +252,7 @@
             flex-wrap: wrap;
         }
 
-        .btn {
-            padding: 1rem 2.2rem;
-            border-radius: var(--radius-md);
-            font-weight: 800;
-            text-decoration: none;
-            transition: var(--transition-smooth);
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 1.1rem;
-            border: 1px solid transparent;
-        }
 
-        .btn-primary {
-            background-color: var(--primary);
-            color: #fff;
-            box-shadow: 0 4px 14px rgba(30, 64, 175, 0.2);
-        }
-
-        .btn-primary:hover {
-            background-color: var(--primary-dark);
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(30, 64, 175, 0.35);
-        }
 
         /* Pain Points */
         .pain-points {
@@ -395,24 +372,6 @@
 
         .proof-img {
             flex: 0.8;
-            width: 100%;
-            max-width: 310px;
-            border-radius: 40px;
-            box-shadow: var(--shadow-lg);
-            overflow: hidden;
-            transition: var(--transition-smooth);
-            background-color: #fff;
-            border: 8px solid #0F172A;
-        }
-
-        .proof-img:hover {
-            transform: translateY(-8px) scale(1.01);
-            box-shadow: var(--shadow-hover);
-        }
-
-        .proof-img img {
-            width: 100%;
-            display: block;
         }
 
         /* Features */
@@ -506,41 +465,7 @@
             line-height: 1.6;
         }
 
-        /* CTA */
-        .final-cta {
-            padding: 80px 0;
-            text-align: center;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: #fff;
-            box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.1);
-        }
 
-        .final-cta h2 {
-            font-size: 2.4rem;
-            font-weight: 900;
-            margin-bottom: 30px;
-            letter-spacing: -0.03em;
-        }
-
-        .cta-logo {
-            width: 84px;
-            height: 84px;
-            border-radius: var(--radius-md);
-            margin-bottom: 24px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-        }
-
-        .btn-white {
-            background-color: #fff;
-            color: var(--primary);
-            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-        }
-
-        .btn-white:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-            background-color: var(--bg-light);
-        }
 
         /* Video Section */
         .video-section {
@@ -570,22 +495,8 @@
         }
 
         .video-card {
-            width: 100%;
-            max-width: 280px;
-            background: #000;
-            border-radius: 40px;
-            padding: 2px;
-            box-shadow: var(--shadow-lg);
-            border: 8px solid #0F172A;
             aspect-ratio: 9/16;
             position: relative;
-            overflow: hidden;
-            transition: var(--transition-smooth);
-        }
-
-        .video-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-hover);
         }
 
         .video-card iframe {
@@ -1011,7 +922,7 @@
                         <h3>광고 없이 편한 공수달력</h3>
                         <p>공수On은 불필요한 광고가 없어 쾌적하게 한 달간의 공수 이력을 한눈에 볼 수 있습니다.</p>
                     </div>
-                    <div class="proof-img">
+                    <div class="proof-img phone-frame">
                         <img src="assets/images/screenshot_calendar.png" alt="공수On 공수 달력 화면" loading="lazy">
                     </div>
                 </div>
@@ -1024,7 +935,7 @@
                         <h3>큰 글씨와 간편한 터치 입력</h3>
                         <p>자주 쓰는 소수점 공수 값(0.5공수, 1공수 등)을 퀵 버튼으로 1초 만에 기록합니다.</p>
                     </div>
-                    <div class="proof-img">
+                    <div class="proof-img phone-frame">
                         <img src="assets/images/screenshot_input.png" alt="공수On 빠른 공수 입력 화면" loading="lazy">
                     </div>
                 </div>
@@ -1037,7 +948,7 @@
                         <h3>정확한 수령액 & 세금 정산</h3>
                         <p>일당 단가 계산부터 고용보험, 3.3% 사업소득세 공제 설정까지 지원하여 실수령액을 미리 계산해 줍니다.</p>
                     </div>
-                    <div class="proof-img">
+                    <div class="proof-img phone-frame">
                         <img src="assets/images/screenshot_tax.png" alt="공수On 정산내역 및 예상 수령액 화면" loading="lazy">
                     </div>
                 </div>
@@ -1050,7 +961,7 @@
                         <h3>안전한 백업과 데이터 이사</h3>
                         <p>스마트폰 변경 시 백업은 물론, 다른 공수 앱에서 기록하던 데이터 파일 가져오기도 지원합니다.</p>
                     </div>
-                    <div class="proof-img">
+                    <div class="proof-img phone-frame">
                         <img src="assets/images/screenshot_data.png" alt="공수On 클라우드 백업 및 데이터 가져오기 화면" loading="lazy">
                     </div>
                 </div>
@@ -1121,7 +1032,7 @@
                 <h2 class="section-title">1분 쇼츠 & 사용 영상</h2>
                 <div class="video-grid">
                     <div class="video-item">
-                        <div class="video-card">
+                        <div class="video-card phone-frame">
                             <iframe loading="lazy" src="https://www.youtube.com/embed/T2AGgbpWkpI" title="공수On 소개 쇼츠"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen=""></iframe>
@@ -1131,7 +1042,7 @@
                         </div>
                     </div>
                     <div class="video-item">
-                        <div class="video-card">
+                        <div class="video-card phone-frame">
                             <iframe loading="lazy" src="https://www.youtube.com/embed/Q60rTrWI8sE" title="공수On 앱 가이드 1"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen=""></iframe>
@@ -1141,7 +1052,7 @@
                         </div>
                     </div>
                     <div class="video-item">
-                        <div class="video-card">
+                        <div class="video-card phone-frame">
                             <iframe loading="lazy" src="https://www.youtube.com/embed/vVAQa6FYk2w" title="공수On 앱 가이드 2"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen=""></iframe>
@@ -1151,7 +1062,7 @@
                         </div>
                     </div>
                     <div class="video-item">
-                        <div class="video-card">
+                        <div class="video-card phone-frame">
                             <iframe loading="lazy" src="https://www.youtube.com/embed/oolmIWpYYhc" title="공수On 앱 가이드 3"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen=""></iframe>
@@ -1192,7 +1103,7 @@
             </div>
         </section>
 
-        <section class="final-cta" id="final-cta">
+        <section class="cta-section" id="final-cta">
             <div class="container">
                 <img src="assets/images/icon.png" alt="공수On 앱 아이콘" class="cta-logo" loading="lazy">
                 <h2>현장이 더 편한<br> 큰 글씨 공수On</h2>

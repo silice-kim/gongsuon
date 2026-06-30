@@ -101,37 +101,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
-        /* Hero Section */
-        .blog-hero {
-            background: radial-gradient(circle at top right, rgba(30, 64, 175, 0.05) 0%, rgba(248, 250, 252, 0.8) 100%);
-            padding: 80px 0 60px 0;
-            text-align: center;
-        }
 
-        .blog-hero h1 {
-            font-size: 3rem;
-            font-weight: 900;
-            color: var(--text-dark);
-            margin-bottom: 15px;
-            letter-spacing: -0.04em;
-        }
-
-        .blog-hero h1 span {
-            color: var(--primary);
-            background: linear-gradient(135deg, var(--primary) 30%, var(--primary-light) 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .blog-hero p {
-            font-size: 1.15rem;
-            color: var(--text-muted);
-            max-width: 600px;
-            margin: 0 auto;
-            font-weight: 500;
-            line-height: 1.6;
-        }
 
         /* Blog Section */
         .blog-section {
@@ -145,22 +115,10 @@
         }
 
         .blog-card {
-            background-color: #fff;
-            border-radius: var(--radius-md);
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
-            border: 1px solid rgba(226, 232, 240, 0.6);
-            transition: var(--transition-smooth);
             display: flex;
             flex-direction: column;
             text-decoration: none;
             color: inherit;
-        }
-
-        .blog-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-hover);
-            border-color: rgba(30, 64, 175, 0.15);
         }
 
         .blog-card-header {
@@ -328,23 +286,11 @@
         }
 
         .toon-card {
-            background-color: #fff;
-            border-radius: var(--radius-md);
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
-            border: 1px solid rgba(226, 232, 240, 0.6);
-            transition: var(--transition-smooth);
             display: flex;
             flex-direction: column;
             cursor: pointer;
             text-decoration: none;
             color: inherit;
-        }
-
-        .toon-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-hover);
-            border-color: rgba(30, 64, 175, 0.15);
         }
 
         .toon-card-image-wrap {
@@ -626,9 +572,9 @@
     </header>
 
     <main>
-        <section class="blog-hero">
+        <section class="page-hero">
             <div class="container">
-                <h1>공수On <span>공식 블로그</span></h1>
+                <h1>공수On <span class="text-gradient">공식 블로그</span></h1>
                 <p>공수 계산 꿀팁부터 건설 현장의 생생한 이야기까지 유용한 정보를 전해드립니다.</p>
             </div>
         </section>
@@ -645,7 +591,7 @@
                 <div id="naver-blog" class="tab-content active">
                     <div class="blog-grid">
                         <!-- Post 1 -->
-                        <a href="https://blog.naver.com/gongsuon/224321057346" target="_blank" class="blog-card">
+                        <a href="https://blog.naver.com/gongsuon/224321057346" target="_blank" class="blog-card card card--interactive">
                             <div class="blog-card-header">
                                 <span class="blog-badge">사용 후기</span>
                                 <i class="fas fa-thumbs-up"></i>
@@ -661,7 +607,7 @@
                         </a>
 
                         <!-- Post 2 -->
-                        <a href="https://blog.naver.com/gongsuon/224320620744" target="_blank" class="blog-card">
+                        <a href="https://blog.naver.com/gongsuon/224320620744" target="_blank" class="blog-card card card--interactive">
                             <div class="blog-card-header">
                                 <span class="blog-badge">기능 추천</span>
                                 <i class="fas fa-star"></i>
@@ -677,7 +623,7 @@
                         </a>
 
                         <!-- Post 3 -->
-                        <a href="https://blog.naver.com/gongsuon/224319562306" target="_blank" class="blog-card">
+                        <a href="https://blog.naver.com/gongsuon/224319562306" target="_blank" class="blog-card card card--interactive">
                             <div class="blog-card-header">
                                 <span class="blog-badge">자주 묻는 질문</span>
                                 <i class="fas fa-question-circle"></i>
@@ -693,7 +639,7 @@
                         </a>
 
                         <!-- Post 4 -->
-                        <a href="https://blog.naver.com/gongsuon/224320810629" target="_blank" class="blog-card">
+                        <a href="https://blog.naver.com/gongsuon/224320810629" target="_blank" class="blog-card card card--interactive">
                             <div class="blog-card-header">
                                 <span class="blog-badge">개발 스토리</span>
                                 <i class="fas fa-tools"></i>
@@ -709,7 +655,7 @@
                         </a>
 
                         <!-- Post 5 -->
-                        <a href="https://blog.naver.com/gongsuon/224307070868" target="_blank" class="blog-card">
+                        <a href="https://blog.naver.com/gongsuon/224307070868" target="_blank" class="blog-card card card--interactive">
                             <div class="blog-card-header">
                                 <span class="blog-badge">사용 꿀팁</span>
                                 <i class="fas fa-calculator"></i>
@@ -725,7 +671,7 @@
                         </a>
 
                         <!-- Post 6 -->
-                        <a href="https://blog.naver.com/gongsuon/224318634432" target="_blank" class="blog-card">
+                        <a href="https://blog.naver.com/gongsuon/224318634432" target="_blank" class="blog-card card card--interactive">
                             <div class="blog-card-header">
                                 <span class="blog-badge">시인성 가이드</span>
                                 <i class="fas fa-eye"></i>
@@ -746,7 +692,7 @@
                 <div id="gongsu-toon" class="tab-content">
                     <div class="toon-grid">
                         <!-- Toon 1 -->
-                        <div class="toon-card" onclick="openToonModal(0)">
+                        <div class="toon-card card card--interactive" onclick="openToonModal(0)">
                             <div class="toon-card-image-wrap">
                                 <img src="assets/images/cartoons/toon_no_ads.png" alt="광고 없는 공수계산기 앱추천 - 공수온 탄생 비화 웹툰" class="toon-card-image">
                             </div>
@@ -762,7 +708,7 @@
                         </div>
 
                         <!-- Toon 2 -->
-                        <div class="toon-card" onclick="openToonModal(1)">
+                        <div class="toon-card card card--interactive" onclick="openToonModal(1)">
                             <div class="toon-card-image-wrap">
                                 <img src="assets/images/cartoons/toon_large_ui.png" alt="눈이 침침한 어르신도 쓰기 편리한 큰 글씨 공수달력 및 출근부 앱 소개 웹툰" class="toon-card-image">
                             </div>
@@ -778,7 +724,7 @@
                         </div>
 
                         <!-- Toon 3 -->
-                        <div class="toon-card" onclick="openToonModal(2)">
+                        <div class="toon-card card card--interactive" onclick="openToonModal(2)">
                             <div class="toon-card-image-wrap">
                                 <img src="assets/images/cartoons/toon_backup.png" alt="기기 변경 시 안전한 공수달력 데이터 백업 및 공수계산기앱 백업 기능 웹툰" class="toon-card-image">
                             </div>
@@ -794,7 +740,7 @@
                         </div>
 
                         <!-- Toon 4 -->
-                        <div class="toon-card" onclick="openToonModal(3)">
+                        <div class="toon-card card card--interactive" onclick="openToonModal(3)">
                             <div class="toon-card-image-wrap">
                                 <img src="assets/images/cartoons/toon_multiple_sites.png" alt="여러 현장도 꼬임 없는 현장별 공수 관리 기능과 공수달력앱 활용법 웹툰" class="toon-card-image">
                             </div>
@@ -810,7 +756,7 @@
                         </div>
 
                         <!-- Toon 5 -->
-                        <div class="toon-card" onclick="openToonModal(4)">
+                        <div class="toon-card card card--interactive" onclick="openToonModal(4)">
                             <div class="toon-card-image-wrap">
                                 <img src="assets/images/cartoons/toon_multilingual.png" alt="외국인 근로자를 위한 다국어 지원 건설현장 출근부 및 공수계산기앱 웹툰" class="toon-card-image">
                             </div>
@@ -826,7 +772,7 @@
                         </div>
 
                         <!-- Toon 6 -->
-                        <div class="toon-card" onclick="openToonModal(5)">
+                        <div class="toon-card card card--interactive" onclick="openToonModal(5)">
                             <div class="toon-card-image-wrap">
                                 <img src="assets/images/cartoons/toon_migration.png" alt="다른 노가다 달력이나 엑셀 출근부에서 공수온 공수달력앱으로 데이터 이전 및 가져오기 웹툰" class="toon-card-image">
                             </div>
@@ -842,7 +788,7 @@
                         </div>
 
                         <!-- Toon 7 -->
-                        <div class="toon-card" onclick="openToonModal(6)">
+                        <div class="toon-card card card--interactive" onclick="openToonModal(6)">
                             <div class="toon-card-image-wrap">
                                 <img src="assets/images/cartoons/toon_export.png" alt="공수 내역을 엑셀로 저장하거나 복사해 카톡으로 공유하는 공수계산기앱 내보내기 기능 웹툰" class="toon-card-image">
                             </div>
