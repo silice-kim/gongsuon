@@ -86,7 +86,7 @@
             display: flex;
             align-items: center;
             gap: 80px;
-            margin-bottom: 100px;
+            margin-bottom: 72px;
         }
 
         .feature-card:last-child {
@@ -108,7 +108,7 @@
             padding: 8px 18px;
             border-radius: 100px;
             font-weight: 900;
-            font-size: 1.15rem;
+            font-size: 0.85rem;
             /* 뱃지 폰트 크게 강조 */
             margin-bottom: 20px;
             letter-spacing: 0.02em;
@@ -515,7 +515,7 @@
                         <a href="#" class="active" title="한국어">🇰🇷 한국어</a>
                         <a href="cn/index.html" title="中文">🇨🇳 中文</a>
                         <a href="vn/index.html" title="Tiếng Việt">🇻🇳 Tiếng Việt</a>
-                        <a href="mn/index.html" title="Монгол">🇲🇳  Монгол</a>
+                        <a href="mn/index.html" title="Монгол">🇲🇳 Монгол</a>
                         <a href="ru/index.html" title="Русский">🇷🇺 Русский</a>
                     </div>
                 </div>
@@ -527,16 +527,74 @@
     </header>
 
     <main>
-        <section class="page-hero">
+        <section class="hero">
             <div class="container">
-                <h1>공수 계산부터 정산, 백업까지</h1>
-                <p>공수On은 현장 근로자를 위한 광고 없는 큰 글씨 공수달력 앱입니다.<br>실제 스크린샷과 함께 핵심 기능을 빠르게 확인해 보세요.</p>
-                <div class="hero-buttons">
-                    <a href="guide.html" class="btn btn-secondary">
-                        사용 가이드 보기 <i class="fas fa-arrow-right"></i>
-                    </a>
+                <div class="hero-wrapper">
+                    <div class="hero-text">
+                        <div class="hero-badge-concept">
+                            <i class="fas fa-list-check"></i> <span>현장 근로자를 위한 공수On 핵심 기능 안내</span>
+                        </div>
+                        <h1 class="hero-title">
+                            공수 계산부터<br>
+                            정산 · 백업까지
+                        </h1>
+                        <p class="hero-desc">공수On은 현장 근로자를 위해 광고 없이 큰 글씨로 공수 계산과 달력 기록을 제공하는 모바일 앱 서비스입니다.<br>실제 현장
+                            스크린샷과 함께 핵심 기능을 빠르게 확인해 보세요.</p>
+                        <div class="download-btns">
+                            <a href="https://play.google.com/store/apps/details?id=kr.co.bizadmin.gongsuon"
+                                class="btn-playstore">
+                                <i class="fab fa-google-play"></i>
+                                <span class="btn-text-wrapper">
+                                    <span class="btn-subtext">Google Play에서</span>
+                                    <span class="btn-maintext">받기</span>
+                                </span>
+                            </a>
+                            <a href="guide.html" class="btn-guide-outline">
+                                <i class="fas fa-book-open"></i> 사용 가이드 보기
+                            </a>
+                        </div>
+                        <div class="hero-features-grid">
+                            <div class="hero-feature-card">
+                                <div class="card-icon bg-blue">
+                                    <i class="fas fa-calendar-days"></i>
+                                </div>
+                                <div class="card-text">
+                                    <h4>큰 글씨 달력</h4>
+                                    <p>공수 현황을 한눈에</p>
+                                </div>
+                            </div>
+                            <div class="hero-feature-card">
+                                <div class="card-icon bg-green">
+                                    <i class="fas fa-calculator"></i>
+                                </div>
+                                <div class="card-text">
+                                    <h4>자동 정산</h4>
+                                    <p>월급 계산까지 자동</p>
+                                </div>
+                            </div>
+                            <div class="hero-feature-card">
+                                <div class="card-icon bg-orange">
+                                    <i class="fas fa-file-excel"></i>
+                                </div>
+                                <div class="card-text">
+                                    <h4>엑셀 공유</h4>
+                                    <p>공수 내역 저장</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="visual-bg-glow"></div>
+                        <div class="phone-mockup-wrapper">
+                            <div class="phone-mockup-item mockup-back">
+                                <img src="assets/images/store_receipt.png" alt="공수On 정산 화면 스크린샷">
+                            </div>
+                            <div class="phone-mockup-item mockup-front">
+                                <img src="assets/images/store_intro.png" alt="공수On 주요 기능 소개 화면">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <!-- 퀵 네비게이션 앵커 칩 추가 -->
                 <div class="anchor-nav">
                     <a href="#feature-calendar" class="anchor-chip">큰글씨 달력</a>
                     <a href="#feature-input" class="anchor-chip">간편 공수입력</a>
@@ -607,7 +665,6 @@
                     <div class="feature-content">
                         <span class="feature-badge">실수령액 정산</span>
                         <h2>세금 계산까지 완벽!<br>스마트한 실수령액 자동 정산</h2>
-                        </p>
                         <ul class="feature-points">
                             <li><i class="fas fa-check-circle"></i> <strong>실시간 공제 계산</strong>: 일용직, 상용직 등 근로 형태에 따른 공제율
                                 자동 계산</li>
@@ -642,7 +699,6 @@
                     <div class="feature-content">
                         <span class="feature-badge">엑셀 파일공유</span>
                         <h2>카카오톡으로 즉시 전송!<br>공수 내역 엑셀 파일 공유</h2>
-                        </p>
                         <ul class="feature-points">
                             <li><i class="fas fa-check-circle"></i> <strong>기간별/현장별 필터링</strong>: 원하는 정산 범위만 선택해 맞춤형 엑셀
                                 파일 생성</li>

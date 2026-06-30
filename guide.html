@@ -105,6 +105,9 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
 
+        .hero-badge-concept {
+            margin-top: 12px;
+        }
 
         /* Guide Section */
         .guide-section {
@@ -124,6 +127,18 @@
             display: flex;
             gap: 60px;
             align-items: center;
+            background: #fff;
+            border: 1px solid rgba(226, 232, 240, 0.7);
+            border-radius: var(--radius-md);
+            padding: 44px 48px;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition-smooth);
+        }
+
+        .guide-card:hover {
+            box-shadow: var(--shadow-hover);
+            border-color: rgba(30, 64, 175, 0.12);
+            transform: translateY(-3px);
         }
 
         .guide-card:nth-child(even) {
@@ -141,7 +156,7 @@
             padding: 6px 14px;
             border-radius: 100px;
             font-weight: 800;
-            font-size: 0.82rem;
+            font-size: 0.88rem;
             margin-bottom: 20px;
             letter-spacing: 0.05em;
         }
@@ -198,7 +213,7 @@
             border-left: 4px solid var(--primary);
             padding: 18px 24px;
             border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-            font-size: 0.95rem;
+            font-size: 1.05rem;
             color: var(--text-muted);
             margin-top: 24px;
             line-height: 1.6;
@@ -215,7 +230,6 @@
             /* Guide Card Responsive */
             .guide-card {
                 flex-direction: column !important;
-                padding: 30px 20px;
                 gap: 30px;
             }
 
@@ -268,10 +282,72 @@
     </header>
 
     <main>
-        <section class="page-hero">
+        <section class="hero">
             <div class="container">
-                <h1>공수On <span class="text-gradient">사용 가이드</span></h1>
-                <p>공수On은 현장 근로자를 위한 광고 없는 큰 글씨 공수달력 앱입니다.<br>터치 한 번으로 쉽고 빠르게 등록하는 핵심 사용법을 소개합니다.</p>
+                <div class="hero-wrapper">
+                    <div class="hero-text">
+                        <div class="hero-badge-concept">
+                            <i class="fas fa-route"></i> <span>현장 근로자를 위한 공수On 간편 사용 가이드</span>
+                        </div>
+                        <h1 class="hero-title">
+                            공수On<br>
+                            사용 가이드
+                        </h1>
+                        <p class="hero-desc">공수On은 현장 근로자를 위해 광고 없이 큰 글씨로 공수 계산과 달력 기록을 제공하는 모바일 앱 서비스입니다.<br>터치 한 번으로 빠르게 등록하고 정산하는 가이드를 확인하세요.</p>
+                        <div class="download-btns">
+                            <a href="https://play.google.com/store/apps/details?id=kr.co.bizadmin.gongsuon" class="btn-playstore">
+                                <i class="fab fa-google-play"></i>
+                                <span class="btn-text-wrapper">
+                                    <span class="btn-subtext">Google Play에서</span>
+                                    <span class="btn-maintext">받기</span>
+                                </span>
+                            </a>
+                            <a href="#step-input" class="btn-guide-outline">
+                                <i class="fas fa-arrow-down"></i> 사용법 보기
+                            </a>
+                        </div>
+                        <div class="hero-features-grid">
+                            <div class="hero-feature-card">
+                                <div class="card-icon bg-blue">
+                                    <i class="fas fa-hand-pointer"></i>
+                                </div>
+                                <div class="card-text">
+                                    <h4>날짜 탭</h4>
+                                    <p>달력에서 바로 선택</p>
+                                </div>
+                            </div>
+                            <div class="hero-feature-card">
+                                <div class="card-icon bg-green">
+                                    <span>1.5</span>
+                                </div>
+                                <div class="card-text">
+                                    <h4>공수 선택</h4>
+                                    <p>퀵 버튼으로 입력</p>
+                                </div>
+                            </div>
+                            <div class="hero-feature-card">
+                                <div class="card-icon bg-orange">
+                                    <i class="fas fa-cloud-arrow-up"></i>
+                                </div>
+                                <div class="card-text">
+                                    <h4>백업 관리</h4>
+                                    <p>기기 변경도 안전하게</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="visual-bg-glow"></div>
+                        <div class="phone-mockup-wrapper">
+                            <div class="phone-mockup-item mockup-back">
+                                <img src="assets/images/store_settings.png" alt="공수On 설정 및 백업 화면 스크린샷">
+                            </div>
+                            <div class="phone-mockup-item mockup-front">
+                                <img src="assets/images/store_input.png" alt="공수On 공수 입력 가이드 화면">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -280,7 +356,7 @@
                 <div class="guide-container">
 
                     <!-- Step 1 -->
-                    <article class="guide-card card card--interactive">
+                    <article class="guide-card card card--interactive" id="step-input">
                         <div class="guide-content">
                             <span class="guide-badge">STEP 01</span>
                             <h2>오늘 날짜 탭하고<br> 한 번에 빠르게 등록</h2>

@@ -104,7 +104,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
+        .blog-hero .hero-wrapper {
+            justify-content: center;
+            max-width: 920px;
+        }
 
+        .blog-hero .hero-text {
+            flex: none;
+            text-align: center;
+        }
+
+        .blog-hero .hero-badge-concept,
+        .blog-hero .download-btns {
+            justify-content: center;
+        }
+
+        .blog-hero h1.hero-title,
+        .blog-hero p.hero-desc {
+            text-align: center;
+        }
+
+        .blog-hero p.hero-desc {
+            max-width: 720px;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
         /* Blog Section */
         .blog-section {
@@ -125,7 +149,7 @@
         }
 
         .blog-card-header {
-            background-color: var(--bg-light);
+            background: linear-gradient(135deg, #F0F4FF 0%, #E8F0FE 100%);
             padding: 40px 25px;
             display: flex;
             align-items: center;
@@ -263,6 +287,7 @@
         /* Tab Content Control */
         .tab-content {
             display: none;
+            min-height: 400px;
             animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
 
@@ -297,7 +322,7 @@
         }
 
         .toon-card-image-wrap {
-            height: 220px;
+            aspect-ratio: 4 / 3;
             overflow: hidden;
             position: relative;
             background-color: #eaeaea;
@@ -483,6 +508,36 @@
             height: auto;
             border-radius: var(--radius-sm);
             box-shadow: var(--shadow-md);
+            animation: toonFadeIn 0.25s ease-out;
+        }
+
+        @keyframes toonFadeIn {
+            from { opacity: 0.6; transform: scale(0.99); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .toon-modal-body::-webkit-scrollbar {
+            width: 8px;
+        }
+        .toon-modal-body::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        .toon-modal-body::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        .toon-modal-body::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
+        .toon-modal-page {
+            font-size: 0.85rem;
+            font-weight: 800;
+            color: var(--primary);
+            background: rgba(30, 64, 175, 0.08);
+            padding: 4px 12px;
+            border-radius: 100px;
+            flex-shrink: 0;
         }
 
         .toon-modal-nav {
@@ -521,6 +576,24 @@
         }
 
         @media (max-width: 850px) {
+            .download-btns {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 12px !important;
+                width: 100% !important;
+                max-width: 320px !important;
+                margin: 0 auto 30px auto !important;
+            }
+
+            .download-btns a {
+                display: inline-flex !important;
+                width: 100% !important;
+                max-width: 320px !important;
+                box-sizing: border-box !important;
+                justify-content: center !important;
+            }
+
             .blog-grid, .toon-grid {
                 grid-template-columns: 1fr;
                 gap: 24px;
@@ -580,10 +653,64 @@
     </header>
 
     <main>
-        <section class="page-hero">
+        <section class="hero blog-hero">
             <div class="container">
-                <h1>공수On <span class="text-gradient">공식 블로그</span></h1>
-                <p>공수 계산 꿀팁부터 건설 현장의 생생한 이야기까지 유용한 정보를 전해드립니다.</p>
+                <div class="hero-wrapper">
+                    <div class="hero-text">
+                        <div class="hero-badge-concept">
+                            <i class="fas fa-newspaper"></i> <span>현장 근로자를 위한 공수 계산 꿀팁과 소식 모음</span>
+                        </div>
+                        <h1 class="hero-title">
+                            공수On<br>
+                            공식 블로그
+                        </h1>
+                        <p class="hero-desc">공수On은 현장 근로자를 위해 광고 없이 큰 글씨로 공수 계산과 달력 기록을 제공하는 모바일 앱 서비스입니다.<br>유용한 공수 계산 꿀팁과 다양한 소식을 확인해 보세요.</p>
+                        <div class="download-btns">
+                            <a href="https://play.google.com/store/apps/details?id=kr.co.bizadmin.gongsuon" class="btn-playstore" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-google-play"></i>
+                                <span class="btn-text-wrapper">
+                                    <span class="btn-subtext">Google Play에서</span>
+                                    <span class="btn-maintext">받기</span>
+                                </span>
+                            </a>
+                            <a href="#naver-blog" class="btn-guide-outline">
+                                <i class="fas fa-pen-nib"></i> 블로그 글 보기
+                            </a>
+                            <a href="#gongsu-toon" class="btn-guide-outline">
+                                <i class="fas fa-images"></i> 공수툰 보기
+                            </a>
+                        </div>
+                        <div class="hero-features-grid">
+                            <div class="hero-feature-card">
+                                <div class="card-icon bg-blue">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <div class="card-text">
+                                    <h4>사용 꿀팁</h4>
+                                    <p>빠른 기록 방법 정리</p>
+                                </div>
+                            </div>
+                            <div class="hero-feature-card">
+                                <div class="card-icon bg-green">
+                                    <i class="fas fa-calculator"></i>
+                                </div>
+                                <div class="card-text">
+                                    <h4>정산 노하우</h4>
+                                    <p>현장별 금액 관리</p>
+                                </div>
+                            </div>
+                            <div class="hero-feature-card">
+                                <div class="card-icon bg-orange">
+                                    <i class="fas fa-comments"></i>
+                                </div>
+                                <div class="card-text">
+                                    <h4>공수툰</h4>
+                                    <p>쉽게 보는 기능 소개</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -822,7 +949,10 @@
             </button>
             <div class="toon-modal-content">
                 <div class="toon-modal-header">
-                    <span class="toon-modal-title" id="modalTitle">공수온 만화</span>
+                    <div style="display: flex; align-items: center; gap: 10px; overflow: hidden; max-width: 85%;">
+                        <span class="toon-modal-title" id="modalTitle">공수온 만화</span>
+                        <span class="toon-modal-page" id="modalPage">1 / 7</span>
+                    </div>
                     <button class="toon-modal-close" onclick="closeToonModal()" aria-label="닫기">
                         <i class="fas fa-times"></i>
                     </button>
@@ -882,6 +1012,26 @@
             });
         });
 
+        // 해시(Hash) 링크 감지 탭 활성화 로직
+        function handleHashTab() {
+            const hash = window.location.hash;
+            if (hash === '#gongsu-toon') {
+                const toonTabBtn = document.querySelector('.tab-btn[data-tab="gongsu-toon"]');
+                if (toonTabBtn) {
+                    toonTabBtn.click();
+                }
+            } else if (hash === '#naver-blog') {
+                const blogTabBtn = document.querySelector('.tab-btn[data-tab="naver-blog"]');
+                if (blogTabBtn) {
+                    blogTabBtn.click();
+                }
+            }
+        }
+
+        // 초기 로드 시 및 해시 변경 시 실행
+        window.addEventListener('DOMContentLoaded', handleHashTab);
+        window.addEventListener('hashchange', handleHashTab);
+
         // 공수툰 데이터 구성
         const toonsData = [
             {
@@ -918,6 +1068,7 @@
         const toonModal = document.getElementById('toonModal');
         const modalTitle = document.getElementById('modalTitle');
         const modalImage = document.getElementById('modalImage');
+        const modalPage = document.getElementById('modalPage');
 
         function openToonModal(index) {
             currentToonIndex = index;
@@ -944,6 +1095,9 @@
             modalTitle.textContent = toon.title;
             modalImage.src = toon.image;
             modalImage.alt = toon.title;
+            if (modalPage) {
+                modalPage.textContent = `${currentToonIndex + 1} / ${toonsData.length}`;
+            }
             
             // 모달 전환 시 바디 영역 스크롤 맨 위로 초기화
             const modalBody = toonModal.querySelector('.toon-modal-body');
@@ -962,6 +1116,33 @@
             if (event) event.stopPropagation();
             currentToonIndex = (currentToonIndex + 1) % toonsData.length;
             updateModalContent();
+        }
+
+        // 모바일 스와이프(터치) 제스처 지원
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        const modalBodyElement = toonModal.querySelector('.toon-modal-body');
+        if (modalBodyElement) {
+            modalBodyElement.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+
+            modalBodyElement.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipeGesture();
+            }, { passive: true });
+        }
+
+        function handleSwipeGesture() {
+            const swipeThreshold = 50; // 스와이프 인식 최소 픽셀값
+            if (touchStartX - touchEndX > swipeThreshold) {
+                // 왼쪽으로 쓸어넘김 -> 다음 만화
+                nextToon();
+            } else if (touchEndX - touchStartX > swipeThreshold) {
+                // 오른쪽으로 쓸어넘김 -> 이전 만화
+                prevToon();
+            }
         }
 
         // 모달 어두운 배경 클릭 시 닫기

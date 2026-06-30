@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO 기본 메타 태그 -->
-    <title>공수계산기 & 공수달력 | 광고 없는 큰글씨 공수On</title>
-    <meta name="description" content="광고 없는 큰글씨 공수계산기 & 공수달력 앱 공수On. 현장 근로자를 위한 모바일 출근부, 일당 정산, 간편 공수 기록 및 클라우드 백업 기능 제공.">
+    <title>공수온 (공수On) - 광고 없는 공수계산기앱·공수달력앱</title>
+    <meta name="description" content="공수계산기, 공수달력을 광고 없이 편리하게! 공수온은 건설현장 일용직 근로자를 위한 모바일 출근부, 일당 정산, 클라우드 백업을 지원합니다.">
     <meta name="keywords"
         content="공수온, 공수On, 공수계산기, 공수달력, 공수계산기앱, 공수달력앱, 공수 계산기, 공수 달력, 공수 기록, 일용직 계산기, 건설 현장 앱, 일당달력, 출근부앱, 일당출근부, 현장출근부, 일용직출근부, 건설일용직, 노가다달력, 노가다공수">
     <link rel="canonical" href="https://gongsuon.bizadmin.co.kr/">
@@ -23,17 +23,17 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://gongsuon.bizadmin.co.kr/">
-    <meta property="og:title" content="공수계산기 & 공수달력 | 광고 없는 큰글씨 공수On">
+    <meta property="og:title" content="공수온 (공수On) - 광고 없는 공수계산기앱·공수달력앱">
     <meta property="og:description"
-        content="광고 없는 큰글씨 공수계산기 & 공수달력 앱 공수On. 현장 근로자를 위한 모바일 출근부, 일당 정산, 간편 공수 기록 및 클라우드 백업 기능 제공.">
+        content="공수계산기, 공수달력을 광고 없이 편리하게! 공수온은 건설현장 일용직 근로자를 위한 공수기록, 공수계산, 공수달력, 일당 관리, 클라우드 백업을 지원합니다.">
     <meta property="og:image" content="https://gongsuon.bizadmin.co.kr/assets/images/og-image.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://gongsuon.bizadmin.co.kr/">
-    <meta property="twitter:title" content="공수계산기 & 공수달력 | 광고 없는 큰글씨 공수On">
+    <meta property="twitter:title" content="공수온 (공수On) - 광고 없는 공수계산기앱·공수달력앱">
     <meta property="twitter:description"
-        content="광고 없는 큰글씨 공수계산기 & 공수달력 앱 공수On. 현장 근로자를 위한 모바일 출근부, 일당 정산, 간편 공수 기록 및 클라우드 백업 기능 제공.">
+        content="공수계산기, 공수달력을 광고 없이 편리하게! 공수온은 건설현장 일용직 근로자를 위한 공수기록, 공수계산, 공수달력, 일당 관리, 클라우드 백업을 지원합니다.">
     <meta property="twitter:image" content="https://gongsuon.bizadmin.co.kr/assets/images/og-image.png">
 
     <!-- Structured Data (JSON-LD) -->
@@ -167,12 +167,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
-        /* Hero Section */
-        .hero {
-            background: radial-gradient(circle at top right, rgba(30, 64, 175, 0.05) 0%, rgba(248, 250, 252, 0.8) 100%);
-            padding: 80px 0 60px 0;
-            text-align: center;
-        }
 
         .hero-badge {
             display: inline-block;
@@ -430,11 +424,16 @@
         .faq {
             background-color: var(--bg-light);
             padding: 80px 0;
+            width: 100%;
+            display: block;
         }
 
         .faq-container {
             max-width: 800px;
             margin: 0 auto;
+            width: 100%;
+            padding: 0 16px;
+            box-sizing: border-box;
         }
 
         .faq-item {
@@ -445,6 +444,7 @@
             box-shadow: var(--shadow-sm);
             border: 1px solid rgba(226, 232, 240, 0.5);
             transition: var(--transition-smooth);
+            text-align: left;
         }
 
         .faq-item:hover {
@@ -471,6 +471,8 @@
         .video-section {
             background-color: #fff;
             padding: 80px 20px;
+            width: 100%;
+            display: block;
         }
 
         .video-grid {
@@ -480,6 +482,7 @@
             max-width: 1200px;
             margin: 0 auto;
             justify-items: center;
+            width: 100%;
         }
 
         @media (max-width: 1200px) {
@@ -494,9 +497,21 @@
             }
         }
 
+        .video-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            max-width: 290px;
+        }
+
         .video-card {
+            width: 100%;
+            max-width: 290px;
             aspect-ratio: 9/16;
             position: relative;
+            margin: 0 auto;
         }
 
         .video-card iframe {
@@ -523,6 +538,20 @@
             }
 
             .download-btns {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 12px !important;
+                width: 100% !important;
+                max-width: 320px !important;
+                margin: 0 auto 30px auto !important;
+            }
+
+            .download-btns a {
+                display: inline-flex !important;
+                width: 100% !important;
+                max-width: 320px !important;
+                box-sizing: border-box !important;
                 justify-content: center !important;
             }
         }
@@ -762,7 +791,7 @@
                         <a href="#" class="active" title="한국어">🇰🇷 한국어</a>
                         <a href="cn/index.html" title="中文">🇨🇳 中文</a>
                         <a href="vn/index.html" title="Tiếng Việt">🇻🇳 Tiếng Việt</a>
-                        <a href="mn/index.html" title="Монгол">🇲🇳  Монгол</a>
+                        <a href="mn/index.html" title="Монгол">🇲🇳 Монгол</a>
                         <a href="ru/index.html" title="Русский">🇷🇺 Русский</a>
                     </div>
                 </div>
@@ -787,7 +816,8 @@
                         </h1>
                         <p class="hero-desc">큰 글씨로 빠르게 기록하고 월급 정산까지 한눈에</p>
                         <div class="download-btns">
-                            <a href="https://play.google.com/store/apps/details?id=kr.co.bizadmin.gongsuon" class="btn-playstore">
+                            <a href="https://play.google.com/store/apps/details?id=kr.co.bizadmin.gongsuon"
+                                class="btn-playstore">
                                 <i class="fab fa-google-play"></i>
                                 <span class="btn-text-wrapper">
                                     <span class="btn-subtext">Google Play에서</span>
@@ -874,7 +904,8 @@
                     style="font-size: 1.4rem; font-weight: 700; line-height: 1.6; margin-bottom: 18px; color: var(--text-dark);">
                     "현장에서는 무엇보다 빠르고 직관적이어야 합니다."
                 </p>
-                <p style="font-size: 1.25rem; font-weight: 500; color: var(--text-muted); line-height: 1.8; margin-bottom: 16px;">
+                <p
+                    style="font-size: 1.25rem; font-weight: 500; color: var(--text-muted); line-height: 1.8; margin-bottom: 16px;">
                     공수On은 건설현장 근로자를 위해 광고 없이 큰 글씨로 공수 계산과 달력 기록을 제공하는 모바일 앱 서비스입니다.
                 </p>
                 <p style="font-size: 1.25rem; font-weight: 500; color: var(--text-muted); line-height: 1.8;">

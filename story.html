@@ -56,7 +56,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
+        .story-hero .hero-wrapper {
+            justify-content: center;
+            max-width: 900px;
+        }
 
+        .story-hero .hero-text {
+            flex: none;
+            text-align: center;
+        }
+
+        .story-hero .hero-badge-concept,
+        .story-hero .download-btns {
+            justify-content: center;
+        }
+
+        .story-hero h1.hero-title,
+        .story-hero p.hero-desc {
+            text-align: center;
+        }
+
+        .story-hero p.hero-desc {
+            max-width: 720px;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
         /* Story Main Text */
         .story-body {
@@ -221,10 +245,61 @@
     </header>
 
     <main>
-        <section class="page-hero">
+        <section class="hero story-hero">
             <div class="container">
-                <h1>공수On <span class="text-gradient">개발 스토리</span></h1>
-                <p>"수많은 공수달력 앱들을 뒤로하고, 왜 직접 만들었을까요?"</p>
+                <div class="hero-wrapper">
+                    <div class="hero-text">
+                        <div class="hero-badge-concept">
+                            <i class="fas fa-seedling"></i> <span>현장 근로자를 위한 공수On 솔직한 개발 스토리</span>
+                        </div>
+                        <h1 class="hero-title">
+                            광고 없는 공수달력,<br>
+                            왜 직접 만들었을까요?
+                        </h1>
+                        <p class="hero-desc">공수On은 현장 근로자를 위해 광고 없이 큰 글씨로 공수 계산과 달력 기록을 제공하는 모바일 앱 서비스입니다.<br>실제 현장에서 겪은 불편함을 개선하기 위한 탄생 비화입니다.</p>
+                        <div class="download-btns">
+                            <a href="intro.html" class="btn-guide-outline">
+                                <i class="fas fa-list-check"></i> 기능 살펴보기
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=kr.co.bizadmin.gongsuon" class="btn-playstore">
+                                <i class="fab fa-google-play"></i>
+                                <span class="btn-text-wrapper">
+                                    <span class="btn-subtext">Google Play에서</span>
+                                    <span class="btn-maintext">받기</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="hero-features-grid">
+                            <div class="hero-feature-card">
+                                <div class="card-icon bg-blue">
+                                    <i class="fas fa-ban"></i>
+                                </div>
+                                <div class="card-text">
+                                    <h4>광고 스트레스 제거</h4>
+                                    <p>입력을 방해하지 않게</p>
+                                </div>
+                            </div>
+                            <div class="hero-feature-card">
+                                <div class="card-icon bg-green">
+                                    <span>Aa</span>
+                                </div>
+                                <div class="card-text">
+                                    <h4>현장용 큰 글씨</h4>
+                                    <p>햇빛 아래에서도 선명하게</p>
+                                </div>
+                            </div>
+                            <div class="hero-feature-card">
+                                <div class="card-icon bg-orange">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                </div>
+                                <div class="card-text">
+                                    <h4>기록 보존</h4>
+                                    <p>기기 변경에도 안전하게</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 

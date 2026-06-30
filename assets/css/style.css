@@ -340,6 +340,13 @@ header .container {
     }
 }
 
+/* Hero Section 공통 */
+.hero {
+    background: radial-gradient(circle at top right, rgba(30, 64, 175, 0.05) 0%, rgba(248, 250, 252, 0.8) 100%);
+    padding: 50px 0 60px 0;
+    text-align: center;
+}
+
 /* Hero 2단 Layout */
 .hero-wrapper {
     display: flex;
@@ -603,6 +610,10 @@ header .container {
 
 /* 모바일/태블릿 반응형 미디어 쿼리 */
 @media (max-width: 850px) {
+    .hero {
+        padding: 50px 0 40px 0;
+    }
+
     .hero-wrapper {
         flex-direction: column;
         text-align: center;
@@ -624,14 +635,28 @@ header .container {
         font-size: 1.15rem;
     }
     
-    .download-btns {
-        justify-content: center;
+    .download-btns, .blog-hero .download-btns {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 12px !important;
+        width: 100% !important;
+        max-width: 320px !important;
+        margin: 0 auto !important;
+    }
+
+    .download-btns a, .blog-hero .download-btns a {
+        display: inline-flex !important;
+        width: 100% !important;
+        max-width: 320px !important;
+        box-sizing: border-box !important;
+        justify-content: center !important;
     }
     
     .hero-features-grid {
         flex-direction: column;
         gap: 12px;
-        margin-top: 30px;
+        margin-top: 45px;
     }
     
     .hero-visual {
