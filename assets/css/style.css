@@ -410,7 +410,7 @@ header .container {
     font-size: var(--font-body-lg);
     color: var(--text-muted);
     max-width: 700px;
-    margin: 0 auto;
+    margin: 0 auto 30px auto;
     line-height: 1.6;
     font-weight: 500;
 }
