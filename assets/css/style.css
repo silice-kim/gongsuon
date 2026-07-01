@@ -425,6 +425,32 @@ header .container {
     border: 1px solid #000;
 }
 
+.btn-modern-download {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0f172a;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: var(--transition-smooth);
+    gap: 10px;
+    border: 1.5px solid #0f172a;
+}
+
+.btn-modern-download:hover {
+    background-color: #2563eb;
+    border-color: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
+}
+
+.btn-modern-download i {
+    font-size: 1.3rem;
+}
+
 .btn-playstore:hover {
     background-color: #222;
     transform: translateY(-2px);
