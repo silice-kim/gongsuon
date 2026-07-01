@@ -74,7 +74,32 @@
             gap: 15px;
         }
 
+        .intro-hero .hero-wrapper {
+            justify-content: center;
+            max-width: 900px;
+        }
 
+        .intro-hero .hero-text {
+            flex: none;
+            text-align: center;
+            width: 100%;
+        }
+
+        .intro-hero .hero-badge-concept,
+        .intro-hero .download-btns {
+            justify-content: center;
+        }
+
+        .intro-hero h1.hero-title,
+        .intro-hero p.hero-desc {
+            text-align: center;
+        }
+
+        .intro-hero p.hero-desc {
+            max-width: 720px;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
         /* Features Detail Sections */
         .intro-features {
@@ -527,7 +552,7 @@
     </header>
 
     <main>
-        <section class="hero">
+        <section class="hero intro-hero">
             <div class="container">
                 <div class="hero-wrapper">
                     <div class="hero-text">
@@ -553,16 +578,24 @@
                                 <i class="fas fa-book-open"></i> 사용 가이드 보기
                             </a>
                         </div>
-
-                    </div>
-                    <div class="hero-visual">
-                        <div class="visual-bg-glow"></div>
-                        <div class="phone-mockup-wrapper">
-                            <div class="phone-mockup-item mockup-back">
-                                <img src="assets/images/store_receipt.png" alt="공수On(공수온) 정산 화면 스크린샷">
+                        <div class="hero-features-grid">
+                            <div class="hero-feature-card">
+                                <div class="card-icon bg-blue">
+                                    <i class="fas fa-calendar-days"></i>
+                                </div>
+                                <div class="card-text">
+                                    <h4>큰 글씨 달력</h4>
+                                    <p>공수 현황을 한눈에</p>
+                                </div>
                             </div>
-                            <div class="phone-mockup-item mockup-front">
-                                <img src="assets/images/store_intro.png" alt="공수On(공수온) 주요 기능 소개 화면">
+                            <div class="hero-feature-card">
+                                <div class="card-icon bg-green">
+                                    <i class="fas fa-calculator"></i>
+                                </div>
+                                <div class="card-text">
+                                    <h4>자동 정산</h4>
+                                    <p>월급 계산까지 자동</p>
+                                </div>
                             </div>
                         </div>
                     </div>

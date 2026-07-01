@@ -104,8 +104,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
-        .hero-badge-concept {
-            margin-top: 12px;
+        .guide-hero .hero-wrapper {
+            justify-content: center;
+            max-width: 900px;
+        }
+
+        .guide-hero .hero-text {
+            flex: none;
+            text-align: center;
+            width: 100%;
+        }
+
+        .guide-hero .hero-badge-concept,
+        .guide-hero .download-btns {
+            justify-content: center;
+        }
+
+        .guide-hero .hero-features-grid {
+            justify-content: center;
+        }
+
+        .guide-hero h1.hero-title,
+        .guide-hero p.hero-desc {
+            text-align: center;
+        }
+
+        .guide-hero p.hero-desc {
+            max-width: 720px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         /* Guide Section */
@@ -281,7 +308,7 @@
     </header>
 
     <main>
-        <section class="hero">
+        <section class="hero guide-hero">
             <div class="container">
                 <div class="hero-wrapper">
                     <div class="hero-text">
@@ -289,7 +316,8 @@
                             <i class="fas fa-route"></i> <span>공수달력 공수On 사용 가이드</span>
                         </div>
                         <h1 class="hero-title">
-                            공수달력 사용 가이드
+                            공수달력<br>
+                            사용 가이드
                         </h1>
                         <p class="hero-desc">공수On은 광고 없고, 큰 글씨로 공수계산하고 공수달력에 기록하는 현장용 앱입니다.<br>빠르게 공수 등록하고
                             정산하는 방법을 알아보세요.</p>
@@ -309,38 +337,18 @@
                                     <i class="fas fa-hand-pointer"></i>
                                 </div>
                                 <div class="card-text">
-                                    <h4>날짜 탭</h4>
-                                    <p>달력에서 바로 선택</p>
+                                    <h4>간편 입력</h4>
+                                    <p>퀵 버튼으로 빠른 기록</p>
                                 </div>
                             </div>
                             <div class="hero-feature-card">
                                 <div class="card-icon bg-green">
-                                    <span>1.5</span>
-                                </div>
-                                <div class="card-text">
-                                    <h4>공수 선택</h4>
-                                    <p>퀵 버튼으로 입력</p>
-                                </div>
-                            </div>
-                            <div class="hero-feature-card">
-                                <div class="card-icon bg-orange">
                                     <i class="fas fa-cloud-arrow-up"></i>
                                 </div>
                                 <div class="card-text">
                                     <h4>백업 관리</h4>
-                                    <p>안전하게 백업</p>
+                                    <p>안전하게 데이터 보관</p>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="hero-visual">
-                        <div class="visual-bg-glow"></div>
-                        <div class="phone-mockup-wrapper">
-                            <div class="phone-mockup-item mockup-back">
-                                <img src="assets/images/store_settings.png" alt="공수On(공수온) 설정 및 백업 화면 스크린샷">
-                            </div>
-                            <div class="phone-mockup-item mockup-front">
-                                <img src="assets/images/store_input.png" alt="공수On(공수온) 공수 입력 가이드 화면">
                             </div>
                         </div>
                     </div>
